@@ -1,0 +1,338 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		$("div.spoiler div.name span").toggle(function(){
+		$(this).parent("div.name").parent("div.spoiler").children("div.text").show();
+		$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " -15px 0");
+		},function(){
+		$(this).parent("div.name").parent("div.spoiler").children("div.text").hide();
+		$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " 0 -15px");
+		});
+		});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_044.html" class="button">Назад</a>
+	<a href="../pages/paragraph_060.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 5. ПРОИЗВОДНЫЕ ВЫСШИХ ПОРЯДКОВ</div>
+	<div class="h2">Задачи к \(\S\) 5. </div>	
+	<p><span class="bold">Задача 5.1.</span> 
+	Показать, что функция \(y=x+\sin 2x\) удовлетворяет уравнению 
+	\(y''+4y=4x\).
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>Вычислим производную функции \(y\):
+			\[y'=(x+\sin 2x)'=1+2\cos 2x.\]
+			Теперь вычисляем вторую производную функции \(y\):
+			\[y''=(1+2\cos 2x)'=-4\sin 2x.\]
+			Подставим полученное выражение второй производной \(y''\) и саму 
+			функцию  \(y\) в левую часть заданного уравнения и приведем подобные члены.
+			Получим:
+			\[y''+4y=-4\sin 2x+4x+4\sin 2x=4x.\]
+			</p>
+			<p>Показано, что функция \(y=x+\sin 2x\) удовлетворяет уравнению 
+			\(y''+4y=4x\).
+			</p>
+		</div>
+	</div>	
+			
+	<p><span class="bold">Задача 5.2.</span> 
+	Показать, что функция \(y=e^{2x}\sin 5x\) удовлетворяет уравнению 
+	\(y''-4y'+29y=0\).
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>Вычислим производную функции \(y\):
+			\[y'=2e^{2x}\sin 5x+5e^{2x}\cos 5x.\]
+			Вычислим вторую производную:
+			\[y''=(2e^{2x}\sin 5x+5e^{2x}\cos 5x)'=4e^{2x}\sin 5x+10e^{2x}\cos 5x-25e^{2x}\sin 5x=\]
+			\[=20e^{2x}\cos 5x - 21e^{2x}\sin 5x.\]
+			</p>
+			<p>Подставим полученные выражения производных в левую часть 
+			заданного уравнения и приведем подобные члены. Получим:
+			\[y''-4y'+29y=20e^{2x}\cos 5x-21e^{2x}\sin 5x-8e^{2x}\sin 5x-20e^{2x}\cos 5x+29e^{2x}\sin 5x=0.\]
+			</p>
+			<p>Показано, что функция \(y=e^{2x}\sin 5x\) удовлетворяет уравнению
+			\(y''-4y'+29y=0\).
+			</p>
+		</div>
+	</div>	
+			
+	<p><span class="bold">Задача 5.3.</span> 
+	Показать, что функция \(y=C_{1}e^{2x}+C_{2}xe^{2x}+e^{x}\), где 
+	\(C_{1}, C_{2}\) – любые постоянные величины, удовлетворяет
+	уравнению \(y''-4y'+4y=e^{x}\).
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>Вычислим производную функции \(y\):
+			\[y'=2C_{1}e^{2x}+C_{2}e^{2x}+2C_{2}xe^{2x}+e^{x}.\]
+			</p>
+			<p>Теперь вычисляем вторую производную функции \(y\):
+			\[y'=4C_{1}e^{2x}+2C_{2}e^{2x}+2C_{2}e^{2x}+4C_{2}xe^{2x}+e^{x}=\]
+			\[=4C_{1}e^{2x}+4C_{2}e^{2x}+4C_{2}xe^{2x}+e^{x}.]
+			</p>
+			<p>Подставим полученные выражения производных в левую часть 
+			заданного уравнения и приведем подобные члены, получим:
+			\[y''-4y'+4y=4C_{1}e^{2x}+4C_{2}e^{2x}+4C_{2}xe^{2x}+e^{x}-8C^{1}e^{2x}-4C_{2}e^{2x}-\]
+			\[-8C_{2}xe^{2x}-4e^{x}+4C_{1}e^{2x}+4C_{2}xe^{2x}+4e^{x}=e^{x}-4e^{x}+4e^{x}=e^{x}.\]
+			</p>
+			<p>Показано, что функция \(y=C_{1}e^{2x}+C_{2}xe^{2x}+e^{x}\) 
+			удовлетворяет уравнению \(y''-4y'+4y=e^{x}\).
+			</p>
+		</div>
+	</div>	
+			
+	<p><span class="bold">Задача 5.4.</span> 
+	Показать, что функция \(y=A\cos\alpha x+B\sin\alpha x\), где 
+	\(A, B, \alpha\) – любые постоянные величины, удовлетворяет 
+	уравнению \(y''+\alpha^{2}y=0\).
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>Вычислим вторую производную функции \(y\):
+			\[y''=(-A\alpha\sin\alpha x+B\alpha\cos\alpha x)'= -A\alpha^{2}\cos\alpha x-B\alpha^{2}\sin\alpha x.\]
+			</p>
+			<p>Подставляя выражения для \(y\) и \(y''\) в левую часть заданного
+			уравнения и приводя подобные члены, получим:
+			\(y''+\alpha^{2}y=-A\alpha\cos\alpha x-B\alpha^{2}\sin\alpha x+\alpha^{2}A\cos\alpha x+\alpha^{2}B\sin\alpha x=0\)
+			</p>
+			<p>Показано, что функция \(y=A\cos\alpha x+B\sin\alpha x\)
+			удовлетворяет уравнению \(y''+\alpha^{2}y=0\).
+			</p>
+		</div>
+	</div>	
+			
+	<p><span class="bold">Задача 5.5.</span>
+	Показать, что функция \(\frac{1}{t\ln ct}\), где \(c\) – постоянная
+	величина, в области своего задания удовлетворяет уравнению 
+	\(s''+2\frac{(s')^{2}}{s}=-\frac{s^{2}}{t}\).
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>Область задания функции \(\frac{1}{t\ln ct}\) определяется условиями:
+			\[\begin{cases}
+			t > 0,\\
+			ct\neq 1, 
+			\end{cases}\]
+			то есть 
+			\(t\in\left(0,\frac{1}{c}\right)\bigcup\left(\frac{1}{c},+\infty\right)\).
+			</p>
+			<p>Вычислим производную функции \(s\):
+			\(s'=\left(\frac{1}{t\ln ct}\right)'=\left((t\ln ct)^{-1}\right)'=-(t\ln ct)^{-2}\left(\ln ct+\frac{t}{ct}c\right)=-\frac{\ln ct +1}{(t\ln ct)^{2}}.\)
+			</p>
+			<p>Заметим, что эта производная существует во всей области 
+			определения функции \(s\).
+			</p>
+			<p>Вычислим вторую производную:
+			\[s''=\left(-\frac{\ln ct+1}{(t\ln ct)^{2}}\right)'=-\frac{(\ln ct+1)'(t\ln ct)^{2}-(\ln ct+1)2t\ln ct(t\ln ct)'}{(t\ln ct)^{4}}=\]
+			\[=\frac{\left(\frac{c}{ct}\right)t\ln ct-2(\ln ct+1)^{2}}{(t\ln ct)^{3}}=\frac{2\ln^{2}ct+3\ln ct +2}{(t\ln ct)^{3}}.\]
+			</p>
+			<p>Заметим, что вторая производная также существует во всей области 
+			определения функции \(s\).
+			</p>
+			<p>Подставим полученные выражения производных в левую часть заданного 
+			уравнения и приведем подобные члены. Получим:
+			\[s''+2\frac{(s')^{2}}{s}=2\frac{2\ln^{2}ct+3\ln ct+2}{(t\ln ct)^{3}}-2\frac{(\ln ct+1)^{2}}{(t\ln ct)^{4}}(t\ln ct)=\]
+			\[=\frac{2\ln^{2} ct+3\ln ct+2-2\ln^{2}ct-4\ln ct -2}{(t\ln ct)^{3}}=\frac{1}{t^{3}\ln^{2}ct}.\]
+			</p>
+			<p>Вычислим правую часть уравнения:
+			\[-\frac{s^{2}}{t}=-\frac{1}{t^{3}\ln^{2}ct}.\]
+			Замечая, что для \(t\in\left(0,\frac{1}{c}\right)⋃\left(\frac{1}{c},+\infty\right)\).
+			\[\frac{-\ln ct}{(t\ln ct)^{3}}=-\frac{1}{t^{3}\ln^{2}ct},\]
+			убеждаемся в справедливости предлагаемого равенства.
+			</p>
+			<p>Итак, мы показали, что функция \(s=\frac{1}{t\ln ct}\) в области своего 
+			задания удовлетворяет уравнению \(s''+2\frac{(s')^{2}}{s}=-\frac{s^{2}}{t}\).
+			</p>
+		</div>
+	</div>
+	
+	<p><span class="bold">Задача 5.6.</span>
+	Доказать формулу (5.5) для вычисления производной порядка \(n\) произведения 
+	двух функций \(y=u(x)\cdot v(x)\). 
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>Докажем формулу методом математической индукции.</p>
+			<p>1. База. Убедимся в справедливости формулы (5.5) при \(n=1\). 
+			Подразумевая под производными порядка \(0\) сами функции \(u^{(0)}(x)=u(x)\), 
+			\(v^{(0)}(x)=v(x)\), с учетом выполнения равенств \(C_{1}^{0}=1\), 
+			\(C_{1}^{1}=1\) получим:
+			\[y'=u'(x)\cdot v(x)+u(x)\cdot v'(x)=C_{1}^{0}\cdot u^{(1)}(x)\cdot v^{(0)}(x)
+			+ C_{1}^{1}\cdot u^{(0)}(x)\cdot v^{(1)}(x).\]
+			</p>
+			<p>2. Индукционный переход. Предположим, что формула (5.5) справедлива для 
+			производной порядка \(n\):
+			\[(u(x)\cdot v(x))^{(n)}=\sum_{k=0}^{n}C_{n}^{k}\cdot u^{(n-k)}(x)\cdot v^{(k)}(x).\]
+			</p>
+			<p>Докажем, что из предположения следует справедливость формулы (5.5) и для
+			производной порядка \(n+1\), то есть
+			\[(u(x)\cdot v(x))^{(n+1)}=\sum_{k=0}^{n+1}C_{n+1}^{k}\cdot u^{(n+1-k)}(x)\cdot v^{(k)}(x).\]
+			</p>
+			<p>Используя формулы (2.10), (2.11) и (2.12), продифференцируем выражение 
+			(5.5) и представим результат в виде двух сумм:
+			\[(u(x)\cdot v(x))^{(n+1)}=\sum_{k=0}^{n}C_{n}^{k}\cdot (u^{(n-k)}(x)\cdot v^{(k)}(x))'=\]
+			\[=\sum_{k=0}^{n}C_{n}^{k}u^{(n-k+1)}(x)\cdot v^{(k)}(x)+ \sum_{k=0}^{n}C_{n}^{k}u^{(n-k)}(x)\cdot v^{(k+1)}(x)=\]
+			\[=\sum_{k=0}^{n}C_{n}^{k}u^{(n+1-k)}(x)\cdot v^{(k)}(x)+ \sum_{m=1}^{n+1}C_{n}^{m-1}u^{(n+1-m)}(x)\cdot v^{(m)}(x),\]
+			где введено обозначение \(m=k+1\).
+			</p>
+			<p>Объединим далее слагаемые, содержащие производные оди-наковых порядков. 
+			С учетом равенств \(C_{n}^{0}=C_{n+1}^{0}=1\), \(C_{n}^{n}=C_{n+1}^{n+1}=1\) 
+			будем иметь:
+			\[(u(x)\cdot v(x))^{(n+1)}=u^{n+1}(x)\cdot v^{(0)}(x)+\sum_{k=1}^{n}(C_{n}^{k}+C_{n}^{k-1})\cdot u^{(n+1-k)}(x)\cdot v^{(k)}(x)+u^{(0)}(x)\cdot v^{(n+1)}(x).\]
+			Так как \(C_{n}^{k-1}+C_{n}^{k}=C_{n+1}^{k}\), получим:
+			\[(u(x)\cdot v(x))^{(n+1)}=C_{n+1}^{0}\cdot u^{n+1}(x)\cdot v^{(0)}(x)+\sum_{k=1}^{n}C_{n+1}^{k}\cdot u^{(n+1-k)}(x)\cdot v^{(k)}(x)+\]
+			\[+C_{n+1}^{n+1}\cdot u^{(0)}(x)\cdot v^{(n+1)}(x)=\sum_{k=0}^{n+1}C_{n+1}^{k}\cdot u^{(n+1-k)}(x)\cdot v^{(k)}(x).\]
+			</p>
+			<p>Таким образом, индукционный переход доказан и формула (5.5) справедлива 
+			для производной любого порядка \(n\geq 1\).
+			</p>
+		</div>
+	</div>	
+			
+	<p><span class="bold">Задача 5.7.</span>
+	Задан закон движения материальной точки \(S(t)=Ae^{-3t}+Be^{3t}\).
+	Доказать, что ускорение пропорционально пройденному пути. 
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>Вычислим скорость:
+			\[v(t)=(Ae^{-3t}+Be^{3t})'=-3Ae^{-3t}+3Be^{3t}\]
+			Теперь вычислим ускорение:
+			\[a(t)=v'(t)=(-3Ae^{-3t}+3Be^{3t})'=9Ae^{-3t}+9Be^{3t}.\]
+			Таким образом, поскольку \(a(t)=9S(t)\), то ускорение пропорционально 
+			пройденному пути.
+			</p>
+		</div>
+	</div>	
+			
+	<p><span class="bold">Задача 5.8.</span>
+	Доказать, что функция \(y\), заданная неявно уравнением 
+	\(\frac{x}{y}+\ln y-1=c\), удовлетворяет условию 
+	\(y\cdot y''_{xx}=(y'_{x})^{3}\).
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>Продифференцируем уравнение, определяющее \(y\), считая \(y\) зависящим от \(x\):
+			\[\left(\frac{x}{y}+\ln y-1\right)'=c';\]
+			\[\frac{y-y'_{x}\cdot x}{y^{2}}+\frac{1}{y}\cdot y'_{x}=0;\]
+			\[\frac{y-y'_{x\cdot x+y\cdot y'_{x}}}{y^{2}}=0,\]
+			откуда найдем
+			\[y'_{x}=\frac{y}{x-y}.\]
+			</p>
+			<p>Продифференцируем полученное уравнение:
+			\[y''_{xx}=\frac{y'_{x}\cdot(x-y)-(1-y'_{x})\cdot y}{(x-y)^{2}}\;или\;y''_{xx}=\frac{y'_{x}\cdot x-y}{(x-y)^{2}}\]
+			и подставим в него выражение для \(y'_{x}\). После приведения к общему знаменателю
+			получим:
+			\[y''_{xx}=\frac{\frac{y}{x-y}\cdot x-y}{(x-y)^{2}}=\frac{y^{2}}{(x-y)^{3}}.\]
+			</p>
+			<p>Подставим найденные выражения в левую и правую части заданного условия:
+			\[(y'_{x})^{3}=\left(\frac{y}{x-y}\right)^{3},\]
+			убеждаемся в том, что они равны.
+			</p>
+			<p>Доказано, что функция \(y\), заданная неявно уравнением \(\frac{x}{y}+\ln y-1=c\),
+			удовлетворяет условию \(y\cdot y''_{xx}=(y'_{x})^{3}\).
+			</p>
+		</div>
+	</div>	
+			
+	<p><span class="bold">Задача 5.9.</span>
+	Найти значение второй производной \(y''_{x}\) при \(x=-\ln 2\) для функции,
+	заданной параметрически:
+	\[\begin{cases}
+	x=\ln\sin t,\\
+	y=\ln\sin\frac{t}{2}, 
+	\end{cases} t\in \left(0,\frac{\pi}{2}\right).\]
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>Найдем сначала значение \(t=t_{0}\), при котором \(x=-\ln 2\):
+			\[\ln\sin t_{0}=-\ln 2\;или\;\ln\sin t_{0}=\ln\frac{1}{2},\]
+			откуда \(\sin t_{0}=\frac{1}{2}\), \(t_{0}=\frac{\pi}{6}.\)
+			</p>
+			<p>Дифференцируем функции \(\varphi(t)=\ln\sin t\) и 
+			\(\psi(t)=\ln\sin \frac{t}{2}\):
+			\[\varphi'(t)=\frac{\cos t}{\sin t}=\cot t,\;\;\psi'(t)=\frac{\cos\frac{t}{2}}{2\frac{t}{2}}=\frac{1}{2}\cot\frac{t}{2},\]
+			\[\varphi''(t)=-\frac{1}{\sin^{2}t}\;\;\psi''(t)=-\frac{1}{4\sin^{2}\frac{t}{2}}.\]
+			По формуле (5.11) получим:
+			\[y''_{x}=\frac{\psi''(t)\cdot\varphi'(t)-\varphi''(t)\cdot\psi'(t)}{(\varphi'(t))^{3}}=\frac{-\frac{\cot t}{4\sin^{2}\frac{t}{2}}+\frac{\cot\frac{t}{2}}{s\sin^{2}t}}{\cot^{3}t}=\]
+			\[=\tan^{3}t\left(\frac{\cot\frac{t}{2}}{2\sin^{2}t}-\frac{\cot t}{4\sin^{2}\frac{t}{2}}\right)=\frac{\sin^{2}t}{2\cos^{3}t}.\]
+			Подставим значение \(t_{0}=\frac{\pi}{6}\), получим: \(y''_{xx}=\frac{\frac{1}{4}}{2\frac{3\sqrt{3}}{8}}=\frac{\sqrt{3}}{9}\).
+			<span class="bold">Ответ.</span>\(y''_{xx}=\frac{\sqrt{3}}{9}\) при \(x=\ln 2\).
+			</p>
+		</div>
+	</div>	
+			
+	<p><span class="bold">Задача 5.10. [4].</span>
+	Пусть функция \(f(x)\) на интервале \((a,b)\) в \(n+1\) различной точке 
+	\(a < x_{1} < x_{2} <\;...\;< x_{n} < x_{n+1} < b\) обращается в нуль: <br>
+	\(f(x_{1}) = f(x_{2}) =\;...\;= f(x_{n}) = f(x_{n+1}) = 0\). Доказать, что если эта
+	функция имеет на интервале \((a,b)\) производные вплоть до \(n\)-го \((n\geq 1)\)
+	порядка включительно, то внутри интервала найдется хотя бы одна точка 
+	\(x_{0}\in(a,b)\), в которой \(f^{(n)}(x_{0})=0\).
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>Заметим, что из существования на промежутках \([x_{1},x_{2}], ..., [x_{n},x_{n+1}] ⊂ (a,b)\) 
+			производной \(f'(x)\) следует непрерывность функции \(f(x)\) на каждом из них. 
+			Таким образом, на каждом из промежутков \([x_{1},x_{2}], ..., [x_{n},x_{n+1}]\) 
+			функция \(f(x)\) удовлетворяет условиям теоремы Ролля, следовательно, внутри 
+			каждого из них найдется хотя бы одна точка \(x_{i}^{1}\in (x_{i},x_{i+1}),\) 
+			в которой \(f'(x_{i}^{1})=0\). Таким образом, хотя бы в \(n\) различных точках 
+			интервала \((a,b)\) производная \(f'(x)\) обращается в ноль.
+			</p>
+			<p>Далее, из существования второй производной \(f''(x)\) на интервале \((a,b)\)
+			следует непрерывность \(f'(x)\). Поэтому на каждом из промежутков 
+			\([x_{1}^{1},x_{2}^{1}], ..., [x_{n-1}^{1},x_{n}^{1}]\) функция \(f'(x)\) 
+			удовлетворяет условиям теоремы Ролля, следовательно, хотя бы в одной точке 
+			\(x_{i}^{2}\in (x_{i}^{1},x_{i+1}^{1}), i=1, ..., n-1, f''(x_{i}^{2})=0\).
+			Таким образом, хотя бы в \(n-1\) различных точках \((a,b)\) вторая производная
+			обращается в ноль.
+			</p>
+			<p>Продолжая подобные рассуждения, убедимся в том, что \(f'''(x)\) в \(n-2\)
+			точках обращается в ноль, \(f^{IV}(x)\) – в \(n-3\) точках и т. д. Дойдя до
+			производной \(n\) порядка, получим, что хотя бы в \(n-(n-1)=1\) точке она 
+			обращается в ноль: \(f^{(n)}(x_{1})^{n}=0\). Обозначим: \(x_{0}=x_{1}^{n}\).
+			</p>
+			<p>Итак, доказано, что внутри интервала найдется хотя бы одна точка 
+			\(x_{0}\in(a, b)\), в которой \(f^{(n)}(x_{0})=0\).
+			</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

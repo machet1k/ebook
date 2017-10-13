@@ -1,0 +1,68 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_026.html" class="button">Назад</a>
+	<a href="../pages/paragraph_028.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 2. ВЫЧИСЛЕНИЕ ПРОИЗВОДНОЙ</div>
+	<div class="h2">2.7. Дифференцирование функций, заданных параметрически</div>
+	<p>Зависимость переменной \(y\) от переменной \(x\) может быть задана не 
+	непосредственно, а с помощью третьей переменной \(t\), называемой параметром:
+\[\begin{cases}
+x=\varphi(t),\\
+y=\psi(t), & 
+\end{cases} (t\in T).\]
+	</p>
+	<p>Предположим, что обе функции \(\psi\) и \(\varphi\) имеют производные и что 
+	существует обратная функция \(t=\varphi^{-1}(x)\), имеющая производную. Тогда
+	\[y=\psi(\varphi^{-1}(x)).\]
+	Используя теоремы 
+<a class="htooltip" href="#">(2.4)<span class="wStyle">
+Пусть функция \(z(x)\) имеет в точке \(x\) производную 
+		\(z'(x)\). Пусть функция \(y(z)\) имеет в точке \(z=z(x)\) 
+		производную \(y_{z}'(z)\). Тогда сложная функция \(y(z(x))\) 
+		имеет в точке \(x\) производную и 
+\begin{equation}
+(y(z(x)))'_{x}=y'_{z}(z(x))\cdot z'(x). \tag{2.2}
+\end{equation}
+</span></a>
+	и
+<a class="htooltip" href="#">(2.3)<span class="wStyle">
+Пусть функция \(y=f(x)\) удовлетворяет условиям теоремы 2.2 и 
+		в точке \(x_{0}\in X\) существует производная \(y=f'_{x}(x_{0})\neq 0\).
+		Тогда и обратная функция \(g(y)\) в точке \(y_{0}=f(x_{0})\) имеет 
+		производную \(g'_{y}(y_{0})\) и выполняется равенство
+\[g'_{y}(y_{0})=\frac{1}{f'_{x}(x_{0})}\tag{2.1}\]
+</span></a>
+	, получим
+	\[y'_{x}=\psi'_{t}\cdot(\varphi^{-1}(x))'_{x}=\psi'_{t}\cdot\frac{1}{\varphi'_{t}}=\frac{\psi'(t)}{\varphi'(t)}\]
+	или
+\[\begin{cases}
+x=\varphi(t), \\
+y=\frac{\psi'(t)}{\varphi'(t)}. 
+\end{cases}(t\in T),\tag{2.9}\]
+	</p>
+
+</div>
+</body>
+</html>

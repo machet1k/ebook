@@ -1,0 +1,333 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		$("div.spoiler div.name span").toggle(function(){
+		$(this).parent("div.name").parent("div.spoiler").children("div.text").show();
+		$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " -15px 0");
+		},function(){
+		$(this).parent("div.name").parent("div.spoiler").children("div.text").hide();
+		$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " 0 -15px");
+		});
+		});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_010.html" class="button">Назад</a>
+	<a href="../pages/paragraph_020.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 1. ОПРЕДЕЛЕНИЕ ПРОИЗВОДНОЙ</div>
+	<div class="h2">Задачи к \(\S\) 1. </div>	
+	<p><span class="elected">Задача 1.1.</span> 
+	Установить, существуют ли производные следующих функций при \(x=x_{0}\), и, если они существуют, 
+	то найти их, пользуясь определением производной:
+\[а)\quad f(x)=\sqrt[4]{x^{7}}, \quad x_{0}=16;\]
+\[б)\quad f(x)=
+	\begin{cases}
+	2x-3, & x \leq 2,\\
+	\frac{x}{2}, & x>2
+	\end{cases}, \quad x_{0}=0;\]
+\[в)\quad f(x)=
+	\begin{cases}
+	2x-3, & x \leq 2,\\
+	\frac{x}{2}, & x>2
+	\end{cases}, \quad x_{0}=3;\]
+\[г)\quad f(x)=
+	\begin{cases}
+	2x-3, & x \leq 2,\\
+	\frac{x}{2}, & x>2
+	\end{cases}, \quad x_{0}=2;\]
+\[д)\quad f(x)=
+	\begin{cases}
+	\sin\frac{\pi x}{4}, & x \leq 1,\\
+	\frac{\sqrt{2}}{8}(\pi x+4-\pi), & x>1
+	\end{cases}, \quad x_{0}=1;\]
+	</p>
+		
+	<p><span class="elected">Указание 1.1.</span> 
+	При вычислении производной непрерывной функции по определению
+<a class="htooltip" href="#">1.1<span class="wStyle">
+	Пусть функция \(y=f(x)\) определена на множестве \(X\). Пусть \(x_{0}\in X\). 
+	Придадим  \(x_{0}\) приращение \(\Delta x (\Delta x < 0\) или \(\Delta x > 0)\) 
+	так, чтобы \(x_{0}+\Delta x \in X\). 
+	<span class="elected">Производной функции \(y=f(x)\) по переменной \(x\) 
+	при \(x=x_{0}\) называется предел отношения приращения функции  
+	\(\Delta y\), вычисленного в этой точке, к вызвавшему его приращению 
+	аргумента \(\Delta x\) при стремлении последнего к \(0\), то есть
+	\[\lim_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x \rightarrow 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x},\tag{1.1}\]
+	если этот предел существует.
+	</span></span>
+</a>
+	возникает 
+	неопределенность типа \(\left[\frac{0}{0}\right]\). Ее следует раскрыть, заменяя бесконечно 
+	малые величины (в произведении и частном) эквивалентными.
+	</p>
+
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>П. а). Согласно определению 
+<a class="htooltip" href="#">1.1<span class="wStyle">
+	Пусть функция \(y=f(x)\) определена на множестве \(X\). Пусть \(x_{0}\in X\). 
+	Придадим  \(x_{0}\) приращение \(\Delta x (\Delta x < 0\) или \(\Delta x > 0)\) 
+	так, чтобы \(x_{0}+\Delta x \in X\). 
+	<span class="elected">Производной функции \(y=f(x)\) по переменной \(x\) 
+	при \(x=x_{0}\) называется предел отношения приращения функции  
+	\(\Delta y\), вычисленного в этой точке, к вызвавшему его приращению 
+	аргумента \(\Delta x\) при стремлении последнего к \(0\), то есть
+	\[\lim_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x \rightarrow 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x},\tag{1.1}\]
+	если этот предел существует.
+	</span></span>
+</a>
+			производная 
+				\[f'(16)=\lim_{\Delta x \rightarrow 0}\frac{\sqrt[4]{(16+\Delta x)^{7}}-128}{\Delta x}\]
+			</p>
+			<p>Здесь возникает неопределенность типа \(\left[\frac{0}{0}\right]\). Чтобы раскрыть эту 
+			неопределенность, приведем выражение под знаком предела к виду 
+			\(\frac{\sqrt[4]{(1+\alpha)^{7}}-1}{\alpha}\), где \(\alpha\rightarrow 0\), 
+			для чего вынесем общий множитель в числителе за скобку и за знак предела:
+			\[f'(16)=128\lim_{\Delta x \rightarrow 0}\frac{\sqrt[4]{(1+\frac{\Delta x}{16})^{7}}-1}{\Delta x}.\]
+			</p>
+			<p>Замечая, что при \(\Delta x \rightarrow 0\) бесконечно малая функция 
+			\(\sqrt[4]{\left(1+\frac{\Delta x}{16}\right)^{7}}-1\) эквивалентна бесконечно малой величине 
+			\(\frac{7}{64}\Delta x\), воспользуемся заменой бесконечно малых величин на 
+			эквивалентные и затем сократим числитель и знаменатель на общий множитель 
+			\(\Delta x\):
+			\[f'(16)=128\lim_{\Delta x\rightarrow 0}\frac{7 \Delta x}{64 \Delta x}=14.\]
+			</p>
+			<p><span class="bold">Ответ.</span>
+			\(f'(16)=14.\)
+			</p>
+			<p>П. б). В окрестности точки \(x_{0}=0\) функция задается формулой \(f(x)=2x-3\). 
+			Согласно определению 
+<a class="htooltip" href="#">1.1<span class="wStyle">
+	Пусть функция \(y=f(x)\) определена на множестве \(X\). Пусть \(x_{0}\in X\). 
+	Придадим  \(x_{0}\) приращение \(\Delta x (\Delta x < 0\) или \(\Delta x > 0)\) 
+	так, чтобы \(x_{0}+\Delta x \in X\). 
+	<span class="elected">Производной функции \(y=f(x)\) по переменной \(x\) 
+	при \(x=x_{0}\) называется предел отношения приращения функции  
+	\(\Delta y\), вычисленного в этой точке, к вызвавшему его приращению 
+	аргумента \(\Delta x\) при стремлении последнего к \(0\), то есть
+	\[\lim_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x \rightarrow 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x},\tag{1.1}\]
+	если этот предел существует.
+	</span></span>
+</a>
+		производная вычисляется следующим образом:
+		\[f'(0)=\lim_{\Delta x\rightarrow 0}\frac{(2(0+\Delta x)-3)-(2\cdot 0-3)}{\Delta x}=\lim_{\Delta x\rightarrow 0}\frac{2 \Delta x}{\Delta x}=2.\]
+		</p>
+		<p><span class="bold">Ответ.</span>
+		\(f'(0)=2.\)
+		</p>
+		<p>П. в). В окрестности точки \(x_{0}=3\) функция задается формулой \(f(x)=\frac{x}{2}\). 
+		По определению 
+<a class="htooltip" href="#">1.1<span class="wStyle">
+	Пусть функция \(y=f(x)\) определена на множестве \(X\). Пусть \(x_{0}\in X\). 
+	Придадим  \(x_{0}\) приращение \(\Delta x (\Delta x < 0\) или \(\Delta x > 0)\) 
+	так, чтобы \(x_{0}+\Delta x \in X\). 
+	<span class="elected">Производной функции \(y=f(x)\) по переменной \(x\) 
+	при \(x=x_{0}\) называется предел отношения приращения функции  
+	\(\Delta y\), вычисленного в этой точке, к вызвавшему его приращению 
+	аргумента \(\Delta x\) при стремлении последнего к \(0\), то есть
+	\[\lim_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x \rightarrow 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x},\tag{1.1}\]
+	если этот предел существует.
+	</span></span>
+</a>
+		получим:
+		\[f'(3)=\lim_{\Delta x\rightarrow 0}\frac{\frac{3+\Delta x}{2}-\frac{3}{2}}{\Delta x}=\lim_{\Delta x\rightarrow 0}\frac{\Delta x}{2\Delta x}=\frac{1}{2}.\]
+		</p>
+		<p><span class="bold">Ответ.</span>
+		\(f'(3)=\frac{1}{2}.\)
+		</p>
+		<p>П. г). При \(x\leq 2\) и при \(x>2\) функция задана разными формулами. 
+		Согласно замечанию 1.2 найдем обе односторонние производные при \(x_{0}=2\): 
+		\[f'_{+}(2)=\lim_{\Delta x \rightarrow +0}\frac{\frac{2+\Delta x}{2}-1}{\Delta x}=\lim_{\Delta x \rightarrow +0}\frac{\Delta x}{2\Delta x}=\frac{1}{2},\]
+		\[f'_{-}(2)=\lim_{\Delta x \rightarrow -0}\frac{(2(2+\Delta x)-3)-1}{\Delta x}=\lim_{\Delta x \rightarrow -0}\frac{2\Delta x}{\Delta x}=2.\]
+		</p>
+		<p>Производные слева и справа не равны друг другу, следовательно, 
+		производной функции при \(x_{0}=2\) не существует.
+		</p>
+		<p><span class="bold">Ответ.</span> \(f'(2)\) не существует.
+		</p>
+		<p>П. д). Поскольку функция \(f(x)\) задана разными формулами слева и справа от \(x_{0}=1\), 
+		воспользуемся замечанием 1.2 и найдем обе односторонние производные:
+		\[f'_{-}(1)=\lim_{\Delta x \rightarrow -0}\frac{\sin\frac{\pi(1+\Delta x)}{4}-\sin\frac{\pi}{4}}{\Delta x},\]
+		\[f'_{+}(1)=\lim_{\Delta x \rightarrow +0}\frac{\frac{\sqrt{2}}{8}(\pi\Delta x+4)-\frac{\sqrt{2}}{2}}{\Delta x}.\]
+		Каждый из пределов представляет собой неопределенность типа \(\left[\frac{0}{0}\right]\).
+		</p>
+		<p>Для раскрытия первой неопределенности воспользуемся тригонометрической формулой
+		\[\sin\alpha-\sin\beta=2\sin\frac{\alpha-\beta}{2}\cos\frac{\alpha+\beta}{2}.\]
+		Получим
+		\[f'_{-}(1)=2\lim_{\Delta x \rightarrow -0}\frac{\sin\frac{\pi\Delta x}{8}\cos(\frac{\pi}{4}+\frac{\pi\Delta x}{8})}{\Delta x}.\]
+		</p>
+		<p>Замечая, что бесконечно малая при \(\Delta x\rightarrow -0\) функция 
+		\(\sin\frac{\pi\Delta x}{8}\) эквивалентна своему аргументу \(\frac{\pi\Delta x}{8}\), 
+		произведем замену на эквивалентную бесконечно малую, сократим числитель и знаменатель
+		дроби на \(\Delta x\) и, воспользовавшись непрерывностью косинуса, вычислим предел:
+		\[f'_{-}(1)=2\lim_{\Delta x \rightarrow -0}\frac{\frac{\pi\Delta x}{8}\cos(\frac{\pi}{4}+\frac{\pi\Delta x}{8})}{\Delta x}= \frac{\pi}{4}\lim_{\Delta x \rightarrow -0} \cos\left(\frac{\pi}{4}+\frac{\pi\Delta x}{8}\right)= \frac{\pi}{4}\cos\frac{\pi}{4}=\frac{\sqrt{2}\cdot\pi}{8}.\]
+		</p>
+		<p>Для вычисления одностороннего предела справа раскроем скобки, приведем подобные 
+		члены и сократим числитель и знаме-натель дроби на общий множитель \(\Delta x\). Тогда получим:
+		\[f'_{+}(1)=\lim_{\Delta x \rightarrow +0}\frac{\frac{\sqrt{2}}{8}(\pi\Delta x +4)-\frac{\sqrt{2}}{2}}{\Delta x}= \lim_{\Delta x \rightarrow +0} \frac{\sqrt{2}\pi\cdot\Delta x}{8\Delta x}= \frac{\sqrt{2}\cdot\pi}{8}.\]
+		</p>
+		<p>Так как обе односторонние производные существуют и равны, то, согласно замечанию 1.2, 
+		существует и производная функции при \(x_{0}=1\).
+		</p>
+		<p><span class="bold">Ответ.</span> \(f'(1)=\frac{\sqrt{2}\cdot\pi}{8}.\)
+		</p>
+		</div>
+	</div>
+		<p><span class="elected">Задача 1.2.</span> 
+		Найти производные следующих функций, пользуясь определением производной:
+		\[а)\quad f(x)=\cos(3x-2);\]
+		\[б)\quad f(x)=\ln(7x-3);\]
+		\[в)\quad f(x)=e^{-4x+2};\]
+		\[г)\quad f(x)=\sqrt[5]{x^{2}+2};\]
+		</p>
+		<div class="spoiler">
+			<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+			<div class="text">
+				<p>П. а). Пусть \(x\in R\). Согласно определению 
+<a class="htooltip" href="#">1.1<span class="wStyle">
+	Пусть функция \(y=f(x)\) определена на множестве \(X\). Пусть \(x_{0}\in X\). 
+	Придадим  \(x_{0}\) приращение \(\Delta x (\Delta x < 0\) или \(\Delta x > 0)\) 
+	так, чтобы \(x_{0}+\Delta x \in X\). 
+	<span class="elected">Производной функции \(y=f(x)\) по переменной \(x\) 
+	при \(x=x_{0}\) называется предел отношения приращения функции  
+	\(\Delta y\), вычисленного в этой точке, к вызвавшему его приращению 
+	аргумента \(\Delta x\) при стремлении последнего к \(0\), то есть
+	\[\lim_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x \rightarrow 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x},\tag{1.1}\]
+	если этот предел существует.
+	</span></span>
+</a>
+			производная 
+			\[f'(x)=\lim_{\Delta x \rightarrow 0}\frac{\cos(3(x+\Delta x)-2)-\cos(3x-2)}{\Delta x}.\]
+			Здесь возникает неопределенность типа \(\left[\frac{0}{0}\right]\). Чтобы раскрыть эту 
+			неопределенность, преобразуем выражение, стоящее в числителе, в произведение тригонометрических 
+			функций по формуле
+			\[\cos\alpha-\cos\beta=2\sin\frac{\alpha+\beta}{2}\sin\frac{\beta-\alpha}{2}.\]
+			Тогда
+			\[\cos(3(x+\Delta x)-2)-\cos(3x-2)=-2\sin\frac{6x-4+3\Delta x}{2}\sin\frac{3\Delta x}{2}.\]
+			Следовательно, 
+			\[f'(x)=\lim_{\Delta x \rightarrow 0}\frac{-2\sin\frac{6x-4+3\Delta x}{2}\sin\frac{3\Delta x}{2}}{\Delta x}.\]
+			</p>
+			<p>Замечая, что при \(\Delta x \rightarrow 0\) бесконечно малая функция 
+			\(\sin\frac{3\Delta x}{2}\) эквивалентна своему бесконечно малому 
+			аргументу \(\frac{3\Delta x}{2}\), воспользуемся заменой бесконечно малых величин 
+			на эквивалентные и затем сократим числитель и знаменатель на общий множитель \(\Delta x\):
+			\[f'(x)=\lim_{\Delta x \rightarrow 0}\frac{-2(\sin\frac{6x-4+3\Delta x}{2})\frac{3\Delta x}{2}}{\Delta x}= -3\lim_{\Delta x \rightarrow 0}\ \sin\frac{6x-4+3\Delta x}{2}.\]
+			Вычисляя предел, в силу непрерывности функции \(\sin x\) получим значение производной
+			\[f'(x)=-3\sin(3x-2).\]
+			</p>
+			<p><span class="bold">Ответ.</span> 
+			\(\left(\cos(3x-2)\right)'=-3\sin(3x-2).\)
+			</p>
+			<p>П. б). Пусть \(x>\frac{3}{7}\). Согласно определению 
+<a class="htooltip" href="#">1.1<span class="wStyle">
+	Пусть функция \(y=f(x)\) определена на множестве \(X\). Пусть \(x_{0}\in X\). 
+	Придадим  \(x_{0}\) приращение \(\Delta x (\Delta x < 0\) или \(\Delta x > 0)\) 
+	так, чтобы \(x_{0}+\Delta x \in X\). 
+	<span class="elected">Производной функции \(y=f(x)\) по переменной \(x\) 
+	при \(x=x_{0}\) называется предел отношения приращения функции  
+	\(\Delta y\), вычисленного в этой точке, к вызвавшему его приращению 
+	аргумента \(\Delta x\) при стремлении последнего к \(0\), то есть
+	\[\lim_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x \rightarrow 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x},\tag{1.1}\]
+	если этот предел существует.
+	</span></span>
+</a>
+			производная 
+			\[f'(x)=\lim_{\Delta x \rightarrow 0}\frac{\ln{7(x+\Delta x)-3}-\ln(7x-3)}{\Delta x}.\]
+			Здесь возникает неопределенность типа \(\left[\frac{0}{0}\right]\).
+			Преобразуем выражение, стоящее в числителе, по формуле
+			\[\ln\alpha-\ln\beta=\ln\frac{\alpha}{\beta}.\]
+			Тогда
+			\[\ln(7(x+\Delta x)-3)-\ln(7x-3)=\ln\frac{7x-3+7\Delta x}{7x-3}=\ln\left(1+\frac{7\Delta x}{7x-3}\right)\]
+			Следовательно, 
+			\[f'(x)=\lim_{\Delta x \rightarrow 0}\frac{ \ln(1+\frac{7\Delta x}{7x-3}) }{\Delta x}.\]
+			При \(\Delta x \rightarrow 0\) бесконечно малая функция \(\ln\left(1+\frac{7\Delta x}{7x-3}\right)\) 
+			эквивалентна бесконечно малой \(\frac{7\Delta x}{7x-3}\). 
+			Заменив \(\ln\left(1+\frac{7\Delta x}{7x-3}\right)\) на эквивалентную, получим
+			\[f'(x)=\lim_{\Delta x \rightarrow 0}\frac{\frac{7\Delta x}{7x-3}}{\Delta x}= \lim_{\Delta x \rightarrow 0}\frac{7}{7x-3}=\frac{7}{7x-3}.\]
+			<p><span class="bold">Ответ.</span> 
+			\((\ln(7x-3))'=\frac{7}{7x-3}.\)
+			</p>
+			<p>П. в). Пусть \(x\in R\). По определению 
+<a class="htooltip" href="#">1.1<span class="wStyle">
+	Пусть функция \(y=f(x)\) определена на множестве \(X\). Пусть \(x_{0}\in X\). 
+	Придадим  \(x_{0}\) приращение \(\Delta x (\Delta x < 0\) или \(\Delta x > 0)\) 
+	так, чтобы \(x_{0}+\Delta x \in X\). 
+	<span class="elected">Производной функции \(y=f(x)\) по переменной \(x\) 
+	при \(x=x_{0}\) называется предел отношения приращения функции  
+	\(\Delta y\), вычисленного в этой точке, к вызвавшему его приращению 
+	аргумента \(\Delta x\) при стремлении последнего к \(0\), то есть
+	\[\lim_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x \rightarrow 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x},\tag{1.1}\]
+	если этот предел существует.
+	</span></span>
+</a>
+			имеем 
+			\[f'(x)=\lim_{\Delta x \rightarrow 0}\frac{ e^{-4(x+\Delta x)+2}-e^{-4x+2} }{\Delta x}.\]
+			Здесь возникает неопределенность типа \(\left[\frac{0}{0}\right]\).
+			Преобразуем выражение, стоящее в числителе, вынося за скобку множитель \(e^{-4x+2}:\)
+			\[e^{-4(x+\Delta x)+2}-e^{-4x+2}=e^{-4x+2}(e^{-4\Delta x}-1),\]
+			и заменим бесконечно малую при \(\Delta x \rightarrow 0\) функцию \(e^{-4\Delta x}-1\) 
+			на эквивалентную ей бесконечно малую \((-4\Delta x)\). 
+			Сократим числитель и знаменатель на общий множитель \(\Delta x\) и, вычисляя предел, получим:
+			\[f'(x)=\lim_{\Delta x \rightarrow 0}\frac{e^{-4x+2}(-4\Delta x)}{\Delta x}= \lim_{\Delta x \rightarrow 0}(-4e^{-4x+2})=-4e^{-4x+2}.\]
+			</p>
+			<p><span class="bold">Ответ.</span> 
+			\(\left(e^{-4x+2}\right)'=-4e^{-4x+2}.\)
+			</p>
+			
+			<p>П. г). Пусть \(x\in R\). По определению 
+	<a class="htooltip" href="#">1.1<span class="wStyle">
+		Пусть функция \(y=f(x)\) определена на множестве \(X\). Пусть \(x_{0}\in X\). 
+		Придадим  \(x_{0}\) приращение \(\Delta x (\Delta x < 0\) или \(\Delta x > 0)\) 
+		так, чтобы \(x_{0}+\Delta x \in X\). 
+		<span class="elected">Производной функции \(y=f(x)\) по переменной \(x\) 
+		при \(x=x_{0}\) называется предел отношения приращения функции  
+		\(\Delta y\), вычисленного в этой точке, к вызвавшему его приращению 
+		аргумента \(\Delta x\) при стремлении последнего к \(0\), то есть
+		\[\lim_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x \rightarrow 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x},\tag{1.1}\]
+		если этот предел существует.
+		</span></span>
+	</a>
+			имеем 
+			\[f'(x)=\lim_{\Delta x \rightarrow 0}\frac{ \sqrt[5]{(x+\Delta x)^2+2}-\sqrt[5]{x^2+2} }{\Delta x}.\]
+			Здесь возникает неопределенность типа \(\left[\frac{0}{0}\right]\).
+			Преобразуем выражение, стоящее в числителе, вынося за скобку множитель \(\sqrt[5]{x^2+2}:\)
+			\[ \sqrt[5]{(x+\Delta x)^2+2}-\sqrt[5]{x^2+2}=\sqrt[5]{x^2+2} \left(\sqrt[5]{\frac{(x+\Delta x)^2+2}{x^2+2}}-1\right)= \]
+			\[=\sqrt[5]{x^2+2}\left(\sqrt[5]{1+\frac{2x\Delta x+(\Delta x)^2}{x^2+2}}-1\right).\]
+			</p>
+			<p>Заметим, что бесконечно малая при \(\Delta x \rightarrow 0\) функция \( \sqrt[5]{1+\frac{2x\Delta x+(\Delta x)^2}{x^2+2}}-1 \) 
+			эквивалентна бесконечно малой \( \frac{2x\Delta x+(\Delta x)^2}{5(x^2+2)} \). 
+			Произведем замену бесконечно малой на эквивалентную и сократим числитель и знаменатель на общий 
+			множитель \(\Delta x\). Тогда, получим:
+			\[f'(x)=\lim_{\Delta x \rightarrow 0}\sqrt[5]{x^2+2} \frac{\Delta x(2x+\Delta x)}{5\Delta x(x^2+2)}=\frac{2x}{5}\sqrt[5]{x^2+2}^{-4}.\]
+			</p>
+			<p><span class="bold">Ответ.</span> 
+			\(\left( \sqrt[5]{x^2+2} \right)'=\frac{2x}{5\sqrt[5]{x^2+2}^{4}}.\)
+			</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

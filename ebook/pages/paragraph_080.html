@@ -1,0 +1,145 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	TeX: {
+		Macros: {
+			tan: '{\\rm tg\\;\}',
+			cot: '{\\rm ctg\\;\}',
+			arctan: '{\\rm arctg\\;\}',
+			arccot: '{\\rm arcctg\\;\}'
+		}
+	}
+});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_070.html" class="button">Назад</a>
+	<a href="../pages/paragraph_081.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 8. Асимптоты</div>
+	
+	<a href="../pages/paragraph_081.html" class="button">8.1</a>
+	<a href="../pages/paragraph_082.html" class="button">8.2</a>
+	
+	<div class="definition">
+		<span class="elected">Определение 8.1.</span>
+		<p>Пусть \(K\) – плоская кривая и пусть при движении точки \((x,y)\) вдоль 
+		кривой \(K\) выполняется соотношение \(x^{2}+y^{2}\rightarrow +\infty\). 
+		Если расстояние \(r\) от точки на кривой \(K\) до прямой \(L\) стремится 
+		к нулю при \(x^{2}+y^{2}\rightarrow +\infty\), то говорят, что прямая \(L\) 
+		является <span class="elected">асимптотой</span> кривой \(K\).
+		</p>
+	</div>
+	
+	<div class="h2"><a name="an81">8.1. Вертикальные асимптоты</a></div>	
+	<p>Пусть кривая \(K\) – это график функции \(y=f(x)\). 
+	<span class="elected">Вертикальная асимптота</span> к графику функции возникает, 
+	если при \(x=x_{0}\) функция терпит бесконечный разрыв, стремясь к бесконечности
+	того или иного знака при стремлении \(x\) к \(x_{0} \) слева или справа. В этом 
+	случае расстояние \(r\) от точки \(M(x,f(x))\) до вертикальной прямой \(L\) 
+	равно \(x-x_{0}\). Стремлению \(r\) к \(0\) соответствует стремление \(y^{2}(x)\)
+	к бесконечности (рис. 8.1). Таким образом, вертикальная прямая с уравнением 
+	\(x-x_{0}\) будет асимптотой графика функции \(y=f(x)\) тогда и только тогда, 
+	когда \(\lim_{x\rightarrow x_{0}\pm 0}f(x)=\infty\).
+	</p>
+	<div class="h2"><a name="an82">8.2. Наклонные асимптоты</a></div>	
+	<p>Пусть прямая \(L\), имеющая уравнение \(y_{L}=kx+b\), является при 
+	\(x\rightarrow +\infty\) асимптотой для графика функции \(y=f(x)\). 
+	Тогда (рис. 8.2) вместе с \(r\) стремится к \(0\) и разность ординат 
+	\(|y_{L}-y|\), поскольку \(|y_{L}-y| < \frac{r}{\cos\alpha} \), 
+	где \(\alpha\) – угол наклона асимптоты \(\left(\alpha\neq\frac{\pi}{2}\right)\). 
+	Таким образом,
+	\[\lim_{x\rightarrow +\infty}(y-kx-b)=\lim_{x\rightarrow +\infty}(f(x)-kx-b)=0 \tag{8.1}\]
+	или
+	\[\lim_{x\rightarrow +\infty}\left(\dfrac{f(x)}{x}-k-\dfrac{b}{x}\right)=0.\]
+	Поскольку \(x\) есть бесконечно большая, то функция 
+	\(\left(\dfrac{f(x)}{x}-k-\dfrac{b}{x}\right)\) является бесконечно 
+	малой, то есть  \(\lim_{x\rightarrow +\infty}\left(\dfrac{f(x)}{x}-k-\dfrac{b}{x}\right)=0\),
+	откуда \(k=\lim_{x\rightarrow +\infty}\dfrac{f(x)}{x}=0\). Если последний предел 
+	существует и угловой коэффициент \(k\) найден, то из (8.1) получаем \(b\), откуда 
+	\[k=\lim_{x\rightarrow +\infty}\dfrac{f(x)}{x},\qquad b=\lim_{x\rightarrow +\infty}(f(x)-kx).\tag{8.2}\]
+	</p>
+	<p>Обратно, если существуют пределы (8.2), то справедливо равенство (8.1).
+	</p>
+	<p>Доказана следующая теорема.
+	</p>
+	
+	<div class="theorem" style="border-bottom: 2px #FF9D3A solid;">
+		<span class="elected">Теорема 8.1.</span>
+		<p>Пусть функция \(y=f(x)\) определена на промежутке \([a,+\infty)\). 
+		Для того чтобы ее график при \(x\rightarrow +\infty\) имел наклонную асимптоту 
+		\(y=kx+b\), необходимо и достаточно, чтобы существовали пределы (8.2).
+		</p>
+		<p>Аналогично доказывается следующая теорема.
+		</p>
+	</div>
+	<div class="theorem" style="border-bottom: 2px #FF9D3A solid;">
+		<span class="elected">Теорема 8.2.</span>
+		<p>Пусть функция \(y=f(x)\) определена на промежутке \((-\infty,a]\). 
+		Для того чтобы ее график имел при \(x\rightarrow -\infty\) наклонную асимптоту 
+		\(y=kx+b\), необходимо и достаточно, чтобы существовали пределы в равенствах
+		\[k=\lim_{x\rightarrow -\infty}\dfrac{f(x)}{x},\qquad b=\lim_{x\rightarrow -\infty}(f(x)-kx).\tag{8.3}\]
+		</p>
+	</div>
+	
+	<div class="img" style="float: left; padding-left: 20px;">
+		<img src="../img/8-1.png"/>
+		<div class="nameImg">Рис. 8.1</div>
+	</div>
+	<div class="img" style="float: left; padding-left: 50px;">
+		<img src="../img/8-2.png"/>
+		<div class="nameImg">Рис. 8.2</div>
+	</div>
+	
+	<p><span class="elected">Замечание 8.1.</span>
+	Если в (8.2) ((8.3)), мы получаем <span class="elected">горизонтальную асимптоту</span> 
+	графика функции \(y=f(x)\) – частный случай наклонной асимптоты. Для того чтобы \(y=b\)
+	служила горизонтальной асимптотой графика при \(x\rightarrow +\infty\) 
+	(или при \(x\rightarrow -\infty\)), необходимо и достаточно, чтобы выполнялось равенство
+	\[\lim_{x\rightarrow +\infty}y=\lim_{x\rightarrow +\infty}f(x)\quad\left(или\;\lim_{x\rightarrow -\infty}y=\lim_{x\rightarrow -\infty}f(x)\right). \tag{8.4}\]
+	</p>
+	<p>Заметим, что если 
+	\(\lim_{x\rightarrow +\infty}f(x)=b\quad\left(или\;\lim_{x\rightarrow -\infty}f(x)=b\right)\), 
+	то горизонтальная прямая \(y=b\) является асимптотой. Искать \(k\) не нужно, поскольку 
+	в этом случае \(k=0\). 
+	</p>
+	<p><span class="bold">Пример 8.1.</span>
+	График функции \(y=x\sqrt[3]{(x-1)^{2}}\) асимптот не имеет, так как функция непрерывна 
+	и \(\lim_{x\rightarrow \infty}\dfrac{f(x)}{x}=+\infty\).
+	</p>
+	
+	<div class="h2">Задачи к \(\S\) 8. </div>	
+	<p><span class="bold">Задача 8.1.</span>
+	Найти асимптоты графика функции \(y=f(x)\):
+	</p>
+	<p>а) \(f(x)=\dfrac{2x+1}{x-2};\)
+	</p>
+	<p>б) \(f(x)=\dfrac{x^{2}+2x+3}{|x+1|};\)
+	</p>
+	<p>в) \(f(x)=(2x-3)e^{-4x};\)
+	</p>
+	<p>г) \(f(x)=\sqrt[3]{(1-2x)(x-3)}\)
+	</p>
+	<p><span class="elected">Решение.</span></p>
+	<p>П. а) 1. При \(x=2\) функция терпит бесконечный разрыв, причем
+	\[\lim_{x\rightarrow 2-0}\dfrac{2x+1}{x-2}=-\infty,\qquad\lim_{x\rightarrow 2+0}\dfrac{2x+1}{x-2}=+\infty\]
+	Следовательно, прямая \(x=2\) является вертикальной асимптотой.
+	</p>
+	<p>\(\qquad\)2. Используя замечание 8.1, рассмотрим предел (8.4):
+	\[b=\lim_{x\rightarrow \pm\infty}f(x)=\lim_{x\rightarrow \pm\infty}\dfrac{2x+1}{x-2}=2,\]
+	следовательно, \(k=0\) и у графика есть горизонтальная асимптота \(y=2\).
+	</p>
+
+	<a href="../pages/problems_08.html" class="button">К задачам \(\S\) 8</a>
+
+</div>
+</body>
+</html>

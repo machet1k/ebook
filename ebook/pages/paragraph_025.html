@@ -1,0 +1,59 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_024.html" class="button">Назад</a>
+	<a href="../pages/paragraph_026.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 2. ВЫЧИСЛЕНИЕ ПРОИЗВОДНОЙ</div>
+<div class="h2">2.5. Дифференцирование функции, заданной неявно</div>
+
+	<p>Пусть функция \(y\) аргумента \(x\) задается неявно уравнением
+\begin{equation}
+F(x,y)=0. \tag{2.5}
+\end{equation}
+	</p>
+	<p>Предположим, что функция \(y\) имеет производную по аргументу \(x\)
+	в области своего задания. Тогда вычислить ее можно следующим образом.
+	</p>
+	<p>Продифференцируем равенство
+<a class="htooltip" href="#">(2.5)<span class="wStyle">\(F(x,y)=0\)</span></a>
+	как тождество, имея в виду, что 
+	переменная \(y\) является функцией переменной \(x\) и, следовательно, 
+	любая функция от \(y\) является сложной функцией переменной \(x\). 
+	Затем выразим производную \(y'_{x}\) через \(x\) и \(y\).
+	</p>
+	<p><span class="bold">Пример 2.10.</span> 
+	Функция \(y\) задана уравнением \(\ln(x^2+y^2)=\arctan\frac{y}{x}.\) Найти 
+	\(y'_{x}.\)
+	</p>
+	<p>Продифференцируем заданное равенство по \(x\):
+	</p>
+	\[\frac{2x+2y\cdot y'_{x}}{x^2+y^2}=\frac{\frac{y'_{x}\cot x-y}{x^2}}{1+\frac{y^2}{x^2}},\]
+	или
+	\[2x+2y\cdot y'_{x}=y'_{x}\cdot x-y,\] 
+	откуда
+	\[y'_{x}=\frac{2x+y}{x-2y}.\]
+
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_023.html" class="button">Назад</a>
+	<a href="../pages/paragraph_025.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 2. ВЫЧИСЛЕНИЕ ПРОИЗВОДНОЙ</div>
+	<div class="h2">2.4. Производная сложной функции</div>
+	
+	<div class="theorem">
+	<span class="elected">Теорема 2.4.</span>
+		<p>Пусть функция \(z(x)\) имеет в точке \(x\) производную 
+		\(z'(x)\). Пусть функция \(y(z)\) имеет в точке \(z=z(x)\) 
+		производную \(y_{z}'(z)\). Тогда сложная функция \(y(z(x))\) 
+		имеет в точке \(x\) производную и 
+\begin{equation}
+(y(z(x)))'_{x}=y'_{z}(z(x))\cdot z'(x). \tag{2.2}
+\end{equation}
+		</p>
+	</div>
+	<div class="proof">
+	<span class="elected">Доказательство</span>
+		<p>Придадим аргументу \(x\) приращение \(\Delta x\). 
+		Тогда функция \(z\) получит приращение \(\Delta z\), а функция 
+		\(y\) – приращение \(\Delta y\), вызванное приращением \(\Delta z\). 
+		По формуле (1.6) имеем
+		\[\Delta y=y'_{z}\Delta z+\alpha\Delta z.\]
+		где \(\alpha\) стремится к \(0\) при \(\Delta z\rightarrow 0\). 
+		Разделим данное равенство почленно на \(\Delta x\). Получим
+		\[\frac{\Delta y}{\Delta x}=y'_{z}\frac{\Delta z}{\Delta x}+\alpha\frac{\Delta z}{\Delta x}.\]
+		</p>
+		<p>Перейдем теперь к пределу при \(\Delta x\rightarrow 0\). 
+		Замечаем, что тогда \(\Delta z\rightarrow 0\) и, следовательно, 
+		\(\alpha\rightarrow 0\). Замечаем также, что
+		\[\lim_{\Delta x\rightarrow 0}\frac{\Delta z}{\Delta x}=z'(x);\quad\lim_{\Delta x\rightarrow 0}\frac{\Delta y}{\Delta x}=y'_{x}(z(x)),\]
+		а производная \(y'_{z}\) вычисляется в точке \(z=z(x)\). 
+		Таким образом, 
+		\[(y(z(x)))'_{x}=y'(z(x))\cdot z'(x).\]
+		Теорема доказана.
+		</p>
+	</div>
+	<p><span class="bold">Пример 2.8.</span> 
+	Пусть \(y=\sin 2^{x}\). Найти \(y'_{x}\). Представим \(y\) 
+	как «цепочку функций»:
+	\(y=\sin z,\quad z=2^{x}.\)
+	Так как \(y'_{z}=\cos z, \quad z'_{x}=2^{x}\ln 2\), то по формуле 
+<a class="htooltip" href="#">(2.2)<span class="wStyle">\((y(z(x)))'_{x}=y'_{z}(z(x))\cdot z'(x)\)</span></a>	
+	найдем \[\left(\sin(2^{x})\right)'_{x}=\cos(2^{x})\cdot 2^{x}\cdot\ln 2.\]
+	Здесь производная \(y'_{Z}\) вычисляется в точке \(z=2^{x}\). 
+	</p>
+	
+	<p><span class="elected">Замечание 2.1.</span>
+	Коротко формулу
+<a class="htooltip" href="#">(2.2)<span class="wStyle">\((y(z(x)))'_{x}=y'_{z}(z(x))\cdot z'(x)\)</span></a>	
+	можно записать в виде
+\begin{equation}
+y'_{x}=y'_{z}\cdot z'_{x}. \tag{2.3}
+\end{equation}
+	</p>
+	<p><span class="elected">Замечание 2.2.</span>
+	Сложная функция может быть получена в результате нескольких 
+	суперпозиций. Например, \(y=y(z),\;z=z(t),\;t=t(x),\) то есть 
+	\(y=y(z(t(x)))\). Тогда теорему 
+
+	<a class="htooltip" href="#">(2.4)<span class="wStyle">Пусть функция \(z(x)\) имеет в точке \(x\) производную 
+		\(z'(x)\). Пусть функция \(y(z)\) имеет в точке \(z=z(x)\) 
+		производную \(y_{z}'(z)\). Тогда сложная функция \(y(z(x))\) 
+		имеет в точке \(x\) производную и 
+		\[(y(z(x)))'_{x}=y'_{z}(z(x))\cdot z'(x). \tag{2.2}\]</span>
+	</a>
+	(формулу (2.3)) следует 
+	применить несколько раз:
+\begin{equation}
+y'_{x}=y'_{z}\cdot z'_{t}\cdot t'_{x}. \tag{2.4}
+\end{equation}
+	</p>
+	
+	<p><span class="bold">Пример 2.9.</span> 
+	\(y=\sin(\arctan 2^{x})\). Найти \(y'_{x}\). Представим \(y\) в виде
+	\[y=\sin z, z=\arctan u, u=2^{x}.\]
+	Тогда 
+	\[y'_{x}=y'_{z}\cdot z'_{u}\cdot u'_{x}=\cos z\frac{1}{1+u^2}2^{x}\ln 2\]
+	или
+	\[(\sin(\arctan 2^{x}))'_{x}=\cos(\arctan 2^{x})\frac{1}{1+(2^{x})^2}2^{x}\ln 2.\]
+	</p>
+
+</div>
+</body>
+</html>

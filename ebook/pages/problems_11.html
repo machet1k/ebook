@@ -1,0 +1,269 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		$("div.spoiler div.name span").toggle(function(){
+		$(this).parent("div.name").parent("div.spoiler").children("div.text").show();
+		$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " -15px 0");
+		},function(){
+		$(this).parent("div.name").parent("div.spoiler").children("div.text").hide();
+		$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " 0 -15px");
+		});
+		});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_100.html" class="button">Назад</a>
+	<a href="../pages/paragraph_120.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 11. Формула Тейлора</div>
+	<div class="h2">Задачи к \(\S\) 11. </div>	
+	
+	<p><span class="bold">Задача 11.1</span>
+	Выписать формулу Тейлора порядка \(n=7\) для функции \(y=f(x)\). Найти оценку остаточного члена:</p>
+	<p>а) \(f(x)=e^{x},\;a=0,\) на интервале \((-0.5; 0.5)\);</p>
+	<p>б) \(f(x)=\ln(1+x),\;a=0,\) на интервале \((0; 0.5)\).</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>П. а). Вычислим все необходимые производные:
+			\[f^{(n)}(x)=e^{x},\;f^{(n)}(0)=1,\;n=0,\;1,\;...\;.\]
+			Формула Тейлора примет вид
+			\[f(x)=e^{x}=1+\frac{x}{1!}+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}+\frac{x^{4}}{4!}+\frac{x^{5}}{5!}+\frac{x^{6}}{6!}+\frac{x^{7}}{7!}+R_{7}(x)=\sum_{n=1}^{7}\frac{x^{n}}{n!}+R_{7}(x).\]
+			</p>
+			<p>Запишем остаточный член в форме Лагранжа (11.8):
+			\[R_{7}(x)=\frac{e^{\xi}}{8!}^{8}.\]
+			Отсюда, если \(0 < x < \frac{1}{2}\), то \(R_{7}(x) < \frac{\sqrt{e}}{8!\cdot 256}\approx 0.00000016\). 
+			Если \(-\frac{1}{2} < x < 0\), то \(R_{7}(x) < \frac{e^{0}}{8!\cdot 256}\approx 0.000000097\).
+			</p>
+			<p>П. б). Вычислим все необходимые производные:
+			\[f(x)=\ln(1+x),\;f^{(n)}(x)=(n-1)!(-1)^{n+1}(1+x)^{-n};\]
+			\[f(0)=0,\;f^{(n)}(0)=(-1)^{n+1}(n-1)!,\;n=1,\;2,\;...\,.\]
+			</p>
+			<p>
+			Формула Тейлора примет вид
+			\[f(x)=\ln(1+x)=x-\frac{x^{2}}{2}+\frac{x^{3}}{3}-\frac{x^{4}}{4}+\frac{x^{5}}{5}-\frac{x^{6}}{6}+\frac{x^{7}}{7}+R_{7}(x)=\]
+			\[=\sum_{n=1}^{7}(-1)^{n+1}\frac{x^{n}}{n}+R_{7}(x).\]
+			Запишем остаточный член в форме Лагранжа (11.8):
+			\[R_{7}(x)=-\frac{x^{8}}{8(1+\xi)}.\]
+			Если \(0 < x < \frac{1}{2}\), то \(|R_{7}(x)| < \frac{\left(\frac{1}{2}\right)^{8}}{8}=\frac{1}{8\cdot 256}=0.00049\).
+			</p>
+		</div>
+	</div>
+	<p><span class="bold">Задача 11.2</span>
+	Используя формулу Тейлора порядка \(n\) при \(a=0\), найти приближенное значение функции \(y=f(x)\) при \(x=x_{0}\) и оценить 
+	его погрешность:
+	</p>
+	<p>а) \(f(x)=\cos x,\;n=6,\;x_{0}=\frac{\pi}{8}\);</p>
+	<p>б) \(f(x)=\arcsin x,\;n=3,\;x_{0}=0.2\);</p>
+	<p>в) \(f(x)=\arctan x,\;n=3,\;x_{0}=0.125\);</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>П. а). Вычислим все необходимые производные:
+			\[f(x)=f^{IV}(x)=\cos x,\;f'(x)=f^{V}(x)=-\sin x,\]
+			\[f''(x)=f^{VI}(x)=-\cos x,\;f'''(x)=f^{VII}(x)=\sin x;\]
+			\[f(0)=f^{IV}(0)=1,\;f'''(0)=f^{V}(0)=0,\;f''(0)=f^{VI}(0)=-1.\]
+			Формула Тейлора имеет вид
+			\[f(x)=\cos x=1-\frac{1}{2!}x^{2}+\frac{1}{4!}x^{4}-\frac{1}{6!}x^{6}+R_{6}(x).\]
+			Вычислим приближенное значение функции:
+			\[f\left(\frac{\pi}{8}\right)=\cos\frac{\pi}{8}\approx 1-\frac{1}{2!}\left(\frac{\pi}{8}\right)^{2}+\frac{1}{4!}\left(\frac{\pi}{8}\right)^{4}-\frac{1}{6!}\left(\frac{\pi}{8}\right)^{6}\approx 0.923879519.\] 
+			Оценим остаточный член при \(x=x_{0}\).
+			\[|R_{6}(x_{0})|=\left|\frac{\sin\xi}{7!}\right||x_{0}|^{7}\leq\frac{|x_{0}|^{7}}{7!}=\frac{\pi^{7}}{8^{7}\cdot 7!}\approx 0.000000285.\]
+			</p>
+			<p><span class="bold">Ответ.</span>
+			\[\cos\left(\frac{\pi}{8}\right)\approx 0.923879519,\;\left|R_{6}\left(\frac{\pi}{8}\right)\right|\approx 0.000000285.\]
+			</p>
+			<p>П. б). Вычислим необходимые производные:
+			\[f(x)=\arcsin x,\;f'(x)=(1-x^{2})^{-\frac{1}{2}},\;f''(x)=x(1-x^{2})^{-\frac{3}{2}},\]
+			\[f'''(x)=(1-x^{2})^{-\frac{3}{2}}+3x^{2}(1-x^{2})^{-\frac{5}{2}},\]
+			\[f^{IV}(x)=4x(1-x^{2})^{-\frac{5}{2}}+5x(1+2x^{2})(1-x^{2})^{-\frac{7}{2}}=3x(3+2x^{2})(1-x^{2})^{-\frac{7}{2}};\]
+			\[f(0)=0,\;f'(0)=1,\;f''(0)=0,\;f'''(0)=1.\]
+			Формула Тейлора примет вид
+			\[f(x)=\arcsin x = x+\frac{1}{6}x^{3}+R_{3}(x).\]
+			Вычислим приближенное значение функции:
+			\[f(x_{0})=\arcsin x_{0}\approx x_{0}+\frac{1}{6}x_{0}^{3}=0.2+\frac{(0.2)^{3}}{6}=0.20133.\]
+			Оценим остаточный член при \(x=x_{0}\):
+			\[R_{3}(x_{0})=\frac{3\xi(3+2\xi^{2})}{4!(1-\xi^{2})^{\frac{7}{2}}}x_{0}^{4} < \frac{0.6(3+0.08)}{4!(1-0.04)^{\frac{7}{2}}}(0.2)^{4}\approx 0.000142.\]
+			<p><span class="bold">Ответ.</span>
+			\(\arcsin(0.2)\approx 0.20133,\;|R_{3}(0.2)| < 0.000142.\)
+			</p>
+			<p>П. в). Вычислим необходимые производные:
+			\[f(x)=\arctan x,\;f'(x)=(1+x^{2})^{-1},\;f''(x)=-2x(1+x^{2})^{-2},\]
+			\[f'''(x)=-2(1+x^{2})^{-2}+8x^{2}(1+x^{2})^{-3}=2(3x^{2}-1)(1+x^{2})^{-3},\]
+			\[f^{IV}(x)=2(6x(1+x^{2})^{-3}-6x(3x^{2}-1)(1+x^{2})^{-4})=24x(1-x^{2})(1+x^{2})^{-4};\]
+			\[f(0)=0,\;f'(0)=1,\;f''(0)=0,\;f'''(0)=-2.\]
+			Запишем формулу Тейлора:
+			\[f(x)=\arctan x = x-\frac{1}{3}x^{3}+R_{3}(x).\]
+			Вычислим приближенное значение функции:
+			\[f(x_{0})=\arctan x_{0}\approx x_{0}-\frac{1}{3}x_{0}^{3}=0.125-\frac{1}{3}(0.125)^{3}\approx 0.12434896.\]
+			Оценим остаточный член при \(x=x_{0}\):
+			\[R_{3}(x_{0})=\frac{24\xi(1-\xi^{2})}{4!(1+\xi^{2})^{4}}x_{0}^{4} < \frac{24\cdot 0.125}{4!}(0.125)^{4}\approx 0.0000305.\]
+			</p>
+			<p><span class="bold">Ответ.</span>
+			\(\arctan(0.125)\approx 0.12434896,\;|R_{3}(0.125)| < 0.0000305.\)
+			</p>
+			<p>
+			</p>
+		</div>
+	</div>
+	
+	<p><span class="bold">Задача 11.3</span>
+	Выписать формулу Тейлора для функции \(f(x)\) в окрестности 
+	точки \(x=a\) для произвольного значения порядка \(n\):
+	</p>
+	<p>а) \(f(x)=e^{2x},\;a=1\);</p>
+	<p>б) \(f(x)=\cos 3x\;a=-\frac{\pi}{2}\);</p>
+	<p>в) \(f(x)=\ln x,\;a=1\);</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>П. а). Найдем все необходимые производные:
+			\[f(x)=e^{2x},\;f^{(n)}(x)=2^{n}e^{2x};\]
+			\[f^{(n)}(1)=2^{n}e^{2},\;n=1,2,...\;.\]
+			Запишем формулу Тейлора:
+			\[f(x)=e^{2x}=e^{2}\left(1+2(x-1)+\frac{2^{2}}{2!}(x-1)^{2}+...+\frac{2^{n}}{n!}(x-1)^{n}\right)+R_{n}(x).\]
+			Составим выражение для остаточного члена в форме Лагранжа:
+			\[R_{n}(x)=\frac{2^{n+1}e^{2\xi}}{(n+1)!}(x-1)^{n+1},\text{ где }\xi\in(1,x)\].
+			</p>
+			<p>П. б). Вычислим производные:
+			\[f(x)=\cos 3x,\;f'(x)=-3\sin 3x,\;f''(x)=-3^{2}\cos 3x,\;\]
+			\[f'''(x)=3^{3}\sin 3x,\;f^{(IV)}(x)=3^{4}\cos 3x,\;f^{(V)}(x)=-3^{5}\sin 3x,\;...\;:\]
+			Таким образом, справедлива формула при \(n=0,1,2,\,...\,:\):
+			\[f^{(n)}(x)=
+			\left[\begin{gathered} 
+			3^{n}(-1)^{\frac{n+1}{2}}\sin 3x,\text{ если } n=2k+1\text{ – нечетное число;} \\
+			3^{n}(-1)^{\frac{n}{2}}\cos 3x,\text{ если } n=2k\text{ – четное число;} 
+			\end{gathered}\right.\]
+			откуда
+			\[f^{(2k+1)}\left(\frac{\pi}{2}\right)=(-1)^{k+1}\cdot 3^{2k+1}\;f^{(2k)}\left(\frac{\pi}{2}\right)=0,\;k=0,1,\,...\,.\]
+			Составим формулу Тейлора:
+			\[f(x)=\cos 3x=\sum_{k=0}^{\ell}\frac{(-1)^{k+1}\cdot3^{2k+1}}{(2k+1)!}\left(x+\frac{\pi}{2}\right)^{2k+1}+R_{2\ell+1}(x)\]
+			и выражение для остаточного члена в форме Лагранжа:
+			\[R_{2\ell+1}(x)=-\frac{(-1)^{\ell+1}\cos 3\xi}{(2\ell+2)!}\left(x+\frac{\pi}{2}\right)^{2\ell+2}\text{, где }\xi\in\left(-\frac{\pi}{2},x\right).\]
+			</p>
+			<p>П. в). Вычислим все необходимые производные:
+			\[f(x)=\ln x,\;f^{(n)}(x)=(-1)^{n-1}(n-1)!x^{-n};\]
+			\[f(1)=0,\;f^{(n)}(1)=(-1)^{n-1}(n-1)!,\;n=1,2,\,...\,.\]
+			Выпишем формулу Тейлора:
+			\[f(x)=\ln x=\sum_{i=1}^{n}\frac{(-1)^{i+1}}{i}(x-1)^{i}+R_{n}(x).\]
+			Составим выражение для остаточного члена в форме Лагранжа:
+			\[R_{n}(x)=\frac{(-1)^{n}}{(n+1)}\frac{(x-1)^{n+1}}{\xi^{n+1}}\text{, где }\xi\in(1,x).\]
+			</p>
+		</div>
+	</div>
+	
+	<p><span class="bold">Задача 11.4</span>
+	Выписать формулу Тейлора для функции \(f(x)\) в окрестности 
+	точки \(x=a\) для произвольного значения порядка \(n\):
+	</p>
+	<p>а) \(f(x)=\sin(2x-3),\;a=\frac{1}{4}\);</p>
+	<p>б) \(f(x)=e^{x^{2}+2x},\;a=-1\);</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>П. а). Значению \(a=\frac{1}{4}\) соответствует многочлен 
+			Тейлора, разложенный по степеням \(x-\frac{1}{4}\). Преобразуем 
+			функцию:
+			\[\sin(2x-3)=\sin\left(2\left(x-\frac{1}{4}\right)-\frac{5}{2}\right)=\cos\frac{5}{2}\cdot\sin 2\left(\frac{1}{4}\right)-\sin\frac{5}{2}\cdot\cos 2\left(\frac{1}{4}\right).\]
+			Сделаем замену переменной \(t=2\left(x-\frac{1}{4}\right)\) и 
+			воспользуемся решениями примера 11.1 и задачи 11.2 а):
+			\[\sin 2\left(x-\frac{1}{4}\right)\sin t=t-\frac{1}{3!}t^{3}+\frac{1}{5!}t^{5}-\frac{1}{7!}t^{7}+R^{S}_{7}(t),\]
+			\[|R^{S}_{7}(t)|=\left|\frac{\sin\xi_{1}}{8!}\right||t|^{8}\leq\frac{|t|^{8}}{8!},\]
+			\[\cos 2\left(x-\frac{1}{4}\right)\cos t=1-\frac{1}{2!}t^{2}+\frac{1}{4!}t^{4}-\frac{1}{6!}t^{6}+R^{C}_{7}(t),\]
+			\[|R^{C}_{7}(t)|=\left|\frac{\sin\xi_{2}}{8!}\right||t|^{8}\leq\frac{|t|^{8}}{8!}.\]
+			Тогда получим:
+			\[\sin(2x-3)=\cos\frac{5}{2}\cdot\left(t-\frac{1}{3!}t^{3}+\frac{1}{5!}t^{5}-\frac{1}{7!}t^{7}\right)-\]
+			\[-\sin\frac{5}{2}\cdot\left(1-\frac{1}{2!}t^{2}+\frac{1}{4!}t^{4}-\frac{1}{6!}t^{6}\right)+R_{7}(t),\]
+			\[R_{7}(x)=\cos\frac{5}{2}\cdot R^{S}_{7}-\sin\frac{5}{2}\cdot R^{C}_{7}.\]
+			Вернемся к переменной \(x\):
+			\[f(x)=\sin(2x-3)=-\sin\frac{5}{2}+2\cdot\cos\frac{5}{2}\cdot \left(x-\frac{1}{4}\right) +\frac{4}{2!}\cdot\sin\frac{5}{2}\cdot \left(x-\frac{1}{4}\right)^{2}\]
+			\[-\frac{8}{3!}\cdot\cos\frac{5}{2}\cdot \left(x-\frac{1}{4}\right)^{3}-\frac{16}{4!}\cdot\cos\frac{5}{2}\cdot \left(x-\frac{1}{4}\right)^{4}+\frac{32}{5!}\cdot\cos\frac{5}{2}\cdot \left(x-\frac{1}{4}\right)^{5}+\]
+			\[+\frac{64}{6!}\cdot\cos\frac{5}{2}\cdot \left(x-\frac{1}{4}\right)^{6}-\frac{128}{7!}\cdot\cos\frac{5}{2}\cdot \left(x-\frac{1}{4}\right)^{7}+R_{7}(x).\]
+			Остаточный член можно оценить как
+			\[|R_{7}(x)| < 2\frac{2^{8}\left(x-\frac{1}{4}\right)^{8}}{8!}=\frac{4}{315}\left(x-\frac{1}{4}\right)^{8}.\]
+			</p>
+			<p>П. б). Значению \(a=-1\) соответствует многочлен Тейлора, 
+			разложенный по степеням \((x+1)\). Преобразуем функцию:
+			\[f(x)=e^{x^{2+2x}}=e^{-1}\cdot e^{(x+1)^{2}},\]
+			сделаем замену переменной \(t=(x+1)^{2}\) и воспользуемся 
+			формулой Тейлора из задачи 11.1 а):
+			\[e^{-1}\cdot e^{(x+1)^{2}}=e^{-1}\cdot e^{t}=e^{-1}\cdot\left(1+\frac{1}{1!}t+\frac{1}{2!}t^{2}+...+\frac{1}{7!}t^{7}+R_{7}(t)\right),\]
+			\[R_{7}(t)=\frac{e^{\xi}}{8!}t^{8},\;\xi\in(0,t).\]
+			Вернемся к переменной \(x\):
+			\[f(x)=e^{-1}\cdot\left(1+\frac{1}{1!}(x+1)^{2}+\frac{1}{2!}(x+1)^{4}+...+\frac{1}{7!}(x+1)^{14}+R_{7}(t)\right)\]
+			\[R_{7}(t)=\frac{e^{\xi}}{8!}(x+1)^{16},\;\xi\in(0,(x+1)^{2}).\]
+			</p>
+		</div>
+	</div>
+	
+	<p><span class="bold">Задача 11.5</span>
+	Не применяя повторное дифференцирование, найти \(f^{IX}(x)\) 
+	функции \(f(x)=x^{2\ln(1+3x)}\).
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>Воспользуемся решением задачи 11.3 в):
+			\[\ln t=\sum^{n}_{i=1}\frac{(-1)^{t-1}}{i}+R_{n(t)}.\]
+			Полагая в этом равенстве \(t=3x+1\) и умножая его на \(x^{2}\), 
+			будем иметь:
+			\[x^{2}\ln(1+3x)=\sum^{n}_{i=1}\frac{(-1)^{i+1}\cdot 3^{i}\cdot x^{i+2}}{i}+x^{2}\hat R_{n}(1+3x),\]
+			или 
+			\[x^{2}\ln(1+3x)=3x^{3}-\frac{3^{2}x^{4}}{2}+\frac{3^{3}x^{5}}{3}-\frac{3^{4}x^{6}}{4}+...-\frac{3^{7}x^{9}}{7}+x^{2}\hat{R_{9}}(1+3x).\]
+			С другой стороны, воспользуемся формулой Тейлора (11.6) 
+			для \(a=0\), \(n=9\):
+			\[f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^{2}+...+\frac{f^{IX}(x)}{9!}+R_{9}(x).\]
+			Сравнивая две формулы для функции \(f(x)=x^{2}\ln(1+3x)\), 
+			убеждаемся в том, что для нахождения искомой величины 
+			\(f^{IX}(x)\) достаточно приравнять друг другу коэффициенты 
+			при \(x^{9}\). Тогда получаем 
+			\(\frac{f^{IX}(0)}{9!}=\frac{3^{7}}{7}\).
+			</p>
+			<p><span class="bold">Ответ.</span>
+			\(f^{IX}(x)=\frac{9!\cdot 3^{7}}{7}\).
+			</p>
+		</div>
+	</div>
+	
+	<p><span class="bold">Задача 11.6</span>
+	Без использования формулы бинома Ньютона разложить 
+	выражение \((3x-1)^{5}\) по степеням \(x\).
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>Введем функцию \(f(x)=(3x-1)^{5}\) и найдем ее 
+			производные:
+			\[f^{(n)}(x)=\frac{5!\cdot 3^{n}}{(5-n)!}(3x-1)^{5-n},\;f^{(n)}(0)=\frac{5!\cdot 3^{n}}{(5-n)!}(-1)^{5-n},\;n=0,1,\,...\,;\]
+			\[f^{(n)}(x)=0\text{ при }n=6,7,\,...\,.\]
+			Составим формулу Тейлора при \(a=0\):
+			\[f(x)=(3x-1)^{5}=\sum^{5}_{n=0}\frac{5!\cdot3^{n}\cdot(-1)^{5-n}}{(5-n)!n!}\cdot x^{n}\]
+			или
+			\[(3x-1)^{5}=-1+15x-90x^{2}+270x^{3}-405x^{4}+243x^{5}.\]
+			</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

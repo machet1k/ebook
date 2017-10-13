@@ -1,0 +1,1503 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_010.html" class="button">Назад</a>
+	<a href="../pages/paragraph_030.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 2. ВЫЧИСЛЕНИЕ ПРОИЗВОДНОЙ</div>
+	
+	<a href="../pages/paragraph_021.html" class="button">2.1</a>
+	<a href="../pages/paragraph_022.html" class="button">2.2</a>
+	<a href="../pages/paragraph_023.html" class="button">2.3</a>
+	<a href="../pages/paragraph_024.html" class="button">2.4</a>
+	<a href="../pages/paragraph_025.html" class="button">2.5</a>
+	<a href="../pages/paragraph_026.html" class="button">2.6</a>
+	<a href="../pages/paragraph_027.html" class="button">2.7</a>
+	<a href="../pages/paragraph_028.html" class="button">2.8</a>
+	
+	<div class="h2"><a name="an21">2.1. Вычисление производных некоторых основных элементарных функций
+	</a></div>	
+	
+	<p>Если \(y=const\), то \(y'=0\). Действительно, по определению 
+<a class="htooltip" href="#">1.1<span class="wStyle">
+	Пусть функция \(y=f(x)\) определена на множестве \(X\). Пусть \(x_{0}\in X\). 
+	Придадим  \(x_{0}\) приращение \(\Delta x (\Delta x < 0\) или \(\Delta x > 0)\) 
+	так, чтобы \(x_{0}+\Delta x \in X\). 
+	<span class="elected">Производной функции \(y=f(x)\) по переменной \(x\) 
+	при \(x=x_{0}\) называется предел отношения приращения функции  
+	\(\Delta y\), вычисленного в этой точке, к вызвавшему его приращению 
+	аргумента \(\Delta x\) при стремлении последнего к \(0\), то есть
+	\[\lim_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x \rightarrow 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x},\tag{1.1}\]
+	если этот предел существует.
+	</span></span>
+</a>	
+	имеем \[y'=\lim_{\Delta x\rightarrow 0}\frac{c-c}{\Delta x}=0.\]
+	</p>
+	
+	<p> 2. Пусть \(y=x^{\alpha} (x \in D_{\alpha}\), где \(D_{\alpha}\) 
+	– область определения функции). 
+	</p>
+	<p>Рассмотрим сначала частный случай, когда \(\alpha=1\), то есть 
+	\(y=x\). Тогда 
+	\(\Delta y =\Delta x\) и 
+	\(y'=\lim_{\Delta x\rightarrow 0}\frac{\Delta x}{\Delta x}=1\), так что 
+	\(x'=1\) при всех 
+	\(x \in R\).
+	</p>
+	<p>Пусть теперь \(\alpha \neq 1\). Предположим, что \(x \neq 0\). Тогда
+	\[\lim_{\Delta x\rightarrow 0}\frac{(x+\Delta x)^{\alpha}-x^{\alpha}}{\Delta x}=x^{\alpha}\lim_{\Delta x\rightarrow 0}\frac{(1+\frac{\Delta x}{x})^{\alpha}-1}{\Delta x}.\]
+	</p>
+	<p>Заменяя в числителе дроби бесконечно малое при 
+	\(\Delta x \rightarrow 0\) выражение  
+	\(\frac{(1+\frac{\Delta x}{x})^{\alpha}-1}{\Delta x}\) эквивалентной бесконечно малой 
+	\(\alpha\frac{\Delta x}{x}\) и сокращая числитель и знаменатель на \(\Delta x\), получим:
+	\[(x^{\alpha})'=x^{\alpha}\lim_{\Delta x\rightarrow 0}\frac{\alpha\Delta x}{x\Delta x}=\alpha x^{\alpha-1}.\]
+	</p>
+	<p>Рассмотрим случай \(x=0\). Тогда
+	\[y'=\lim_{\Delta x\rightarrow 0}\frac{(\Delta x)^{\alpha}}{\Delta x}.\]
+	</p>
+	<p>В этом случае при \(\alpha>1\) значение производной равно 0. Оно 
+	совпадает со значением \(\alpha x^{\alpha-1}\) при \(x=0\). 
+	Если \(\alpha<1\), то производная в точке \(x=0\) не существует.
+	</p>
+	<p>3. Пусть \(y=a^{x} (a>0)\). Тогда
+	\[(a^{x})'=\lim_{\Delta x\rightarrow 0}\frac{a^{x+\Delta x}-a^{x}}{\Delta x}=a^{x}\lim_{\Delta x\rightarrow 0}\frac{a^{\Delta x}-1}{\Delta x}=a^{x}\lim_{\Delta x\rightarrow 0}\frac{\Delta x\ln a}{\Delta x}=a^{x}\ln a.\]
+	Здесь использована замена выражения \(a^{\Delta x}-1\) эквивалентной 
+	при \(\Delta x\rightarrow 0\) бесконечно малой величиной \(\Delta x\ln a\).
+	</p>
+	<p>4. Пусть \(y=\ln x (x>0)\). Тогда 
+	\[(\ln x)'=\lim_{\Delta x\rightarrow 0}\frac{\ln(x+\Delta x)-\ln x}{\Delta x}=\lim_{\Delta x\rightarrow 0}\frac{\ln(1+\frac{\Delta x}{x})}{\Delta x}=\lim_{\Delta x\rightarrow 0}\frac{\frac{\Delta x}{x}}{\Delta x}=\frac{1}{x}.\]
+	Мы заменили бесконечно малую при \(\Delta x\rightarrow 0\) величину
+	\(\ln(x+\frac{\Delta x}{x})\) эквивалентной ей бесконечно малой \(\frac{\Delta x}{x}\).
+	</p>
+	<p>	5. Пусть \(y=\sin x (x \in R)\). Тогда
+	\[(\sin x)'=\lim_{\Delta x\rightarrow 0}\frac{\sin(x+\Delta x)-\sin x}{\Delta x}=\lim_{\Delta x\rightarrow 0}\frac{2\sin\frac{\Delta x}{2}\cos(x+\frac{\Delta x}{2})}{\Delta x}.\]
+	Поскольку величина 
+	\(\sin\frac{\Delta x}{2}\) эквивалентна величине 
+	\(\sin\frac{\Delta x}{2}\) при 
+	\(\Delta x\rightarrow 0\), а 
+	\(\lim_{\Delta x\rightarrow 0}\cos(x+\frac{\Delta x}{2})=\cos x\), получим:
+	\[(\sin x)'=\lim_{\Delta x\rightarrow 0}\frac{2\frac{\Delta x}{2}\cos(x+\frac{\Delta x}{2})}{\Delta x}=\cos x\]
+	</p>
+	<p>	6. Рассуждая так же, как в п. 5), получим
+	\[(\cos x)'=-\sin x.\]
+	</p>
+	
+	<div class="h2"><a name="an22">2.2. Простейшие правила дифференцирования
+	</a></div>
+	
+	<div class="theorem">
+	<span class="elected">Теорема 2.1.</span>
+		<p>Пусть функции \(u=u(x)\) и \(v=v(x)\) имеют в точке   
+		производные \(u'(x)\) и \(v'(x)\). Тогда в точке \(x\):
+		</p>
+		<p>\(1) (u(x) \pm v(x))'=u'(x)\pm v'(x)\)</p>
+		<p>\(2) (u(x)\cdot v(x))'=u'(x)v(x)+u(x)v'(x)\)</p>
+		<p>\(3) (\frac{u(x)}{v(x)})'=\frac{u'(x)v(x)-u(x)v'(x)}{v^{2}(x)}\), если \(v(x)\neq 0.\)</p>
+	</div>
+	<div class="proof">
+	<span class="elected">Доказательство.</span>
+		<p> Докажем п. 3), то есть найдем производную функции 
+		\(y=\frac{u(x)}{v(x)}\). Придадим аргументу
+		\(x\) приращение 
+		\(\Delta x\). Тогда функции 
+		\(u(x)\) и \(v(x)\) получат соответственно приращения 
+		\(\Delta u\) и \(\Delta v\) и 
+		\(u(x+\Delta x)=u(x)+\Delta u, v(x+\Delta x)=v(x)+\Delta v\). Следовательно, 
+		\(y(x+\Delta x)=\frac{u(x)+\Delta u}{v(x)+\Delta v}\). Таким образом,
+		\[\Delta y=\frac{u(x)+\Delta u}{v(x)+\Delta v}-\frac{u(x)}{v(x)}=\frac{v(x)+\Delta u-u(x)+\Delta v}{v(x)(v(x)+\Delta v)},\] откуда
+		\[\frac{\Delta y}{\Delta x}=\frac{v(x)\frac{\Delta u}{\Delta x}-u(x)\frac{\Delta v}{\Delta x}}{v(x)(v(x)+\Delta v)}\].
+		</p>
+		<p>Поскольку \(v(x)\) имеет производную, то по теореме 1.1 эта 
+		функция непрерывна, и из условия 
+		\(\Delta x\rightarrow 0\) следует, что \(\Delta v\rightarrow 0\). Тогда
+		\[\left(\frac{u(x)}{v(x)}\right)'=\lim_{\Delta x\rightarrow 0}\frac{\Delta y}{\Delta x}=\frac{v(x)u'(x)+u(x)v'(x)}{v^{2}}\]		
+		</p>
+		<p>	Для п. 3) теорема доказана. Пп. 1) и 2) доказываются по той же схеме.
+		</p>
+	</div>
+		<p><span class="elected">Следствие  2.1.</span> 
+		Постоянный множитель можно выносить за знак производной, то есть
+		\((ku(x))'=ku'(x)\), где \(k=const\).
+		</p>
+		<p><span class="elected">Доказательство.</span> 
+		Это утверждение следует из п. 2) теоремы 2.1, так как, если  
+		\(v(x)=k=const\), то \(v'(x)=0\).
+		</p>
+		
+	<p><span class="bold">Пример 2.1.</span> 	
+	\[(\arccot x)'=\left(\frac{\sin x}{\cos x}\right)'= \frac{\cos x\cdot\cos x-\sin x\cdot(-\sin x)}{\cos^2 x} =-\frac{1}{\cos^2 x}\].
+	</p>
+	<p><span class="bold">Пример 2.2.</span> 	
+	\[(\cot x)'=\left(\frac{\cos x}{\sin x}\right)'=-\frac{1}{\sin^2 x}\].
+	</p>
+	<p><span class="bold">Пример 2.3.</span> 	
+	\[(\log_{a} x)'=\left(\frac{\ln x}{\ln a}\right)'=\frac{1}{\ln a}(\ln x)'=\frac{1}{x \ln a}\].	
+	</p>
+	
+	<div class="h2"><a name="an23">2.3. Производная обратной функции
+	</a></div>
+	
+	<div class="theorem" style="border-bottom: 2px #FF9D3A solid;">
+	<span class="elected">Теорема 2.2 (без доказательства). </span>
+		<p>Пусть функция \(y=f(x)\) определена и непрерывна на некотором 
+		промежутке \(X\). Пусть \(y=f(x)\) строго монотонна в этом 
+		промежутке, то есть либо для любых \(x_1 < x_2\) из \(X\) 
+		выполнено неравенство \(f(x_1) < f(x_2)\), либо для любых
+		\(x_1 < x_2\) из \(X\) выполнено неравенство \(f(x_1) > f(x_2)\). 
+		Тогда в промежутке \(Y\) значений функции \(f(x)\) существует 
+		однозначная обратная функция \(x=g(y)\), также строго монотонная 
+		и непрерывная.
+		</p>
+	</div>
+	
+	<p>	Обычно обратную функцию обозначают \(x=f^{-1}(y)\).</p>
+	<p>	Теорема проиллюстрирована рис. 2.1.</p>
+	<div class="img">
+		<img src="../img/2-1.png"/>
+	</div>
+	<div class="nameImg">Рис. 2.1</div>
+	
+	<div class="theorem">
+	<span class="elected">Теорема 2.3. </span>
+		<p>Пусть функция \(y=f(x)\) удовлетворяет условиям теоремы 2.2 и 
+		в точке \(x_{0}\in X\) существует производная \(y=f'_{x}(x_{0})\neq 0\).
+		Тогда и обратная функция \(g(y)\) в точке \(y_{0}=f(x_{0})\) имеет 
+		производную \(g'_{y}(y_{0})\) и выполняется равенство
+\begin{equation}
+g'_{y}(y_{0})=\frac{1}{f'_{x}(x_{0})}\tag{2.1}
+\end{equation}
+		</p>
+	</div>
+	<div class="proof">
+	<span class="elected">Доказательство</span>
+		<p>Пусть \(\Delta y\) – приращение переменной \(y\) в точке \(y_{0}\). 
+		Тогда переменная \(x=g(y)\) получит приращение 
+		\(\Delta x =g(y_{0}\Delta y)-g(y_{0})\). Если \(\Delta y\neq 0\), то и 
+		\(\Delta x\neq 0\), поскольку  \(g(y)\) – строго монотонная функция. 
+		В силу непрерывности \(g(y)\) из условия \(\Delta y\rightarrow 0\) 
+		следует, что \(\Delta x\rightarrow 0\), поэтому имеем
+		\[g'(y_{0})= \lim_{\Delta x\rightarrow 0}\frac{\Delta x}{\Delta y} =\lim_{\Delta x\rightarrow 0}\frac{1}{\frac{\Delta y}{\Delta x}} = \frac{1}{\lim_{\Delta x\rightarrow 0}\frac{\Delta y}{\Delta x}}=\frac{1}{f'(x_{0})}.\]
+		Теорема доказана.
+		</p>
+	</div>	
+	
+	<p><span class="bold">Пример 2.4.</span> 	
+	Пусть 
+	\(y=\arcsin x\), 
+	\(x\in[-1,1]\), 
+	\(y\in\left[-\frac{\pi}{2},\frac{\pi}{2}\right]\). 
+	</p>
+	<p>Вычислим производную этой функции. Для этого рассмотрим функцию
+		\(x=\sin y\),  
+		\(y\in\left[-\frac{\pi}{2},\frac{\pi}{2}\right]\),
+		\(x\in[-1,1]\),
+	для которой функция \(y=\arcsin x\) является обратной.
+	Так как \(x'_{y}=\cos y\), то
+	\[y'_{x}=\frac{1}{x'_{y}}=\frac{1}{\cos y}=\frac{1}{\sqrt{1-\sin^{2}y}}=\frac{1}{\sqrt{1-x^2}}\].
+	Полученная формула верна для \(x\in(-1,1)\), так как при \(x =\pm 1\) производная 
+	\(x'_{y}\) обращается в \(0\).
+	</p>
+	
+	<p><span class="bold">Пример 2.5.</span> 	
+	Пусть 
+	\(y=\arccos x,\;
+	x\in[-1,1],\;
+	y\in [0, \pi]\). 
+	Рассуждая, как в примере 2.4 
+	\((x=\cos y,\; 
+	y\in [0, \pi],\;
+	x\in[-1,1]\)), найдем:
+	\[(\arccos x)'=\frac{1}{(\cos y)'}=-\frac{1}{\sin y}=-\frac{1}{\sqrt{1-x^2}},\quad x\in(-1,1).\]
+	</p>
+	
+	<p><span class="bold">Пример 2.6.</span> 	
+	Пусть 
+	\(y=\arctan x,\; 
+	x\in[-\infty,\infty],\;
+	y\in\left[-\frac{\pi}{2},\frac{\pi}{2}\right]\).  
+	Рассмотрим функцию 
+	\(x=\tan(y),\;
+	y\in\left[-\frac{\pi}{2},\frac{\pi}{2}\right],\;
+	x\in[-\infty,\infty]\),   
+	для которой функция \(y=\arctan x\) является обратной. Тогда имеем:
+	\[y_{x}'=\frac{1}{x_{y}'}=\frac{1}{\frac{1}{\cos^{2}x}}=\frac{1}{1+\tan^{2}y}=\frac{1}{1+x^2}.\]
+	</p>
+	
+	<p><span class="bold">Пример 2.7.</span> 	
+	Пусть 
+	\(y=\arccot x\), 
+	\(x\in[-\infty,\infty]\), 
+	\(y\in [0, \pi]\).  
+	Рассуждая, как в примере 2.6 
+	\(\left(x=\cot y,\;
+	y\in [0, \pi],\;
+	x\in[-\infty,\infty]\right)\), найдем  
+	\[(\arccot x)'=-\frac{1}{1+x^2},\quad x\in(\infty,\infty).\]
+	</p>
+
+	<div class="h2"><a name="an24">2.4. Производная сложной функции
+	</a></div>
+	
+	<div class="theorem">
+	<span class="elected">Теорема 2.4.</span>
+		<p>Пусть функция \(z(x)\) имеет в точке \(x\) производную 
+		\(z'(x)\). Пусть функция \(y(z)\) имеет в точке \(z=z(x)\) 
+		производную \(y_{z}'(z)\). Тогда сложная функция \(y(z(x))\) 
+		имеет в точке \(x\) производную и 
+\begin{equation}
+(y(z(x)))'_{x}=y'_{z}(z(x))\cdot z'(x). \tag{2.2}
+\end{equation}
+		</p>
+	</div>
+	<div class="proof">
+	<span class="elected">Доказательство</span>
+		<p>Придадим аргументу \(x\) приращение \(\Delta x\). 
+		Тогда функция \(z\) получит приращение \(\Delta z\), а функция 
+		\(y\) – приращение \(\Delta y\), вызванное приращением \(\Delta z\). 
+		По формуле (1.6) имеем
+		\[\Delta y=y'_{z}\Delta z+\alpha\Delta z.\]
+		где \(\alpha\) стремится к \(0\) при \(\Delta z\rightarrow 0\). 
+		Разделим данное равенство почленно на \(\Delta x\). Получим
+		\[\frac{\Delta y}{\Delta x}=y'_{z}\frac{\Delta z}{\Delta x}+\alpha\frac{\Delta z}{\Delta x}.\]
+		</p>
+		<p>Перейдем теперь к пределу при \(\Delta x\rightarrow 0\). 
+		Замечаем, что тогда \(\Delta z\rightarrow 0\) и, следовательно, 
+		\(\alpha\rightarrow 0\). Замечаем также, что
+		\[\lim_{\Delta x\rightarrow 0}\frac{\Delta z}{\Delta x}=z'(x);\quad\lim_{\Delta x\rightarrow 0}\frac{\Delta y}{\Delta x}=y'_{x}(z(x)),\]
+		а производная \(y'_{z}\) вычисляется в точке \(z=z(x)\). 
+		Таким образом, 
+		\[(y(z(x)))'_{x}=y'(z(x))\cdot z'(x).\]
+		Теорема доказана.
+		</p>
+	</div>
+	<p><span class="bold">Пример 2.8.</span> 
+	Пусть \(y=\sin 2^{x}\). Найти \(y'_{x}\). Представим \(y\) 
+	как «цепочку функций»:
+	\(y=\sin z,\quad z=2^{x}.\)
+	Так как \(y'_{z}=\cos z, \quad z'_{x}=2^{x}\ln 2\), то по формуле 
+<a class="htooltip" href="#">(2.2)<span class="wStyle">\((y(z(x)))'_{x}=y'_{z}(z(x))\cdot z'(x)\)</span></a>	
+	найдем \[\left(\sin(2^{x})\right)'_{x}=\cos(2^{x})\cdot 2^{x}\cdot\ln 2.\]
+	Здесь производная \(y'_{Z}\) вычисляется в точке \(z=2^{x}\). 
+	</p>
+	
+	<p><span class="elected">Замечание 2.1.</span>
+	Коротко формулу
+<a class="htooltip" href="#">(2.2)<span class="wStyle">\((y(z(x)))'_{x}=y'_{z}(z(x))\cdot z'(x)\)</span></a>	
+	можно записать в виде
+\begin{equation}
+y'_{x}=y'_{z}\cdot z'_{x}. \tag{2.3}
+\end{equation}
+	</p>
+	<p><span class="elected">Замечание 2.2.</span>
+	Сложная функция может быть получена в результате нескольких 
+	суперпозиций. Например, \(y=y(z),\;z=z(t),\;t=t(x),\) то есть 
+	\(y=y(z(t(x)))\). Тогда теорему 
+
+	<a class="htooltip" href="#">(2.4)<span class="wStyle">Пусть функция \(z(x)\) имеет в точке \(x\) производную 
+		\(z'(x)\). Пусть функция \(y(z)\) имеет в точке \(z=z(x)\) 
+		производную \(y_{z}'(z)\). Тогда сложная функция \(y(z(x))\) 
+		имеет в точке \(x\) производную и 
+		\[(y(z(x)))'_{x}=y'_{z}(z(x))\cdot z'(x). \tag{2.2}\]</span>
+	</a>
+	(формулу (2.3)) следует 
+	применить несколько раз:
+\begin{equation}
+y'_{x}=y'_{z}\cdot z'_{t}\cdot t'_{x}. \tag{2.4}
+\end{equation}
+	</p>
+	
+	<p><span class="bold">Пример 2.9.</span> 
+	\(y=\sin(\arctan 2^{x})\). Найти \(y'_{x}\). Представим \(y\) в виде
+	\[y=\sin z, z=\arctan u, u=2^{x}.\]
+	Тогда 
+	\[y'_{x}=y'_{z}\cdot z'_{u}\cdot u'_{x}=\cos z\frac{1}{1+u^2}2^{x}\ln 2\]
+	или
+	\[(\sin(\arctan 2^{x}))'_{x}=\cos(\arctan 2^{x})\frac{1}{1+(2^{x})^2}2^{x}\ln 2.\]
+	</p>
+	
+<div class="h2"><a name="an25">2.5. Дифференцирование функции, заданной неявно
+</a></div>
+
+	<p>Пусть функция \(y\) аргумента \(x\) задается неявно уравнением
+\begin{equation}
+F(x,y)=0. \tag{2.5}
+\end{equation}
+	</p>
+	<p>Предположим, что функция \(y\) имеет производную по аргументу \(x\)
+	в области своего задания. Тогда вычислить ее можно следующим образом.
+	</p>
+	<p>Продифференцируем равенство
+<a class="htooltip" href="#">(2.5)<span class="wStyle">\(F(x,y)=0\)</span></a>
+	как тождество, имея в виду, что 
+	переменная \(y\) является функцией переменной \(x\) и, следовательно, 
+	любая функция от \(y\) является сложной функцией переменной \(x\). 
+	Затем выразим производную \(y'_{x}\) через \(x\) и \(y\).
+	</p>
+	<p><span class="bold">Пример 2.10.</span> 
+	Функция \(y\) задана уравнением \(\ln(x^2+y^2)=\arctan\frac{y}{x}.\) Найти 
+	\(y'_{x}.\)
+	</p>
+	<p>Продифференцируем заданное равенство по \(x\):
+	</p>
+	\[\frac{2x+2y\cdot y'_{x}}{x^2+y^2}=\frac{\frac{y'_{x}\cot x-y}{x^2}}{1+\frac{y^2}{x^2}},\]
+	или
+	\[2x+2y\cdot y'_{x}=y'_{x}\cdot x-y,\] 
+	откуда
+	\[y'_{x}=\frac{2x+y}{x-2y}.\]
+	
+<div class="h2"><a name="an26">2.6. Логарифмическое дифференцирование
+</a></div>
+
+	<p>Рассмотрим показательно-степенную функцию
+\begin{equation}
+y=(u(x))^{v(x)}. \tag{2.6}
+\end{equation}
+	Чтобы найти ее производную, прологарифмируем ее:
+	\[\ln(y(x))=v(x)\ln(u(x)).\]
+	Продифференцируем теперь функцию \(y(x)\) как функцию, заданную неявно:
+	\[\frac{y'(x)}{y(x)}=v'(x)\ln(u(x))+\frac{v(x)u'(x)}{u(x)},\]
+	откуда
+\begin{equation}
+y'(x)=(u(x))^{v(x)}\left(v'(x)\ln(u(x))+\frac{v(x)u'(x)}{u(x)}\right). \tag{2.7}
+\end{equation}
+	</p>
+	<p><span class="bold">Пример 2.11.</span> 
+	\(y=x^{\sin x}\). Найти \(y'_{x}\). Прологарифмируем функцию \(y\):
+	\[\ln y = \sin x \ln x,\]
+а затем продифференцируем получившееся равенство:
+	\[\frac{y'_{x}}{y}=\cos x\ln x+\frac{\sin x}{x}.\]
+В итоге получим
+	\[y'_{x}=x^{\sin x}\left(\cos x\ln x+\frac{\sin x}{x}\right).\]
+	</p>
+	<p><span class="elected">Замечание 2.3.</span>
+	Логарифмическое дифференцирование удобно применять при определении 
+	производной произведения \(n\) функций \((n>2)\).
+	</p>
+	<p><span class="bold">Пример 2.12.</span> 
+	\(y=y_{1}\cdot y_{2}\cdot y_{3}\). Найти \(y'_{x}\). 
+	</p>
+	<p><span class="elected">Решение</span>
+	\[\ln y = \ln y_{1}+\ln y_{2}+\ln y_{3},\]
+	\[\frac{y'_{x}}{y}=\frac{y'_{1}}{y_{1}}+\frac{y'_{2}}{y_{2}}+\frac{y'_{3}}{y_{3}}\]
+	</p>
+	<p>Умножим обе части равенства на \(y\). Тогда 
+\begin{equation}
+y'_{x}=y'_{1}y_{2}y_{3}+y'_{2}y_{1}y_{3}+y'_{3}y_{1}y_{2}. \tag{2.8}
+\end{equation}
+Получили формулу для дифференцирования произведения трех функций.
+	</p>
+	
+<div class="h2"><a name="an27">2.7. Дифференцирование функций, заданных параметрически
+</a></div>
+	<p>Зависимость переменной \(y\) от переменной \(x\) может быть задана не 
+	непосредственно, а с помощью третьей переменной \(t\), называемой параметром:
+\[\begin{cases}
+x=\varphi(t),\\
+y=\psi(t), & 
+\end{cases} (t\in T).\]
+	</p>
+	<p>Предположим, что обе функции \(\psi\) и \(\varphi\) имеют производные и что 
+	существует обратная функция \(t=\varphi^{-1}(x)\), имеющая производную. Тогда
+	\[y=\psi(\varphi^{-1}(x)).\]
+	Используя теоремы 
+<a class="htooltip" href="#">(2.4)<span class="wStyle">
+Пусть функция \(z(x)\) имеет в точке \(x\) производную 
+		\(z'(x)\). Пусть функция \(y(z)\) имеет в точке \(z=z(x)\) 
+		производную \(y_{z}'(z)\). Тогда сложная функция \(y(z(x))\) 
+		имеет в точке \(x\) производную и 
+\begin{equation}
+(y(z(x)))'_{x}=y'_{z}(z(x))\cdot z'(x). \tag{2.2}
+\end{equation}
+</span></a>
+	и
+<a class="htooltip" href="#">(2.3)<span class="wStyle">
+Пусть функция \(y=f(x)\) удовлетворяет условиям теоремы 2.2 и 
+		в точке \(x_{0}\in X\) существует производная \(y=f'_{x}(x_{0})\neq 0\).
+		Тогда и обратная функция \(g(y)\) в точке \(y_{0}=f(x_{0})\) имеет 
+		производную \(g'_{y}(y_{0})\) и выполняется равенство
+\[g'_{y}(y_{0})=\frac{1}{f'_{x}(x_{0})}\tag{2.1}\]
+</span></a>
+	, получим
+	\[y'_{x}=\psi'_{t}\cdot(\varphi^{-1}(x))'_{x}=\psi'_{t}\cdot\frac{1}{\varphi'_{t}}=\frac{\psi'(t)}{\varphi'(t)}\]
+	или
+\[\begin{cases}
+x=\varphi(t), \\
+y=\frac{\psi'(t)}{\varphi'(t)}. 
+\end{cases}(t\in T),\tag{2.9}\]
+	</p>
+	
+<div class="h2"><a name="an28">2.8. Сводная таблица формул и правил дифференцирования
+</a></div>
+
+	<p>\(1.\quad (const)'=0.\)</p>
+	<p>\(2.\quad (x^{\alpha})'=\alpha\cdot x^{\alpha-1};\)
+		<br>\(\qquad\qquad\)частные случаи: \(x'=1,\quad(\sqrt{x})'=\frac{1}{2\sqrt{x}},\quad\left(\frac{1}{x}\right)'=-\frac{1}{x^2}.\)
+	</p>
+	<p>\(3.\quad (a^{x})'=a^{x}\ln a\)
+		<br>\(\qquad\qquad\)частный случай: \((e^{x})'=e^{x}.\)
+	</p>
+	<p>\(4.\quad (\log_{a}x)'=\frac{1}{x\ln a};\)
+		<br>\(\qquad\qquad\)частный случай: \((\ln x)'=\frac{1}{x}.\)
+	</p>
+	<p>\(5.\quad (\sin x)'=\cos x.\)</p>
+	<p>\(6.\quad (\cos x)'=-\sin x.\)</p>
+	<p>\(7.\quad (\tan x)'=\frac{1}{\cos^{2}x};\)</p>
+	<p>\(8.\quad (\cot x)'=-\frac{1}{\sin^{2}x};\)</p>
+	<p>\(9.\quad (\arcsin x)'=\frac{1}{\sqrt{1-x^2}};\)</p>
+	<p>\(10.\quad (\arccos x)'=-\frac{1}{\sqrt{1-x^2}};\)</p>
+	<p>\(11.\quad (\arctan x)'=\frac{1}{1+x^2};\)</p>
+	<p>\(12.\quad (\arccot x)'=-\frac{1}{1+x^2};\)</p>
+
+	<p><span class="bold">I.</span>\(\quad(u(x)\pm v(x))'=u'(x)\pm v'(x).\)\(\tag{2.10}\)</p>
+	<p><span class="bold">II.</span>\(\quad(u(x)v(x))'=u'(x)v(x)+u(x)v'(x).\)\(\tag{2.11}\)</p>
+	<p>\(\qquad\)частный случай:\(\quad (ku(x))'=ku'(x)\)</p>\(\tag{2.12}\)
+	<p><span class="bold">III.</span>\(\quad\left(\frac{u(x)}{v(x)}\right)'=\frac{u'(x)v(x)-u(x)v'(x)}{v^{2}(x)}.\)\(\tag{2.13}\)</p>
+	<p><span class="bold">IV.</span>\(\quad(y(z(x)))'=y'_{z}(z(x))\cdot z'_{x}(x).\)\(\tag{2.14}\)</p>
+	<p><span class="bold">V.</span>\(\quad \begin{cases}
+	x=\varphi(t), \\ 
+	y=\frac{y'_{t}}{x'_{t}} 
+	\end{cases}\) \(\tag{2.15}\)</p>
+	<p><span class="bold">VI.</span>\(\quad ((u(x))^{v(x)})'=(u(x))^{v(x)}\left(v'(x)\ln(u(x))+\frac{v(x)u'(x)}{u(x)}\right).\)\(\tag{2.16}\)</p>
+
+	<div class="h2">Задачи к \(\S\) 2. </div>	
+	<p><span class="bold">Задача 2.1.</span> 	
+	Существует ли у функции \(f(x)\) производная при \(x=x_{0}\)? 
+	Если существует, то найти ее, пользуясь формулами и правилами 
+	дифференцирования, для следующих функций: 
+	</p>
+	<p>\(а) \quad f(x)=\frac{1}{\sqrt[3]{x^{2}}},\quad x_{0}=-8;\)</p>
+	<p>\(б) \quad f(x)=\sqrt[3]{x^{2}},\quad x_{0}=0;\)</p>
+	<p>\(в) \quad f(x)=|x-2|,\quad x_{0}=3;\)</p>
+	<p>\(г) \quad f(x)=|3x-4|,\quad x_{0}=1;\)</p>
+	<p>\(д) \quad f(x)=|2x-1|,\quad x_{0}=\frac{1}{2};\)</p>
+	<p>\(е) \quad f(x)=5^{x},\quad x_{0}=-1;\)</p>
+	<p>\(ж) \quad f(x)=\log_{\frac{1}{2}}x,\quad x_{0}=2;\)</p>
+	<p>\(з) \quad f(x)=\arccos x,\quad x_{0}=0;\)</p>
+	<p>\(и) \quad f(x)=\arcsin x,\quad x_{0}=\frac{1}{2};\)</p>
+	<p>\(к) \quad f(x)=\arctan x,\quad x_{0}=7;\)</p>
+	<p>\(л) \quad f(x)=\begin{cases}
+	\sin x, & x<0 \\ 
+	\ln(x+1), & x\geq 0 
+	\end{cases},\quad x_{0}=0;\)</p>
+	<p>\(м) \quad f(x)=\begin{cases}
+	\frac{2-x}{4}\pi, & x\in [-2,-1)\\ 
+	\arccot x, & x\in [-1,2] 
+	\end{cases},\quad x_{0}=-1;\)</p>
+	
+	<p><span class="elected">Указание 2.</span>
+	Здесь нужно сначала определить производную \(f'(x)\) по формулам и правилам 
+	дифференцирования, затем подставить в формулу для \(f'(x)\) значение 
+	\(x=x_{0}\). Если функция \(f'(x)\) не определена при \(x=x_{0}\), то 
+	значение \(f'(x_{0})\) не существует. Может оказаться, что при \(x>x_{0}\) 
+	и \(x < x_{0}\) формулы для вычисления \(f'(x)\) разные: \(f'_{+}(x)\) при 
+	и \(f'_{-}(x)\) при \(x < x_{0}\). Тогда для определения существования 
+	\(f'(x)\) при \(x=x_{0}\) следует воспользоваться условием (1.9) для 
+	значений
+	\[f'_{-}(x)=\lim_{x\rightarrow x_{0}-0}f'_{-}(x)\quad и \quad f'_{+}(x)=\lim_{x\rightarrow x_{0}+0}f'_{+}(x).\]
+	</p>
+	<p><span class="elected">Решение</span>
+	П. а). Функция \(f(x)=\frac{1}{\sqrt[3]{x^{2}}}\) определена при всех 
+	\(x\neq 0\). Используя таблицу производных, находим: \(f'(x)=(x^{-\frac{2}{3}})'=-\frac{2}{3}x^{-\frac{5}{3}}=-\frac{2}{3\sqrt[3]{x^{5}}}\). 
+	</p>
+	<p>Тогда \(f'(-8)=\frac{1}{48}\).
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(f'(-8)=\frac{1}{48}\).
+	</p>
+	<p>	П. б). Функция \(f(x)=\sqrt[3]{x^{2}}\) определена при всех 
+	\(x\in R\). Используя таблицу производных, находим: 
+	\(f'(x)=(x^{\frac{2}{3}})'=\frac{2}{3}x^{-\frac{1}{3}}=\frac{2}{3\sqrt[3]{x}}\). 
+	При \(x=0\quad f'(x)\) не определена. Следовательно, значения \(f'(0)\) 
+	не существует.
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(f'(0)\) не существует.
+	</p>
+	<p>	П. в). Функция \(f(x)=|x-2|=\begin{cases}
+	x-2, & x\geq 0 \\ 
+	2-x, & x < 2. 
+	\end{cases}\)
+	</p>
+	<p>Используя правила дифференцирования, при \(x>2\) будем иметь 
+	\(f'(x)=(x-2)'=1\). Таким образом, \(f'(3)=1\).
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(f'(3)=1.\)
+	</p>
+	<p>	П. г). \(f(x)=|3x-4|=\begin{cases}
+	3x-4, & x\geq \frac{4}{3} \\ 
+	4-3x, & x < \frac{4}{3}. 
+	\end{cases}\)
+	</p>
+	<p>Воспользовавшись правилами дифференцирования, найдем производную при 
+	\(x < \frac{4}{3}\): \(f'(x)=(4-3x)'=-3\). Таким образом, \(f'(1)=-3\).
+	</p>
+	<p><span class="bold">Ответ.</span> 
+	\(f'(1)=-3\).
+	</p>
+	<p>	П. д). \(f(x)=|2x-1|=\begin{cases}
+	2x-1, & x\geq \frac{1}{2} \\ 
+	1-2x, & x < \frac{1}{2}. 
+	\end{cases}\)
+	</p>
+	<p>Следуя указанию 2, вычислим производные по правилам дифференцирования:
+	\[f'(x)=(2x-1)'=2\;\;при\;\;x>\frac{1}{2},\]
+	\[f'(x)=(1-2x)'=-2\;\;при\;\;x < \frac{1}{2}.\]
+	А при \(x=\frac{1}{2}\)
+	\[f'_{+}\left(\frac{1}{2}\right)=2,\;\;f'_{-}\left(\frac{1}{2}\right)=-2.\]
+	</p>
+	<p>Поскольку односторонние производные при \(x_{0}=\frac{1}{2}\) не равны, то 
+	согласно замечанию 1.2 \(f'\left(\frac{1}{2}\right)\) не существует.
+	</p>
+	<p><span class="bold">Ответ.</span> 
+	\(f'\left(\frac{1}{2}\right)\) не существует.
+	</p>
+	<p>	П. е). Функция \(f(x)=5^{x}\)определена при всех \(x\in R\). Согласно таблице 
+	производных функция \(f'(x)=5^{x}\ln 5\) также определена при всех \(x\in R\). 
+	Тогда \(f'(-1)=5^{-1}\ln 5\).
+	</p>
+	<p><span class="bold">Ответ.</span> 
+	\(f'(-1)=\frac{\ln 5}{5}\).
+	</p>
+	<p>П. ж). Функция \(f(x)=\log_{\frac{1}{2}}x\) определена при всех \(x>0\). 
+	Используя таблицу производных, находим: \(f'(x)=\frac{1}{x\ln\frac{1}{2}}=-\frac{1}{x\ln 2}\), 
+	а затем вычисляем: \(f'(2)=-\frac{1}{2\ln 2}\).
+	</p>
+	<p><span class="bold">Ответ.</span> 
+	\(f'(2)=-\frac{1}{2\ln 2}\).
+	</p>
+	<p>П. з). \(f'(x)=(\arccos x)'=-\frac{1}{\sqrt{1-x^{2}}}\)
+	Производная определена при всех x, удовлетворяющих неравенству \(|x| < 1\). 
+	Тогда \(f'(0)=-\frac{1}{\sqrt{1-0^{2}}}=-1\).
+	</p>
+	<p><span class="bold">Ответ.</span> 
+	\(f'(0)=-1\).
+	</p>
+	<p>П. и). \(f'(x)=(\arcsin x)'=\frac{1}{\sqrt{1-x^{2}}}\)
+	Производная определена при всех x, удовлетворяющих неравенству \(|x| < 1\). 
+	Тогда \(f'\left(\frac{1}{2}\right)=\frac{1}{\sqrt{1-\left(\frac{1}{2}\right)^{2}}}=\frac{2}{\sqrt{3}}\).
+	</p>
+	<p><span class="bold">Ответ.</span> 
+	\(f'\left(\frac{1}{2}\right)=\frac{2}{\sqrt{3}}\).
+	</p>
+	
+	<p>П. к). \(f'(x)=(\arctan x)'=\frac{1}{1+x^{2}}\)
+	Производная определена при всех \(x\in R\). Тогда 
+	\(f'(7)=\frac{1}{1+7^{2}}=\frac{1}{50}\)
+	</p>
+	<p><span class="bold">Ответ.</span> 
+	\(f'(7)=\frac{1}{50}.\)
+	</p>
+	
+	<p>П. л). Согласно таблице производных будем иметь:
+	\[f'(x)=\cos x\;\;при\;\;x < 0,\]
+	\[f'(x)=\frac{1}{x+1}\;\;при\;\;x > 0.\]
+	</p>
+	<p>Следуя указанию, найдем односторонние производные при \(x_{0}=0\):
+	\[f'_{-}(0)=\lim_{x\rightarrow -0}\cos x =1,\;\;f'_{+}(0)=\lim_{x\rightarrow +0}\frac{1}{x+1}=1.\]
+	Поскольку они равны, то согласно замечанию 1.2 \(f'(0)=1\).
+	</p>
+	<p><span class="bold">Ответ.</span> 
+	\(f'(0)=1.\)
+	</p>
+	<p>П. м). По формулам дифференцирования будем иметь:
+	\[f'(x)=-\frac{\pi}{4},\;\;если\;\; -2\leq x < -1;\]
+	\[f'(x)=(\arccot x)'=-\frac{1}{1+x^{2}}\;\;если\;\; -1 < x \leq 2.\]
+	</p>
+	<p>Следуя указанию 2, найдем односторонние производные при \(x_{0}=-1\):
+	\[f'_{-}(-1)=\lim_{x\rightarrow -1-0}\left(-\frac{\pi}{4}\right)\;\;
+	  f'_{+}(-1)=\lim_{x\rightarrow -1+0}\left(-\frac{1}{1+x^{2}}\right)=-\frac{1}{2}.\]
+	</p>
+	<p>Поскольку \(f'_{-}(-1)\neq f'_{+}(-1)\), то согласно замечанию 1.2 \(f'(-1)\) 
+	не существует.
+	</p>
+	<p><span class="bold">Ответ.</span> 
+	\(f'(-1)\) не существует.
+	</p>
+	<p><span class="bold">Задача 2.2.</span>
+	Найти производные следующих функций, пользуясь формулами и правилами дифференцирования:
+	</p>
+	<p> а) \(\;\;f(x)=e^{x}\cos x +\frac{\sin x}{\ln x}+\sqrt[3]{x^{2}};\)
+	</p>
+	<p> б) \(\;\;f(x)=\frac{7}{\sqrt[5]{x^{4}}}-2\arctan x;\)
+	</p>
+	<p> в) \(\;\;f(x)=\tan(\sqrt[3]{x^{2}});\)
+	</p>
+	<p> г) \(\;\;f(x)=\arcsin(\ln^{2}(\sqrt{x}+1));\)
+	</p>
+	<p> д) \(\;\;f(x)=\arctan\sqrt{2x-1}\cdot\cos^{2}\frac{1}{x};\)
+	</p>
+	<p> е) \(\;\;f(x)=\frac{2^{\cot 3x}}{\arctan\frac{1}{4x}};\)
+	</p>
+	<p> ж) \(\;\;f(x)=\arccos^{5}\sqrt{3x}\cdot\ln(2x+\sqrt{1+4x^{2}});\)
+	</p>
+	<p> з) \(\;\;f(x)=\frac{x^{3}\sin\frac{1}{3\sqrt{x}}}{3^{\arcsin 5x}};\)
+	</p>
+	<p> и) \(\;\;f(x)=\frac{\arctan^{2}x^{3}}{\sqrt{1-x^{4}}}\cdot\arccos x^{2}\cdot\log_{2}(2^{-3x}+x^{6}).\)
+	</p>
+	<p><span class="elected">Указание 3.</span>
+	При решении воспользуемся формулами и правилами дифференцирования, представленными 
+	в сводной таблице формул и правил дифференцирования 2.8. При решении примеров 
+	а) и б) будут использованы только правила (2.10)–(2.13):
+	\[(u\pm v)'=u'\pm v',\;\;(uv)'=u'v+uv',\;\;\left(\frac{u}{v}\right)'=\frac{u'v-uv'}{v^{2}},\]
+	а далее потребуется формула (2.14) дифференцирования сложной функции:
+	\[(y(z(x)))'=y'_{z}(z(x))\cdot z'_{x}(x).\]
+	</p>
+	<p>Производные от перечисленных здесь функций, как правило, имеют вид, не поддающийся
+	упрощению с помощью тождественных преобразований. Однако, если преобразования возможны, 
+	они будут проведены.
+	</p>
+	<p><span class="elected">Решение.</span>
+	П. а). Записав выражение \(\sqrt[3]{x^{2}}\) в виде степенной функции
+	\[\sqrt[3]{x^{2}}=x^{\frac{2}{3}},\]
+	используя правила (2.10)–(2.13) и таблицу производных, будем иметь:
+	\[f'(x)=(e^{x})'\cos x+e^{x}(cos x)'+\frac{(\sin x)'\cdot\ln x-\sin x\cdot(\ln x)'}{(\ln x)^{2}}+\left(x^{\frac{2}{3}}\right)'=\]
+	\[=e^{x}\cos x-e^{x}\sin x +\frac{\cos x\cdot\ln x -\sin x\cdot\frac{1}{x}}{(\ln x)^{2}}+\frac{2}{3}x^{-\frac{1}{3}}.\]
+	</p>
+	<p><span class="bold">Ответ.</span> 
+	\(f'(x)=e^{x}=(\cos x-\sin x)+\frac{x\cdot\cos x\ln x-\sin x}{x\ln^{2}x}+\frac{2}{3\sqrt[3]{x}}.\)
+	</p>
+	<p>П. б).  Записав выражение \(\frac{7}{\sqrt[5]{x^{4}}}\) в виде степенной функции 
+	и используя правила дифференцирования и таблицу производных, получим:
+	\[f'(x)=\left(7x^{-\frac{4}{5}}-2\arctan x\right)'=7\left(-\frac{4}{5}\right)x^{-\frac{9}{5}}-2\frac{1}{1+x^{2}}.\]
+	</p>
+	<p><span class="bold">Ответ.</span> 
+	\[f'(x)=-\frac{28}{5\sqrt[5]{x^{9}}-\frac{2}{1+x^{2}}}.\]
+	</p>
+	<p>П. в). Перед нами сложная функция. Представим ее как «цепочку функций»: \(y=\tan z\), 
+	\(z=\sqrt[3]{x^{2}}=x^{\frac{2}{3}}\). Тогда \(y'_{z}=\frac{1}{\cos^{2}z}\), 
+	\(z'_{x}=\frac{2}{\sqrt[3]{x}}\). По формуле (2.14) получим
+	\[f'(x)=\frac{2}{3\sqrt[3]{x}\cos^{2}(\sqrt[3]{x^{2}})}.\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(f'(x)=\frac{2}{3\sqrt[3]{x}\cos^{2}(\sqrt[3]{x^{2}})}.\)
+	</p>
+	<p>П. г). Представим \(f(x)=\arcsin(\ln^{2}(\sqrt{x}+1))\) как «цепочку функций»:
+	\(y=\arcsin z,\; z=t^{2},\;t=\ln u,\;u=\sqrt{x}+1.\) Тогда 
+	\(y'_{z}=\frac{1}{\sqrt{1-z^{2}}},\; z'_{t}=2t,\;t'_{u}=\frac{1}{u},\;u'_{x}=\frac{1}{2\sqrt{x}}.\)
+	Используя замечание 2.2, по аналогии с формулой (2.4) получим:
+	\[f'(x)=y'_{z}\cdot z'_{t}\cdot t'_{u}\cdot u'_{x}=\frac{1}{\sqrt{1-\ln^{4}(\sqrt{x}+1)}}\cdot 2\ln(\sqrt{x}+1)\cdot\frac{1}{(\sqrt{x}+1)}\cdot\frac{1}{2\sqrt{x}}.\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(f'(x)=\frac{\ln(\sqrt{x}+1)}{\sqrt{1-\ln^{4}(\sqrt{x}+1)}}\cdot\frac{1}{x+\sqrt{x}}.\)
+	</p>
+	<p>П. д). Выражение \(\arctan\sqrt{2x-1}\cdot\cos^{2}\frac{1}{x}\) представляет собой 
+	произведение функций. Воспользуемся формулой (2.11) сводной табл. 2.8. Получим
+	\[f'(x)=(\arctan\sqrt{2x-1})'\cdot\cos^{2}\frac{1}{x}+(\arctan\sqrt{2x-1})\cdot\left(\cos^{2}\frac{1}{x}\right)'.\]
+	</p>
+	<p>Вычислим производные, входящие в состав \(f'(x)\). Функция \(\arctan\sqrt{2x-1}\) –
+	сложная функция, по формуле (2.4) получим:
+	\[(\arctan\sqrt{2x-1})'=\frac{1}{1+(\sqrt{2x-1}^{2}}\cdot\frac{2}{2\sqrt{2x-1}}=\frac{1}{2x\sqrt{2x-1}}.\]
+	</p>
+	<p>Аналогично
+	\[\left(\cos^{2}\frac{1}{x}\right)'=2\cos\frac{1}{x}\left(-\sin\frac{1}{x}\right)\left(-\frac{1}{x^{2}}\right)=\frac{1}{x^{2}}\sin\frac{2}{x}.\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(f'(x)=\frac{1}{2x\sqrt{2x-1}}\cos^{2}\left(\frac{1}{x}\right)+\arctan\sqrt{2x-1}\cdot\frac{1}{x^{2}}\sin\frac{2}{x}.\)
+	</p>
+	<p>П. е). Функция \(f(x)=\frac{2^{\cot 3x}}{\arctan\frac{1}{\sqrt{4x}}}\) представляет
+	собой частное от деления функций. По формуле (2.13) получим
+	\(f'(x)=\frac{(2^{\cot 3x})'\arctan(\frac{1}{\sqrt{4x}})-2^{\cot 3x}(\arctan(\frac{1}{\sqrt{4x}}))'}{\arctan^{2}\frac{1}{\sqrt{4x}}}\)
+	</p>
+	<p>Вычислим производные, входящие в состав \(f'(x)\).
+	\[(2^{\cot 3x})'=2^{\cot 3x}\cdot\ln 2\cdot(\cot 3x)'=-2^{\cot 3x}\cdot\ln 2\cdot\frac{(3x)'}{\sin^{2}3x}= -2^{\cot 3x}\frac{3\ln 2}{\sin^{2}3x}.\]
+	\[\left(\arctan\frac{1}{\sqrt{4x}}\right)'=\frac{1}{\left(1+\frac{1}{4x}\right)}\cdot\left(\frac{1}{2\sqrt{x}}\right)'=-\frac{1}{(4x+1)\sqrt{x}}.\]
+	</p>	
+	<p><span class="bold">Ответ.</span>
+	\(f'(x)=\frac{-2^{\cot 3x}\cdot\ln 2\cdot\frac{3}{\sin^{2}3x}\cdot\arctan\left(\frac{1}{\sqrt{4x}}\right)+2^{\cot 3x}\cdot\frac{1}{(4x+1)\sqrt{x}}}{\arctan^{2}\frac{1}{\sqrt{4x}}}.\)
+	</p>	
+	<p>П. ж). Функция \(f(x)=\arccos^{5}\) представляет собой 
+	произведение. По формуле (2.11) найдем
+	\[f'(x)=(\arccos^{5}\sqrt{3x})'\cdot\ln(2x+\sqrt{1+4x^{2}})+\arccos^{5}\sqrt{3x}\cdot(\ln(2x+\sqrt{1+4x^{2}}))'.\]
+	</p>	
+	<p>Используя правило дифференцирования сложной функции, вычислим 
+	производные, входящие в выражение \(f'(x)\):
+	\[(\arccos^{5}\sqrt{3x})'=5\arccos^{4}\sqrt{3x}(\arccos\sqrt{3x})'=-5\arccos^{4}\sqrt{3x}\frac{1}{\sqrt{1-3x}}(\sqrt{3x})'=\]
+	\[=\arccos^{5}\sqrt{3x}\frac{1}{\sqrt{1-3x}}\cdot\frac{3}{2\sqrt{3x}},\]
+	\[(\ln(2x+\sqrt{1+4x^{2}}))'=\frac{(2x+\sqrt{1+4x^{2}})'}{2x+\sqrt{1+4x^{2}}}=\frac{2+\frac{8}{2\sqrt{1+4x^{2}}}}{2x+\sqrt{1+4x^{2}}}=\]
+	\[=\frac{2(\sqrt{1+4x^{2}}+2x)}{(2x+\sqrt{1+4x^{2}})\sqrt{1+4x^{2}}}=\frac{2}{\sqrt{1+4x^{2}}}.\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(f'(x)=-\frac{15}{2}\frac{\arccos^{4}\sqrt{3x}\cdot\ln(2x+\sqrt{1+4x^{2}})}{\sqrt{3x-9x^{2}}}+\frac{2\arccos^{5}\sqrt{3x}}{\sqrt{1+4x^{2}}}.\)
+	</p>	
+	<p>П. з). Выражение \(\frac{x^{3}\sin\frac{1}{x\sqrt{x}}}{3^{\arcsin 5x}}\) 
+	представляет собой частное от деления функций. По формуле (2.13) получим
+	\[f'(x)=\frac{(x^{3}\sin\frac{1}{x\sqrt{x}})'3^{\arcsin 5x}-x^{3}\sin\frac{1}{x\sqrt{x}}(3^{\arcsin 5x})'}{3^{2\arcsin 5x}}.\]
+	</p>	
+	<p>Функция \(x^{3}\sin\frac{1}{3\sqrt{x}}\) представляет собой 
+	произведение двух функций. Используя формулы (2.11) и (2.14), найдем ее 
+	производную:
+	\[\left(x^{3}\sin\frac{1}{3\sqrt{x}}\right)'=(x^{3})'\sin\frac{1}{3\sqrt{x}}+x^{3}(\sin\frac{1}{3\sqrt{x}})'=\]
+	\[=3x^{2}\sin\frac{1}{3\sqrt{x}}+x^{3}\left(\cos\frac{1}{3\sqrt{x}}\right)\cdot\left(\frac{1}{3\sqrt{x}}\right)'=\]
+	\[=3x^{2}\sin\frac{1}{3\sqrt{x}}-x^{3}\cdot\frac{1}{6\sqrt{x^{3}}}\cdot\cos\frac{1}{3\sqrt{x}}.\]
+	</p>	
+	<p>Правило (2.14) используем также для вычисления производной сложной 
+	функции \(3^{\arcsin 5x}\):
+	\[(3^{\arcsin 5x})'=3^{\arcsin 5x}\cdot\ln 3\cdot(\arcsin 5x)'=3^{\arcsin 5x}\cdot\ln 3\cdot\frac{5}{\sqrt{1-25x^{2}}}.\]
+	</p>	
+	<p>Подставляя полученные выражения в производную \(f'(x)\), будем иметь
+	\[f'(x)=\frac{\left(3x^{2}\sin\frac{1}{3\sqrt{x}}-\frac{x^{3}}{6\sqrt{x^{3}}}\cos\frac{1}{3\sqrt{x}}\right)\cdot 3^{\arcsin 5x}}{3^{2\arcsin 5x}}-\]
+	\[-\frac{x^{3}\cdot 3^{\arcsin 5x}\cdot\sin\frac{1}{3\sqrt{x}}\cdot\ln 3\cdot\frac{5}{\sqrt{1-25x^{2}}}}{3^{2\arcsin 5x}}.\]
+	</p>	
+	<p>После вынесения общих множителей в числителе и знаменателе дроби и 
+	сокращения окончательно получим выражение для \(f'(x)\).
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(f'(x)=\frac{x^{2}\sin\frac{1}{3\sqrt{x}}}{3^{\arcsin 5x}}\left(3-\frac{x}{6\sqrt{x^{3}}}\cot\frac{1}{3\sqrt{x}}-\frac{5x\ln 3}{\sqrt{1-25x^{2}}}\right).\)
+	</p>		
+	<p>П. и). Функция   представляет собой произведение трех функций. 
+	Применив формулу (2.8) для вычисления производной произведения трех
+	функций, получим
+	\[f'(x)=\left(\frac{\arctan^{2}x^{3}}{\sqrt{1-x^{4}}}\right)'\cdot\arccos x^{2}\cdot\log_{2}(2^{-3x}+x^{6})+\]
+	\[+\frac{\arctan^{2}x^{3}}{\sqrt{1-x^{4}}}\cdot(\arccos x^{2})'\cdot\log_{2}(2^{-3x}+x^{6})+\]
+	\[+\frac{\arctan^{2}x^{3}}{\sqrt{1-x^{4}}}\cdot\arccos x^{2}\cdot(\log_{2}(2^{-3x}+x^{6}))'.\]
+	</p>	
+	<p>Функция \(\frac{\arctan^{2}x^{3}}{\sqrt{1-x^{4}}}\) представляет 
+	собой частное от деления функций. Вычислим ее производную по правилу 
+	(2.13), причем для вычисления производной числителя и знаменателя 
+	используем правило (2.14). 
+	</p>	
+	<p>Тогда
+	\[\left(\frac{\arctan^{2}x^{3}}{\sqrt{1-x^{4}}}\right)=\frac{(\arctan^{2}x^{3})'\sqrt{1-x^{4}}-(\sqrt{1-x^{4}})'\arctan^{2}x^{3}}{1-x^{4}}=\]
+	\[=\frac{2\arctan x^{3}\frac{3x^{2}}{1+x^{6}}\sqrt{1-x^{4}}-\frac{(-4x^{3})}{2\sqrt{1-x^{4}}}\arctan^{2}x^{3}}{1-x^{4}}.\]
+	</p>	
+	<p>По правилу (2.14) для остальных производных получим:
+	\[(\arccos x^{2})'=-\frac{1}{\sqrt{1-x^{4}}}(x^{2})'=-\frac{2x}{\sqrt{1-x^{4}}},\]
+	\[(\log_{2}(2^{-3x}+x^{6}))'=\frac{(2^{-3x}+x^{6})'}{(2^{-3x}+x^{6})\ln 2}=\frac{-3\cdot 2^{-3x}\cdot 2+6x^{5}}{(2^{-3x}+x^{6})\ln 2}.\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\[f'(x)=\left(\frac{6x^{2}\arctan x^{3}}{(1+x^{6})\sqrt{1-x^{4}}}+\frac{2x^{3}\arctan^{2}x^{3}}{(1-x^{4})^{\frac{3}{2}}}\right)\arccos x^{2}\log_{2}(2^{-3x}+x^{6})-\]
+	\[-2x\frac{\arctan^{2}x^{3}}{(1-x^{4})}\log_{2}(2^{-3x}+x^{6})+\frac{\arctan^{2}x^{3}}{\sqrt{1-x^{4}}}\arccos x^{2}\cdot\frac{(-3\ln 2\cdot 2^{-3x}+6x^{5})}{(2^{-3x}+x^{6})\ln 2}.\]
+	</p>		
+	<p><span class="bold">Задача 2.3.</span>
+	Найти производные следующих функций, заданных неявно:
+	</p>
+	<p>a) \(y^{2}+x^{2}=e^{x^{2}y};\)
+	</p>
+	<p>б) \(\frac{1}{4}(y-x-\pi)+\arctan\frac{x}{y}=0;\)
+	</p>
+	<p>в) \(x^{3}y-y^{2}x=\sin(e^{y}).\)
+	</p>
+	<p><span class="elected">Решение.</span>
+	Считая, что переменная \(y\) является функцией переменной \(x\), 
+	продифференцируем обе части этих равенств как сложные функции 
+	переменной \(x\), затем выразим производную \(y'_{x}\) как функцию
+	\(x\) и \(y\).
+	</p>
+	<p>П. а). Используя правила (2.10), (2.11) и (2.14), 
+	продифференцируем правую и левую части заданного уравнения. 
+	Получим:
+	\[(y^{2}+x^{2})'=(y^{2})'+(x^{2})'=2y\cdot y'_{x}+2x,\]
+	\[(e^{x^{2}y})'=e^{x^{2}y}\cdot(x^{2}y)'=e^{x^{2}y}\cdot(2xy+x^{2}y'_{x}).\]
+	</p>
+	<p>Из равенства 
+	\[2y\cdot y'_{x}+2x=e^{x^{2}y}\cdot(2xy+x^{2}y'_{x})\]
+	выразим производную \(y'_{x}\).
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(y'_{x}=\frac{2x(ye^{x^{2}y}-1)}{2y-x^{2}e^{x^{2}y}}.\)
+	</p>
+	<p>П. б). При дифференцировании заданного уравнения получим
+	\[\frac{1}{4}(y-x-\pi)'+\left(\arctan\frac{x}{y}\right)'=0\]
+	или
+	\[\frac{1}{4}(y'_{x}-1)+\frac{y-y'_{x}x}{x^{2}+y^{2}},\]
+	откуда выражаем производную \(y'_{x}\).
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(y'_{x}=\frac{4y-x^{2}-y^{2}}{4x-x^{2}-y^{2}}\)
+	</p>
+	<p>П. в). Продифференцируем отдельно обе части равенства: 
+	\[(x^{3}y-y^{2}x)'=(x^{3}y)'-(y^{2}x)'=3x^{2}\cdot y+x^{3}\cdot y'_{x}-2y\cdot y'_{x}\cdot x-y^{2},\]
+	\[(\sin(e^{y}))'=\cos e^{y}(e^{y})'=\cos e^{y}\cdot e^{y}\cdot y'_{x}.\]
+	Из равенства
+	\[3x^{2}y+x^{3}y'_{x}-2yy'_{x}x-y^{2}=\cos e^{y}y'_{x}\]
+	выразим \(y'_{x}\).
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(y'_{x}=\frac{3x^{2}y-y^{2}}{e^{y}\cos e^{y}-x^{3}+2xy}.\)
+	</p>
+	<p><span class="bold">Задача 2.4.</span>
+	Найти производные следующих неявно заданных функций при \(x=x_{0}\):
+	</p>
+	<p>а) \(\frac{x^{2}}{25}+\frac{y^{2}}{25}=1,\;\;y>0\) при x_{0}=4;</p>
+	<p>а) \(\arccos\frac{x}{y}=x^{2}+y^{2},\;\;y>0\) при x_{0}=0;</p>
+	<p><span class="bold">Ответ.</span>
+	П. а). Сначала найдем значение \(y_{0}\) при \(x_{0}=4\) из 
+	заданного уравнения \(\frac{x^{2}}{25}+\frac{y^{2}}{25}=1\).
+	С учетом того, что \(y_{0}>0\), получим \(y_{0}=\frac{12}{5}\). 
+	Продифференцируем равенство \(\frac{x^{2}}{25}+\frac{y^{2}}{25}=1\):
+	\[\frac{2x}{25}+\frac{y\cdot y'_{x}}{8}=0.\]
+	Подставим в полученное уравнение значения \(x_{0}\) и \(y_{0}\):
+	\[\frac{8}{25}+\frac{12}{5\cdot 8}\cdot y'_{x}=0,\]
+	откуда получим значение производной:
+	\[y'_{x}=-\frac{16}{15}.\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	При \(x_{0}=4\), \(y'_{x}=-\frac{16}{15}\).
+	</p>
+	<p>П. б). Решая уравнение \(\arccos\frac{x}{y}=x^{2}+y^{2}\) при 
+	\(x_{0}=0\), найдем 
+	\[\frac{\pi}{2}=y_{0}^{2}.\]
+	С учетом условия \(y_{0}> 0\) получим
+	\[y_{0}=\sqrt{\frac{\pi}{2}}.\]
+	</p>
+	<p>Продифференцируем левую и правую части заданного уравнения 
+	\(\arccos\frac{x}{y}=x^{2}+y^{2}\):
+	\[\left(\arccos\frac{x}{y}\right)'=\frac{\left(\frac{x}{y}\right)'}{\sqrt{1-\frac{x^{2}}{y^{2}}}}=-\frac{y(y-xy'_{x})}{y^{2}\sqrt{y^{2}-x^{2}}}=-\frac{y-xy'_{x}}{y\sqrt{y^{2}-x^{2}}},\]
+	\[(x^{2}+y^{2})'=2x+2yy'_{x}.\]
+	Подставляя значения \(x_{0}=0\), \(y_{0}=\sqrt{\frac{\pi}{2}}\) 
+	в равенство
+	\[-\frac{y-xy'_{x}}{y\sqrt{y^{2}-x^{2}}}=2x+2y\cdot y'_{x},\]
+	получим
+	\[-\frac{\sqrt{2}}{\sqrt{\pi}}=2\frac{\sqrt{\pi}}{\sqrt{2}}y'_{x},\]
+	откуда найдем значение производной
+	\[y'_{x}=-\frac{1}{\pi}.\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	При \(x_{0}=0\;\;y'_{x}=-\frac{1}{\pi}\).
+	</p>
+	
+	<p><span class="bold">Задача 2.5.</span>
+	Найти производные следующих неявно заданных функций при \(y=f(x)\):
+	</p>
+	<p>а) \(y=(\cos 2x)^{\frac{4}{\sin^{2}x}}\);</p>
+	<p>б) \(y=\left(\frac{\arcsin x}{\sin 2x}\right)^{\sqrt{x}}\);</p>
+	<p>в) \(y=\frac{x^{x\ln x}}{\sqrt{\tan x^{2}}}\).</p>
+	<p><span class="elected">Решение.</span>
+	Это показательно-степенные функции. Чтобы найти их производные, 
+	необходимо предварительно прологарифмировать функцию \(y=f(x)\):
+	\[\ln y=\ln(f(x)),\]
+	затем найти \(y'_{x}\) как производную неявно заданной функции.
+	</p>
+	<p>П. а). Прологарифмируем функцию \(y=(\cos 2x)^{\frac{4}{\sin^{2}x}}\):
+	\[\ln y=4\frac{\ln(\cos 2x)}{\sin^{2}x},\]
+	а затем продифференцируем полученное равенство:
+	\[\frac{y'_{x}}{y}=\left(4\frac{\ln(\cos 2x)}{\sin^{2}x}\right)'.\]
+	</p>
+	<p>В правой части этого равенства стоит частное от деления функций.
+	При его дифференцировании используем формулу (2.13):
+	\[4\left(\frac{\ln(\cos 2x)}{\sin^{2}x}\right)'=4\frac{(\ln(\cos 2x))'\sin^{2}x-(\sin^{2}x)'\ln(\cos 2x)}{\sin^{4}x}=\]
+	\[=4\frac{\frac{-2\sin 2x}{\cos 2x}\sin^{2}x-2\sin x\cos x\ln(\cos 2x)}{\sin^{4}x}=\]
+	\[=-4\frac{\sin 2x(2\sin^{2}x+\cos 2x\ln(\cos 2x))}{\cos 2x\sin^{4}x}.\]
+	Из равенства
+	\[\frac{y'_{x}}{y}=-4\frac{\sin 2x(2\sin^{2}x+\cos 2x\ln(\cos 2x))}{\cos 2x\sin^{4}x}\]
+	получим
+	\[y'_{x}=-4y\frac{\sin 2x(2\sin^{2}x+\cos 2x\ln(\cos 2x))}{\cos 2x\sin^{4}x}.\]
+	Подставив сюда выражение функции y из условия, найдем искомую 
+	производную.
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(y'(x)=-4(\cos 2x)^{\frac{4}{\sin^{2}x}-1}\frac{\sin 2x}{\sin^{4}x}\left(2\sin^{2}x+\cos 2x\ln(\cos 2x)\right).\)
+	</p>
+	<p>П. б). В результате логарифмирования функции 
+	\(y=\left(\frac{\arcsin x}{\sin 2x}\right)^{\sqrt{x}}\) получим
+	\[\ln y=\sqrt{x}\ln\left(\frac{\arcsin x}{\sin 2x}\right).\]
+	Производная левой части
+	\[(\ln y)'=\frac{y'_{x}}{y}.\]
+	</p>
+	<p>При дифференцировании правой части этого равенства воспользуемся
+	свойством логарифма:
+	\[\ln\frac{\alpha}{\beta}=\ln\alpha-\ln\beta.\]
+	Тогда, используя формулы (2.10), (2.11) и (2.14), получим:
+	\[\left(\sqrt{x}\ln\left(\frac{\arcsin x}{\sin 2x}\right)\right)'=\]
+	\[=(\sqrt{x})'\ln\frac{\arcsin x}{\sin 2x}+\sqrt{x}(\ln(\arcsin x)-\ln(\sin 2x))'=\]
+	\[=\frac{1}{2\sqrt{x}}\ln\frac{\arcsin x}{\sin 2x}+\sqrt{x}\left(\frac{1}{\arcsin x\sqrt{1-x^{2}}}-\frac{2\cos 2x}{\sin 2x}\right)=\]
+	\[=\frac{1}{2\sqrt{x}}\ln\frac{\arcsin x}{\sin 2x}+\sqrt{x}\left(\frac{1}{\arcsin x\sqrt{1-x^{2}}}-2\cot 2x\right).\]
+	</p>
+	<p>Из равенства
+	\[\frac{y'_{x}}{y}=\frac{1}{2\sqrt{x}}\ln\frac{\arcsin x}{\sin 2x}+\sqrt{x}\left(\frac{1}{\arcsin x\sqrt{1-x^{2}}}-2\cot 2x\right)\]
+	получим \(y'_{x}\).
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\[y'(x)=\left(\frac{\arcsin x}{\sin 2x}\right)^{\sqrt{x}}\left(\frac{1}{2\sqrt{x}}\ln\frac{\arcsin x}{\sin 2x}+\sqrt{x}\left(\frac{1}{\arcsin x\sqrt{1-x^{2}}}-2\cot 2x\right)\right).\]
+	</p>
+	<p>П. в). После логарифмирования функции \(y=\frac{x^{x\ln x}}{\sqrt{(\tan x)^{x^{2}}}}\) будем иметь
+	\[\ln y=x\ln^{2}x-\frac{1}{2}x^{2}\ln\tan x.\]
+	Используя формулы (2.10), (2.11) и (2.14), продифференцируем полученное равенство. 
+	</p>
+	<p>Тогда
+	\[(\ln y)'=\ln^{2}x+x\cdot 2\ln x\cdot\frac{1}{x}-\frac{1}{2}\left(2x\cdot\ln\tan x+x^{2}\cdot\frac{1}{\tan x}\frac{1}{\cos^{2}x}\right)\]
+	или
+	\[\frac{y'_{x}}{y}=\ln^{2}x+2\ln x-x\ln\tan x-\frac{x^{2}}{\sin 2x},\]
+	откуда получим
+	\[y'_{x}=y\cdot\left(\ln^{2}x+2\ln x-x\ln\tan x-\frac{x^{2}}{\sin 2x}\right).\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(y'(x)=\frac{x^{x\ln x}}{(\tan x)^{\frac{x^{2}}{2}}}\left(\ln^{2}x+2\ln x-x\ln\tan x-\frac{x^{2}}{\sin 2x}\right).\)
+	</p>
+	
+	<p><span class="bold">Задача 2.6.</span>
+	Вычислить производные заданных показательно-степенных 
+	функций \(y=f(x)\) при \(x=x_{0}\), используя 
+	логарифмическое дифференцирование:
+	</p>
+	<p>а) \(y=(\sin x)^{\cos x}\) при \(x_{0}=\frac{\pi}{2};\)</p>
+	<p>б) \(y=(^{8-x^{2}})^{x^{2}}\) при \(x_{0}=2.\)</p>
+	<p><span class="elected">Решение.</span>
+	П. а). Прологарифмируем заданную функцию:
+	\[\ln y=\cos x\cdot\ln(\sin x)\]
+	и продифференцируем полученное равенство:
+	\[(\ln y)'=(\cos\cdot\ln(sin x))'.\]
+	Используя формулу (2.11) и правило (2.14), получим
+	\[(\cos x\cdot\ln(\sin x))'=(\cos x)'\ln(\sin x)+\cos x\cdot(\ln(\sin x))'=\]
+	\[=-\sin x\cdot\ln(\sin x)+\cos x\cdot\frac{1}{\sin x}\cdot(\sin x)'=-\sin x\cdot\ln(\sin x)+\frac{\cos^{2}x}{\sin x}.\]
+	Из равенства
+	\[\frac{y'_{x}}{y}=-\sin x\cdot\ln(\sin x)+\frac{\cos^{2}x}{\sin x}\]
+	получим
+	\[y'_{x}=y\cdot\left(-\sin x\cdot\ln(\sin x)+\frac{\cos^{2}x}{\sin x}\right)=\]
+	\[=(\sin x)^{\cos x}\cdot\left(-\sin x\cdot\ln(\sin x)+\frac{\cos^{2}x}{\sin x}\right).\]
+	</p>
+	<p>Вычислим значение полученной производной в точке \(x_{0}=\frac{\pi}{4}\):
+	\[y'\left(\frac{\pi}{4}\right)=
+	\left(\frac{\sqrt{2}}{2}\right)^{\frac{\sqrt{2}}{2}}
+	\left(-\frac{\sqrt{2}}{2}\ln
+	\left(\frac{\sqrt{2}}{2}\right)+\frac{\frac{1}{2}}{\frac{\sqrt{2}}{2}}\right)=
+	\left(\frac{\sqrt{2}}{2}\right)^{\frac{\sqrt{2}}{2}+1}
+	\left(\frac{\ln 2}{2}+1\right).\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(y'\left(\frac{\pi}{4}\right)=
+	\left(\frac{\sqrt{2}}{2}\right)^{\frac{\sqrt{2}}{2}+1}
+	\left(\frac{\ln 2}{2}+1\right).\)
+	</p>
+	
+	<p>П. б). Вычислим значение функции 
+	\(y=\left(\sqrt{8-x^{2}}\right)^{x^{2}}\) при \(x_{0}=2\). 
+	Получим \(y_{0}=f(2)=2^{4}=16\). Прологарифмируем заданную функцию:
+	\[\ln y=\frac{x^{2}}{2}\ln(8-x^{2}),\]
+	а затем продифференцируем полученное равенство:
+	\[(\ln y)'=\left(\frac{x^{2}}{2}\ln(8-x^{2})\right)'.\]
+	</p>
+	<p>Применяя при дифференцировании правой части равенства формулу (2.11) 
+	и правило (2.14), получим:
+	\[\left(\frac{x^{2}}{2}\ln(8-x^{2})\right)'=\left(\frac{x^{2}}{2}\right)'\ln(8-x^{2})+\frac{x^{2}}{2}(\ln(8-x^{2}))'=\]
+	\[=x\ln(8-x^{2})+x\ln(8-x^{2})+\frac{x^{2}}{2}\cdot\frac{(-2x)}{8-x^{2}}=x\ln(8-x^{2})-\frac{x^{3}}{8-x^{2}}.\]
+	Тогда из равенства
+	\[\frac{y_{x}'}{y}=x\ln(8-x^{2})-\frac{x^{3}}{8-x^{2}}\]
+	найдем производную и вычислим ее значение в точке \(x_{0}=2\) и \(y_{0}=16\):
+	\[y'(2)=16\left(2\ln 4-\frac{8}{4}\right).\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(y'(2)=32(\ln 4-1).\)
+	</p>
+	<p><span class="bold">Задача 2.7.</span>
+	Найти производные \(y'_{x}\) функций, заданных параметрически:
+	</p>
+	<p>а) \(\begin{cases}
+		x=at-a\sin t,\\
+		y=a-a\cos t;
+		\end{cases}\)
+	</p>
+	<p>б) \(\begin{cases}
+		x=a\cos^{3}t,\\
+		y=a\sin^{3}t;
+		\end{cases}\)
+	</p>
+	<p>в) \(\begin{cases}
+		x=\frac{e^{\sqrt{t}}}{t^{2}},\\
+		y=\arctan \sqrt{t}.
+		\end{cases}\)
+	</p>
+	<p><span class="elected">Решение.</span>
+	П. а). Воспользуемся формулой (2.15). Тогда получим:
+	\[y'_{x}=\frac{(a-a\cos t)'_{t}}{(at-a\sin t)'_{t}}=\frac{a\sin t}{a-a\cos t}=\frac{\sin t}{1-\cos t}.\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(\begin{cases}
+		x=at-a\sin,\\
+		y'_{x}=\frac{\sin t}{1-\cos t}.
+		\end{cases}\)
+	</p>
+	<p>П. б). Воспользовавшись формулами (2.15) и (2.14), будем иметь:
+	\[y'_{x}=\frac{(a\sin^{3}t)'_{t}}{(a\cos^{3}t)'_{t}}=-\frac{3a\sin^{2}t\cos t}{-3a\cos^{2}t\sin t}=-\frac{\sin t}{\cos t}=-\tan t.\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(\begin{cases}
+		x=a\cos^{3}t,\\
+		y=-\tan t.
+		\end{cases}\)
+	</p>
+	<p>П. в). Применим формулу (2.15) к функции
+	\(\begin{cases}
+		x=\frac{e^{\sqrt{t}}}{t^{2}},\\
+		y=\arctan\sqrt{t}.
+		\end{cases}\)
+		Тогда \(y'_{x}=\frac{y'_{t}}{x'_{t}}=\frac{(\arctan\sqrt{t})'_{t}}{\left(\frac{e^{\sqrt{t}}}{t^{2}}\right)'_{t}}.\)
+	При вычислении производных \(x'_{t}\) и \(y'_{t}\) воспользуемся формулами (2.14), (2.13) и получим:
+	\[y'_{t}=(\arctan \sqrt{t})'_{t}=\frac{1}{(1+t)}\frac{1}{2\sqrt{t}},\]
+	\[x'_{t}=\left(\frac{e^{\sqrt{t}}}{t^{2}}\right)'_{t}=\frac{(e^{\sqrt{t}})'_{t}t^{2}-(t^{2})'_{t}e^{\sqrt{t}}}{t^{4}}= \frac{e^{\sqrt{t}}\frac{1}{2\sqrt{t}}t^{2}-2te^{\sqrt{t}}}{t^{4}}=\frac{e^{\sqrt{t}}}{2t^{3}}(\sqrt{t}-4).\]
+	Подставляя найденные производные в выражение для \(y'_{x}\), получим:
+	\[y'_{x}=\frac{t^{3}}{e^{\sqrt{t}}(\sqrt{t}-4)\sqrt{t}(1+t)}=\frac{t^{3}}{e^{\sqrt{t}}(t-4\sqrt{t})(1+t)}.\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(\begin{cases}
+		x=\frac{e^{\sqrt{t}}}{t^{2}},\\
+		y=\frac{t^{3}}{e^{\sqrt{t}}(t-4\sqrt{t})(1+t)}.
+		\end{cases}\)
+	</p>
+
+	<p><span class="bold">Задача 2.8.</span>
+	Вычислить производные \(y'_{x}\) функций, заданных параметрически:
+	</p>
+	<p>а) \(\begin{cases}
+		x=e^{-2t}\sin t,\\
+		y=e^{2t}\cos t, 
+		\end{cases}\) при \(x_{0}=0;\)
+	</p>
+	<p>б) \(\begin{cases}
+		x=(t^{2}+1)\ln t,\\
+		y=\sqrt[3]{t}, 
+		\end{cases}\) при \(x_{0}=0;\)
+	</p>
+	<p>в) \(\begin{cases}
+		x=\sqrt{\log_{2}t},\\
+		y=2^{t^{2}}, 
+		\end{cases}\) при \(x_{0}=1;\)
+	</p>
+	<p><span class="elected">Решение.</span>
+	П. а). В результате применения формул (2.15), (2.11) и (2.14) получим:
+	\[y'_{x}=\frac{(e^{2t}\cos t)'_{t}}{(e^{-2t}\sin t)'_{t}}=\frac{2e^{2t}\cos t-e^{2t}\sin t}{-2e^{-2t}\sin t+e^{-2t}\cos t}=\frac{2\cos t-\sin t}{\cos t-2\sin t}e^{4t}.\]
+	</p>
+	<p>Тогда параметрическое задание \(y'_{x}\) имеет вид
+	\[\begin{cases}
+		x=e^{-2t}\sin t,\\
+		y'_{x}=\frac{2\cos t-\sin t}{\cos t-2\sin t}e^{-4t}, 
+		\end{cases}\]
+	</p>
+	<p>Подставим в эти уравнения значение \(t_{0}=0\), получим \(x_{0}=0\), \(y'_{x}=2\).
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(y'_{x}=2\) при \(x_{0}=0\).
+	</p>
+	<p>П. б). Найдем сначала значение \(t=t_{0}\), которому соответствует
+	 значение \(x_{0}=0\). Решая уравнение
+	 \[(t^{2}_{0}+1)\ln t_{0}=0,\]
+	 получим \(t_{0}=1\). По формуле (2.15), используя формулы 
+	 (2.10) и (2.11), найдем производную \(y'_{x}\) функции  
+	 \(\begin{cases}
+		x=(t^{2}+1)\ln t,\\
+		y=\sqrt[3]{t}. 
+		\end{cases}\)
+	\[y'_{x}=\frac{(\sqrt[3]{t})'_{t}}{((t^{2}+1)\ln t)'_{t}}=\frac{1}{3t^{\frac{2}{3}}}\left(2t\ln t+\frac{t^{2}+1}{t}\right).\]
+	Подставим в выражение производной значение \(t_{0}=1\), получим \(y'_{x}=\frac{1}{6}\).
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(y'_{x}=\frac{1}{6}\) при \(x_{0}=0\).
+	</p>
+	<p>П. в). Значению \(x_{0}=1\) соответствует значение \(t=t_{0}=2\). 
+	По формулам (2.15) и (2.14) получим выражение для \(y'_{x}\):
+	\[y'_{x}=\frac{\left(2^{t^{2}}\right)'_{t}}{(\sqrt{\log_{2}t})'_{t}}=\frac{2^{t^{2}}\ln 2\cdot 2t}{\frac{1}{2\sqrt{\log_{2}t}\cdot\ln 2\cdot t}}=2^{t^{2}+2}\ln^{2}2\cdot t^{2}\cdot \sqrt{\log_{2}t}.\]
+	</p>
+	<p>Подставим в это выражение значение \(t_{0}=0\), получим \(y'_{x}=2^{6}\ln 2\cdot 4\cdot\sqrt{\log_{2}2}=256\ln^{2}2\).
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(y'_{x}=256\ln^{2}2\) при \(x_{0}=1.\)
+	</p>
+
+	<p><span class="bold">Задача 2.9.</span>
+	Составить уравнение касательной:
+	</p>
+	<p>а) к кривой \(y=x^{x}\) в точке \(M_{0}(2,4)\);
+	</p>
+	<p>б) к кривой \(y=\frac{e^{x}}{x^{3}-1}\) в точке точке ее пересечения с осью ординат;
+	</p>
+	<p>в) к кривой \(y=x^{2}+3x-10\) в точке ее пересечения с осью \(Ox\), лежащей справа от начала координат;
+	</p>
+	<p>г) к кривой \(y=x^{2}+2x-3\) в той точке пересечения с прямой \(y=x-1\), у которой абсцисса отрицательна;
+	</p>
+	<p>д) к полуокружности \(y=\sqrt{10-x^{2}}\) в точке \(M_{0}(x_{0},y_{0})\) с ординатой \(y_{0}=3\) при условии \(x_{0} < 0\);
+	</p>
+	<p>е) к эллипсу \(\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1\) в произвольной точке;
+	</p>
+	<p>ж) к гиперболе \(\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1\) в произвольной точке;
+	</p>
+	<p>з) к параболе  \(y^{2}=2px (p > 0)\) в произвольной точке;
+	</p>
+	<p>и) к кривой \(\begin{cases}
+		x=\ln\left(\cos\frac{t}{2}\right),\\
+		y=\ln(\cos t)
+		\end{cases}\) в точке, соответствующей значению \(t_{0}=\frac{\pi}{3}\);
+	</p>
+	<p>к) к астроиде \(\begin{cases}
+		x=a\cos^{3}t,\\
+		y=a\sin^{3}t
+		\end{cases}\) в точке \(M_{0}\left(\frac{a}{2\sqrt{2}},\frac{a}{2\sqrt{2}}\right)\);
+	</p>
+	<p><span class="elected">Решение.</span>
+	Уравнение касательной к графику функции \(y=f(x)\) в точке 
+	\(M_{0}(x_{0},y_{0})\) имеет вид (1.4)
+	\[y-f(x_{0})=f'(x_{0})(x-x_{0})\]
+	или
+	\[y-y_{0}=y'(M_{0})(x-x_{0})\]
+	где \(y'(M_{0})\) – производная функции \(y=f(x)\), вычисленная 
+	в точке \(M_{0}(x_{0},y_{0})\).
+	</p>
+
+	<p>П. а). Найдем производную заданной функции \(y=x^{x}\), используя 
+	правило логарифмического дифференцирования:
+	\[\ln y =x\ln x,\]
+	\[\frac{y'_{x}}{y}=\ln x+x\frac{1}{x}=\ln x+1\]
+	\[y'_{x}=y(\ln x+1)=x^{x}(\ln x+1).\]
+	</p>
+	<p>Теперь определим значение производной при \(x=2\):
+	\[y'(2)=4(\ln 2+1).\]
+	Составим уравнение касательной к кривой \(y=x^{x}\) в точке \(M_{0}(2,4)\):
+	\[y-4=4(\ln 2+1)(x-2)\]
+	или
+	\[y=4(\ln 2+1)x-4(\ln 2+1).\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(y=4(\ln 2+1)x-4(\ln 2+1).\)
+	</p>
+	<p>П. б). Вычисляя значение функции \(f(0)\), найдем точку 
+	\(M_{0}(0,-1)\) пересечения заданной кривой с осью ординат.
+	Найдем производную функции \(y=\frac{e^{x}}{x^{3}-1}\):
+	\[f'(x)=\left(\frac{e^{x}}{x^{3}-1}\right)'=\frac{e^{x}(x^{3}-1)-3x^{2}e^{x}}{(x^{3}-1)^{2}}=\frac{e^{x}(x^{3}-3x^{2}-1)}{(x^{3}-1)^{2}}.\]
+	Тогда  \(f'(0)=-1.\)
+	</p>
+	<p>Составим уравнение касательной к кривой \(y=\frac{e^{x}}{x^{3}-1}\)
+	 в точке \(M_{0}(0,-1)\):
+	 \[y+1=-x.\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(y+1=-x.\)
+	</p>
+	<p>П. в). Найдем точку \(M_{0}(x_{0},y_{0})\) пересечения параболы
+	\(y=x^{2}+3x-10\) с осью \frac{Ox}{}, лежащую справа от начала 
+	координат. Для этого решим уравнение
+	\[x^{2}+3x-10=0\]
+	и выберем из его корней \(x_{1}=-5\) и \(x_{2}=2\) положительный 
+	корень, откуда искомая точка – \(M_{0}(2, 0)\).
+	</p>
+	<p>Определим производную функции \(y=f(x)\):
+	\[f'(x)=(x^{2}+3x-10)'=2x-3\]
+	и подставим в нее значение \(x_{0}=2\):
+	\[f'(2)=7.\]
+	Составим уравнение касательной в точке \(M_{0}(2, 0)\):
+	\[y=7(x-2).\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(y=7x-14.\)
+	</p>
+	<p>Найдем точку \(M_{0}(x_{0},y_{0})\) пересечения параболы
+	\(y=x^{2}+2x-3\) и прямой \(y=x-1\), для которой \(x_{0} < 0\):
+	\[x^{2}+2x-3=x-1,\]
+	\[x^{2}+x-2=0,\]
+	\[x_{1}=-2, x_{2}=1,\]
+	откуда получим \(x_{0}=-2\). Вычислим:
+	\[y_{0}=f(-2)=(-2)^{2}+2\cdot(-2)-3=-3.\]
+	Определим производную функции  :
+	\[f'(x)=(x^{2}+2x-3)'=2x+2,\]
+	вычислим:
+	\[f'(-2)=-2.\]
+	Составим уравнение касательной:
+	\[y+3=-2x-7.\]
+	</p>
+	<p>П. д). Найдем абсциссу точки \(M_{0}\):
+	\[\sqrt{10-x_{0}^{2}}=3,\]
+	откуда, с учетом условия \(x_{0} < 0, x_{0} < -1.\)
+	Найдем производную заданной функции \(y=f(x)\):
+	\[f'(x)=\frac{-x}{\sqrt{10-x^{2}}}.\]
+	и вычислим ее значение:
+	\[f'(-1)=\frac{1}{\sqrt{10-1}}=\frac{1}{\sqrt{3}}.\]
+	Составим уравнение касательной:
+	\[y-3=\frac{1}{3(x+1)}.\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(y=\frac{x}{3}+\frac{10}{3}.\)
+	</p>
+	<p>П. е). Продифференцируем уравнение \(\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1\):
+	\[\frac{2x}{a^{2}}+\frac{2yy'_{x}}{b^{2}}=0,\]
+	откуда найдем значение производной в произвольной точке эллипса 
+	\(M_{0}(x_{0},y_{0})\):
+	\[y'_{x}(M_{0})=-\frac{b^{2}}{a^{2}}\cdot\frac{x_{0}}{y_{0}}.\]
+	</p>
+	<p>При \(y_{0}=0\) производная не существует, углового коэффициента
+	нет и касательной является вертикальная прямая с уравнением (5) 
+	\(x=x_{0}\) (см. замечание 0.2 введения). Подставим \(y_{0}=0\) в 
+	уравнение эллипса и найдем \(x_{0}=\pm a\). Следовательно, 
+	вертикальные касательные находятся в вершинах эллипса \(\pm a, 0\) 
+	и имеют уравнения \(x=\pm a\).
+	</p>
+	<p>Составим уравнение касательной при  :
+	\[y-y_{0}=-\frac{b^{2}}{a^{2}}\cdot\frac{x_{0}}{y_{0}}(x-x_{0}),\]
+	откуда, умножив обе части уравнения на \(\frac{y_{0}}{b^{2}}\), получим
+	\[\frac{yy_{0}}{b^{2}}-\frac{y_{0^{2}}}{b^{2}}=-\frac{x_{0}x}{a^{2}}+\frac{x_{0}^{2}}{a^{2}}\]
+	или, с учетом равенства \(\frac{x_{0}^{2}}{a^{2}}+\frac{y_{0}^{2}}{b^{2}}=1\),
+	\[\frac{xx_{0}}{a^{2}}+\frac{yy_{0}}{b^{2}}=1.\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(x=\pm a\) в вершинах эллипса \((\pm a, 0)\), 
+	\(\frac{xx_{0}}{a^{2}}+\frac{yy_{0}}{b^{2}}=1\) при \(-a < x_{0} < a\).
+	</p>
+	<p>П. ж). Продифференцируем уравнение \(\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1\):
+	\[\frac{2x}{a^{2}}+\frac{2yy'_{x}}{b^{2}}=0,\]
+	откуда в произвольной точке гиперболы \(M_{0}(x_{0}, y_{0})\) 
+	\[y'_{x}=\frac{b^{2}}{a^{2}}\cdot\frac{x_{0}}{y_{0}}.\]
+	</p>
+	<p>Составим уравнение касательной при \(|x_{0}|>a\):
+	\[y-y_{0}=\frac{b^{2}}{a^{2}}\cdot\frac{x_{0}}{y_{0}}(x-x_{0}),\]
+	откуда
+	\[\frac{yy_{0}}{b^{2}}-\frac{y_{0}^{2}}{b^{2}}=\frac{x_{0}x}{a^{2}}-\frac{x_{0}^{2}}{a^{2}}\]
+	или, с учетом равенства \(\frac{x_{0}^{2}}{a^{2}}-\frac{y_{0}^{2}}{b^{2}}=1\),
+	\[\frac{xx_{0}}{a^{2}}-\frac{yy_{0}}{b^{2}}=1.\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(x=\pm a\) в вершинах гиперболы \((\pm a, 0)\), 
+	\(\frac{xx_{0}}{a^{2}}-\frac{yy_{0}}{b^{2}}=1\) при \(|x_{0}| > a\).
+	</p>
+	<p>П. з). Продифференцируем уравнение \(y^{2}=2px\):
+	\[2yy'_{x}=2p,\]
+	откуда в произвольной точке параболы \(M_{0}(x_{0},y_{0})\)
+	\[y'_{x}=\frac{p}{y_{0}}.\]
+	</p>
+	<p>Составим уравнение касательной при \(x_{0} > 0\):
+	\[y-y_{0}=\frac{p}{y_{0}}(x-x_{0}),\]
+	откуда
+	\[yy_{0}-y_{0}^{2}=px-px_{0},\]
+	или, с учетом равенства \(y_{0}^{2}=2px_{0}\),
+	\[yy_{0}=p(x+x_{0}).\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(x=0\) в вершине параболы \((0,0)\), \(yy_{0}=p(x+x_{0})\) при \(x_{0} > 0.\)
+	</p>
+	<p>П. и). Функция \(\begin{cases}
+		x=\ln\left(\cos\frac{t}{2}\right),\\
+		y=\ln(\cos t);
+		\end{cases}\) задана параметрически. 
+	</p>
+	<p>Сначала найдем координаты точки \(M_{0}(x_{0},y_{0})\), 
+	соответствующей значению \(t_{0}=\frac{\pi}{3}\):
+	\[x_{0}=\ln\left(\cos\frac{\pi}{6}\right)=\ln\frac{\sqrt{3}}{2},\]
+	\[y_{0}=\ln\left(\cos\frac{\pi}{3}\right)=\ln\frac{1}{2}.\]
+	Найдем производную функции по формуле (2.9):
+	\[y'_{x}=\frac{(\ln(\cos t))'_{t}}{\left(\ln\left(\cos\frac{t}{2}\right)\right)'_{t}}=\frac{\frac{-\sin t}{\cos t}}{\frac{-\sin\frac{t}{2}}{2\cos\frac{t}{2}}}=\frac{2\tan t}{\tan\frac{t}{2}}.\]
+	Подставим в нее значение \(t_{0}=\frac{\pi}{3}\):
+	\[y'_{x}\left(\frac{\pi}{3}\right)=6.\]
+	Уравнение касательной примет вид
+	\[y-\ln\frac{1}{2}=6\left(x-\ln\frac{\sqrt{3}}{2}\right).\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(y=6x-3\ln 3+5\ln 2.\)
+	</p>
+	<p>П. к). Сначала определим значение \(t=t_{0}\), \(t_{0}\in[0,2\pi)\), 
+	соответствующее точке \(M_{0}\left(\frac{a}{2\sqrt{2}},\frac{a}{2\sqrt{2}}\right)\):
+	\[\begin{cases}
+		x=\frac{a}{2\sqrt{2}}=\cos^{3}t_{0},\\
+		y=\frac{a}{2\sqrt{2}}=\sin^{3}t_{0},
+		\end{cases}\]
+	откуда \(t_{0}=\frac{\pi}{4}\). Для вычисления производной 
+	воспользуемся результатами решения задачи 2.7 б):
+	\[y'_{x}=-\tan t\]
+	и подставим в него значение \(t_{0}=\frac{\pi}{4}\):
+	\[y'_{x}\left(\frac{\pi}{4}\right)=-1.\]
+	Уравнение касательной примет вид
+	\[y-\frac{a}{2\sqrt{2}}=-\left(x-\frac{a}{2\sqrt{2}}\right).\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(y=-x+\frac{a}{\sqrt{2}}.\)
+	</p>
+	<p><span class="bold">Задача 2.10.</span>
+	В какой точке касательная к кривой \(y=x^{2}e^{-x}\) параллельна оси абсцисс?
+	</p>
+	<p><span class="elected">Решение.</span>
+	При решении воспользуемся геометрическим смыслом производной: производная 
+	функции \(y=f(x)\), вычисленная при \(x=x_{0}\), равна угловому коэффициенту
+	касательной, проведенной к графику функции в точке \(M_{0}(x_{0},f(x_{0}))\), 
+	то есть формулами (1.3) и (1.4).
+	</p>
+	<p>Вычислим производную функции \(y=x^{2}e^{-x}\):
+	\[y'=\left(x^{2}e^{-x}\right)'=(x^{2})'e^{-x}+x^{2}(e^{-x})'=2xe^{-x}-x^{2}e^{-x}=xe^{-x}(2-x).\]
+	</p>
+	<p>Так как касательная параллельна оси \(Ox\), угловой коэффициент касательной 
+	равен \(0\). По формуле (1.3) приравняем значение производной к значению 
+	\(k=0\) и найдем значение \(x\), при котором это равенство выполняется:
+	\[xe^{-x}(2-x)=0,\]
+	откуда либо \(x_{1}=0\), либо \(x_{2}=2\). Вычислим соответствующие им 
+	значения функции: \(y_{1}=0\), \(y_{2}=4e^{-2}\).
+	</p>
+	<p><span class="bold">Ответ.</span>
+	Касательная параллельна оси абсцисс в точках \(M_{1}(0,0)\), \(M_{2}(2,4e^{-2}\).
+	</p>
+	<p><span class="bold">Задача 2.11.</span>
+	В каких точках касательная к кривой \(y=\frac{1}{x+3}\) перпендикулярна 
+	прямой \(y=x+2\)?
+	</p>
+	<p><span class="elected">Решение.</span>
+	Вычислим производную функции \(y=\frac{1}{x+3}\):
+	\[y'=\left(\frac{1}{x+3}\right)'=-\frac{1}{(x+3)^{2}}.\]
+	</p>
+	<p>Угловой коэффициент \(k_{1}\) прямой \(y=x+2\) равен \(1\). Обозначим 
+	угловой коэффициент касательной через \(k_{2}\). В силу перпендикулярности 
+	прямой и касательной \(k_{1}\cdot k_{2}=-1\), следовательно,
+	\[k_{2}=-1.\]
+	</p>
+	<p>По формуле (1.3) приравняем производную к значению \(k_{2}\) и найдем 
+	значения \(x\):
+	\[-\frac{1}{(x+3)^{2}}=-1,\]
+	\[(x+3)^{2}=1,\;\;x+3=\pm 1,\]
+	\[x_{1}=-4\;\;x_{2}=-2.\]
+	</p>
+	<p>Вычислим соответствующие им значения функции: \(y_{1}=-1\;\;y_{2}=1.\). 
+	</p>
+	<p><span class="bold">Ответ.</span>
+	Касательная к кривой \(y=\frac{1}{x+3}\) перпендикулярна прямой \(y=x+2\) 
+	в точках \(M_{1}(-4,-1)\), \(M_{2}(-2,1)\).
+	</p>
+	<p><span class="bold">Задача 2.12.</span>
+	Известно, что касательная к параболе \(y=x^{2}+2x+3\) параллельна прямой 
+	\(y=4x-5\). Составить уравнение этой касательной.
+	</p>
+	<p><span class="elected">Решение.</span>
+	Из уравнения прямой \(y=4x-5\) найдем ее угловой коэффициент: \(k_{1}=4\).
+	Так как касательная и прямая параллельны, то угловой коэффициент касательной 
+	\(k\) равен 4. 
+	</p>
+	<p>Вычислим производную функции \(y=f(x)\):
+	\[f'(x)=(x^{2}+2x+3)'=2x+2.\]
+	Используя формулу (1.3), найдем точку \(M_{0}(x_{0},f(x_{0}))\), 
+	в которой \(k=4\): \(2x_{0}+2=4\), откуда \(x_{0}=1\). 
+	Вычислим соответствующее значение функции: \(y_{0}=f(1)=6\).
+	</p>
+	<p>Составим уравнение касательной к графику функции в точке \(M_{0}(1,6)\):
+	\[y-6=4(x-1).\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(y=4x+2\).
+	</p>
+	<p><span class="bold">Задача 2.13.</span>
+	В какой точке касательная к параболе \(y=x^{2}+6x+4\) перпендикулярна 
+	прямой \(x+4y-2=0\)? Составить уравнение этой касательной.
+	</p>
+	<p><span class="elected">Решение.</span>
+	Запишем уравнение прямой \(x+4y-2=0\) в виде
+	\[y=-\frac{1}{4}x+\frac{1}{2},\]
+	откуда значение углового коэффициента \(k_{1}=-\frac{1}{4}\). Поскольку
+	касательная перпендикулярна заданной прямой, ее угловой коэффициент 
+	\[k=-\frac{1}{k_{1}}=4.\]
+	</p>
+	<p>Вычисляем производную функции:
+	\[y'=(x^{2}+6x+4)'=2x+6\]
+	и, используя формулу (1.3), находим точку \(M_{0}(x_{0},y_{0})\), в которой 
+	угловой коэффициент равен \(k\): \(2x_{0}+6=4\), откуда \(x_{0}=-1\). 
+	Найдем соответствующее значение функции \(y_{0}=-1\) и определим точку, 
+	в которой строим касательную: \(M_{0}(-1,-1)\). Составим уравнение касательной 
+	в этой точке:
+	\[y+1=4(x+1)\]
+	или 
+	\[y=4x+3.\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	В точке \(M_{0}(-1,-1)\) уравнение касательной \(y=4x+3\).
+	</p>
+	<p><span class="bold">Задача 2.14.</span>
+	Найти угловые коэффициенты касательных к эллипсу 
+	\(x^{2}+4y^{2}+2x-8y-20=0\) в точках с абсциссой \(x_{0}=2\).
+	</p>
+	<p><span class="elected">Решение.</span>
+	Продифференцируем уравнение эллипса:
+	\[2x+8yy'_{x}+2-8y'_{x}=0,\]
+	откуда:
+	\[y'_{x}=\frac{-2x-2}{8y-8}=-\frac{x+1}{4(y-1)}.\]
+	</p>
+	<p>При \(x_{0}=2\) из уравнения эллипса получим уравнение 
+	\(4y_{0}^{2}-8y_{0}-12=0\), решив которое будем иметь \(y_{01}=-1\), \(y_{02}=3\).
+	</p>
+	<p>Тогда в точке \(M_{1}(2,-1)\;\; y'_{x}=\frac{3}{8}\), 
+	в точке \(M_{2}(2,3)\;\; y'_{x}=-\frac{3}{8}\).
+	</p>
+	<p><span class="bold">Ответ.</span>
+	В точке \(M_{1}(2,-1)\;\; k_{1}=\frac{3}{8}\), 
+	в точке \(M_{2}(2,3)\;\; k_{2}=-\frac{3}{8}\).
+	</p>
+	<p><span class="bold">Задача 2.15.</span>
+	В какой точке касательная к первой арке циклоиды 
+	\(\begin{cases}
+		x=t-\sin t,\\
+		y=1-\cos t;
+		\end{cases}\) \((t\in[0,2\pi))\) параллельна оси \(Ox\)?
+	</p>
+	<p><span class="elected">Решение.</span>
+	Найдем производную \(y'_{x}\) параметрически заданной функции 
+	\(\begin{cases}
+		x=t-\sin t,\\
+		y=1-\cos t;
+		\end{cases}\) по формуле (2.9):
+	\[y'_{x}=\frac{(1-\cos t)'_{t}}{(t-\sin t)'_{t}}=\frac{\sin t}{1-\cos t}.\]
+	</p>
+	<p>Из условия параллельности касательной и оси \(Ox\) определим значение ее 
+	углового коэффициента: \(k=0\). По формуле (1.3) составим уравнение:
+	\[\frac{\sin t}{1-\cos t}=0,\]
+	найдем значения  , при которых это равенство выполняется:
+	\[\begin{cases}
+		\sin t=0,\\
+		1-\cos t\neq 0,
+		\end{cases}\]
+	откуда \(t=(2k+1)\pi,\;\; k=0,\pm 1,\pm 2, ... \). Первой арке соответствует 
+	значение \(t_{0}=\pi\). Подставим его в уравнения функции:
+	\[\begin{cases}
+		x_{0}=\pi-\sin \pi=\pi,\\
+		y_{0}=1-\cos \pi=2
+		\end{cases}\]
+	и определим точку \(M_{0}(\pi,2)\).
+	</p>
+	<p><span class="bold">Ответ.</span>
+	\(M_{0}(\pi,2)\).
+	</p>
+	<p><span class="bold">Задача 2.16.</span>
+	Под каким углом пересекаются параболы \(y=x^{2}\) и \(y=2-x^{2}\)?
+	</p>
+	<p><span class="elected">Решение.</span>
+	Углом пересечения двух кривых называется острый угол между касательными, 
+	проведенными к кривым в точке их пересечения. Найдем точки пересечения парабол 
+	\(y=x^{2}\) и \(y=2-x^{2}\). Решая уравнение \(x^{2}=2-x^{2}\), получим 
+	\(x=\pm 1\).
+	</p>
+	<p>1. Рассмотрим точку \(x=-1\). Найдем угловые коэффициенты касательных 
+	\(k_{1},\;\; k_{2}\) к параболам:
+	</p>
+	<p>\(y_{1}=f_{1}(x)=x^{2},\;\;\; f'_{1}(x)=2x,\;\;\; k_{1}=f'_{1}(-1)=-2;\)</p>
+	<p>\(y_{2}=f_{2}(x)=2-x^{2},\;\;\; f'_{2}(x)=-2x,\;\;\; k_{2}=f'_{2}(-1)=2;\)</p>
+	<p>Воспользуемся формулой для тангенса острого угла между двумя прямыми:
+	\[\tan\varphi=\left|\frac{k_{1}-k_{2}}{1+k_{1}k_{2}}\right|=\frac{4}{3},\]
+	откуда
+	\[\varphi=\arctan\frac{4}{3}.\]
+	</p>
+	<p>1. Рассмотрим точку \(x=1\). Найдем угловые коэффициенты касательных 
+	\(k_{1},\;\; k_{2}\) к параболам:
+	</p>
+	<p>\(y_{1}=f_{1}(x)=x^{2},\;\;\; f'_{1}(x)=2x,\;\;\; k_{1}=f'_{1}(1)=2;\)</p>
+	<p>\(y_{2}=f_{2}(x)=2-x^{2},\;\;\; f'_{2}(x)=-2x,\;\;\; k_{2}=f'_{2}(1)=-2;\)</p>
+	<p>Таким образом,
+	\[\tan\varphi=\left|\frac{k_{1}-k_{2}}{1+k_{1}k_{2}}\right|=\frac{4}{3}.\]
+	</p>
+	<p><span class="bold">Ответ.</span>
+	В обеих точках кривые пересекаются под углом \(\varphi=\arctan\frac{4}{3}\).
+	</p>
+
+	<a href="../pages/problems_02.html" class="button">К задачам \(\S\) 2</a>
+	
+</div>
+</body>
+</html>

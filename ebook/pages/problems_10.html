@@ -1,0 +1,203 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		$("div.spoiler div.name span").toggle(function(){
+		$(this).parent("div.name").parent("div.spoiler").children("div.text").show();
+		$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " -15px 0");
+		},function(){
+		$(this).parent("div.name").parent("div.spoiler").children("div.text").hide();
+		$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " 0 -15px");
+		});
+		});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_100.html" class="button">Назад</a>
+	<a href="../pages/paragraph_110.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 10. Схема полного исследования функции. Построение графиков</div>
+	<div class="h2">Задачи к \(\S\) 10. </div>	
+	<p><span class="bold">Задача 10.1.</span>
+	Провести полное исследование функции \(y=f(x)\) и построить ее график:</p> 
+	<p>а) \(f(x)=\frac{x+1}{2(x-1)};\)
+	</p>
+	<p>б) \(f(x)=\frac{x^{3}}{x+1};\)
+	</p>
+	<p>в) \(f(x)=\sqrt[3]{1-x^{3}};\)
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>П. а): 1.1. Область определения \(D=(-\infty,1)\cup(1,+\infty)\).
+			</p>
+			<p>\(\qquad\) 1.2. \(x=1\) – точка бесконечного разрыва.
+			</p>
+			<p>\(\qquad\) 1.3.Функция не является ни четной, ни нечетной.
+			</p>
+			<p>\(\qquad\) 1.4. Функция непериодическая.
+			</p>
+			<p>\(\qquad\) 1.5. Точки пересечения графика с осями координат: 
+			\(\left(0,\frac{1}{2}\right)\), \((-1,0)\).
+			</p>
+			<p>\(\qquad\) 2. График имеет вертикальную асимптоту \(x=1\), причем 
+			\[\lim_{x\rightarrow 1-0}\frac{x+1}{2(x-1)}=-\infty,\qquad \lim_{x\rightarrow 1+0}\frac{x+1}{2(x-1)}=+\infty\]
+			</p>
+			<p>\(\qquad\) 3. Найдем наклонные асимптоты:
+			\[k=\lim_{x\rightarrow\pm\infty}\frac{f(x)}{x}=\lim_{x\rightarrow\pm\infty}\frac{x+1}{2x(x-1)}=0,\]
+			\[b=\lim_{x\rightarrow\pm\infty}(f(x)-kx)=\lim_{x\rightarrow\pm\infty}\left(\frac{x+1}{2(x-1)}\right)=\frac{1}{2}.\]
+			\(y\) – наклонная (горизонтальная) асимптота.
+
+			</p>
+			<p>\(\qquad\) 4. Найдем первую производную функции:
+			\[f'(x)=\frac{2(x-1)-2(x+1)}{4(x-1)^{2}}=\frac{-1}{(x-1)^{2}}\]
+			Очевидно, что для всех \(x\in D\) \(f'(x) < 0\), функция убывает при \(x\in D\) .
+			</p>
+			<p>\(\qquad\) 5. Найдем вторую производную функции \(f''(x)\):
+			\[f''(x)=(-(x-1)^{-2})'=2(x-1)^{-3}=\frac{2}{(x-1)^{3}}.\]
+			</p>
+			<p>\(\qquad\) Очевидно, что при \(x < 1\) \(f''(x) < 0\) и функция выпукла вверх, 
+			при \(x > 1\) \(f''(x) > 0\) и функция выпукла вниз.
+			</p>
+			<p>\(\qquad\) Строим график функции (рис. 10.1).
+			</p>
+			
+			<div class="img">
+				<img src="../img/10-1.png"/>
+				<div class="nameImg">Рис. 10.1</div>
+			</div>
+			
+			<p>\(\qquad\) Приведенные построения позволяют уточнить множество значений функции: 
+			\(E=\left(-\infty, \frac{1}{2}\right)\cup\left(\frac{1}{2},+\infty\right)\).
+			</p>
+			<br>
+			<p>П. б): 1.1. Область определения \(D=(-\infty,-1)\cup(-1,+\infty)\).
+			</p>
+			<p>\(\qquad\) 1.2. \(x=-1\) – точка бесконечного разрыва.
+			</p>
+			<p>\(\qquad\) 1.3.Функция не является ни четной, ни нечетной, поскольку
+			\[f(-x)=\frac{(-x)^{3}}{(-x)+1}=\frac{(-x)^{3}}{1-x}\neq
+			\begin{cases} f(x), \\ -f(x).\end{cases}\]
+			</p>
+			<p>\(\qquad\) 1.4. Функция непериодическая.
+			</p>
+			<p>\(\qquad\) 1.5. Точки пересечения графика с осями координат: \((0,0)\).</p>
+			<p>\(\qquad\) 2. График имеет вертикальную асимптоту \(x=-1\), причем 
+			\[\lim_{x\rightarrow -1-0}\frac{x^{3}}{x+1}=+\infty,\qquad \lim_{x\rightarrow -1+0}\frac{x^{3}}{x+1}=-\infty.\]
+			</p>
+			<p>\(\qquad\) 3. Найдем наклонные асимптоты:
+			\[k=\lim_{x\rightarrow\pm\infty}\frac{f(x)}{x}=\lim_{x\rightarrow\pm\infty}\frac{x^{2}}{x+1}=\pm\infty,\]
+			следовательно, наклонных асимптот нет.
+			</p>
+			<p>\(\qquad\) 4. Найдем первую производную функции:
+			\[f'(x)=\frac{3x^{2}(x+1)-x^{3}}{(x+1)^{2}}=\frac{2x^{3}+3x^{2}}{(x+1)^{2}}=\frac{x^{2}(2x+3)}{(x+1)^{2}}.\]
+			Найдем стационарные точки: \(f'(x)=0\) при \(x=0\) или при \(x=-\frac{3}{2}\). Определим знаки производной (рис. 10.2). 
+			</p>
+			
+			<div class="img">
+				<img src="../img/10-2.png"/>
+				<div class="nameImg">Рис. 10.2</div>
+			</div>
+			<p>Следовательно, на промежутке \(\left(-\infty,-\frac{3}{2}\right)\) 
+			функция убывает, на промежутках \(\left(-\frac{3}{2},-1\right)\), \((-1,+\infty)\) 
+			функция возрастает. При \(x=-\frac{3}{2}\) производная меняет 
+			знак с минуса на плюс, следовательно, функция достигает минимума
+			\(f\left(x=-\frac{3}{2}\right)=\frac{27}{4}\). 
+			</p>
+			<p>\(\qquad\) 5. Найдем вторую производную функции \(f''(x)\) при \(x\neq -1\):
+			\[f''(x)=\left(\frac{2x^{3}+3x^{2}}{(x+1)^{2}}\right)'=\frac{(6x^{2}+6x)(x+1)^{2}-2(x+1)(2x^{3}+3x^{2})}{(x+1)^{4}}=\]
+			\[=\frac{2x(x^{2}+3x+3)}{(x+1)^{3}}.\]
+			</p>
+			<p>Далее ищем нули числителя: \(x=0\). Определяем знаки второй
+			производной (рис. 10.3).
+			</p>
+			
+			<div class="img">
+				<img src="../img/10-3.png"/>
+				<div class="nameImg">Рис. 10.3</div>
+			</div>
+			
+			<p>Следовательно, функция выпукла вверх на промежутке \((-1,0)\),
+			выпукла вниз на промежутках \((-\infty,-1)\) и на \((0,\infty)\), 
+			\(M(0,0)\) является точкой перегиба графика функции.
+			</p>
+			<p>Строим график функции (рис. 10.4).</p>
+			
+			<div class="img">
+				<img src="../img/10-4.png"/>
+				<div class="nameImg">Рис. 10.4</div>
+			</div>
+			
+			<br>
+			<p>П. в): 1.1. Область определения \(D=(-\infty,+\infty)\).</p>
+			<p>\(\qquad\) 1.2. Точек разрыва нет.</p>
+			<p>\(\qquad\) 1.3. Функция не является ни четной, ни нечетной</p>
+			<p>\(\qquad\) 1.4. Очевидно, что функция непериодическая.</p>
+			<p>\(\qquad\) 1.5. Находим точки пересечения с осями координат: \((0,1)\) и \((1,0)\).</p>
+			<p>\(\quad\) 2. Вертикальных асимптот нет.</p>
+			<p>\(\quad\) 3. Найдем наклонные асимптоты:
+			\[k=\lim_{x\to \pm\infty}\frac{f(x)}{x}=\lim_{x\to\pm\infty}\frac{\sqrt[3]{1-x^{3}}}{x}=\lim_{x\to\pm\infty}\sqrt[3]{\frac{1}{x^{3}}-1}=-1,\]
+			\[b=\lim_{x\to \pm\infty}(f(x)-kx)=\lim_{x\to \pm\infty}(\sqrt[3]{1-x^{3}}+x)=\]
+			\[=\lim_{x\to \pm\infty}\frac{1-x^{3}+x^{3}}{\sqrt[3]{(1-x^{3})^{2}}-x^{3}\sqrt[3]{1-x^{3}}+x^{2}}=0.\]
+			Таким образом, \(y=-x\) – наклонная асимптота.
+			</p>
+			<p>\(\quad\) 4. Найдем первую производную функции:
+			\[f'(x)=\left(\left(1-x^{3}\right)^{\frac{1}{3}}\right)'=\frac{1}{3}\left(1-x^{3}\right)^{-\frac{2}{3}}(-3x^{2})=-\frac{x^{2}}{\sqrt[3]{(1-x^{3})^{2}}}.\]
+			</p>
+			<p>Найдем точки, «подозрительные на экстремум»: \(f'(x)=0\) 
+			при \(x=0\), \(f'(x)\) не существует при \(x=1\). Во всех остальных
+			случаях \(f'(x) < 0\). Следовательно, функция убывает 
+			на всей числовой оси, точек экстремума нет.
+			</p>
+			<p>\(\quad\) 5. Найдем вторую производную функции \(f''(x)\):
+			\[f''(x)=(-x^{2}(1-x^{3})^{-\frac{2}{3}})'=-2x\cdot(1-x^{3})^{-\frac{2}{3}}-2x^{4}\cdot(1-x^{3})^{-\frac{5}{3}}=\]
+			\[=-2x\frac{(1-x^{3})+x^{3}}{(1-x^{3})^{\frac{5}{3}}}.\]
+			</p>
+			<p>Очевидно, что \(f''(x)=0\) при \(x=0\), 
+			\(f''(x)\) не существует при \(x=1\). Определяем знаки \(f''(x)\) (рис. 10.5).
+			</p>
+			
+			<div class="img">
+				<img src="../img/10-5.png"/>
+				<div class="nameImg">Рис. 10.5</div>
+			</div>
+			
+			<p>Следовательно, функция выпукла вверх на промежутке \((0,1)\), 
+			выпукла вниз на промежутках \((-\infty,0)\) и \((0,+\infty)\), 
+			точки M_{1}(0,1) и M_{2}(1,0) являются точками перегиба графика функции.
+			</p>
+			<p>Строим график функции (рис. 10.6).
+			</p>
+			
+			<div class="img">
+				<img src="../img/10-6.png"/>
+				<div class="nameImg">Рис. 10.6</div>
+			</div>
+			
+			<p>
+			</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+		</script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	</head>
+<body>
+<div class="prevNextPage">
+	<a href="../pages/info.html" class="button">Назад</a>
+	<a href="../pages/paragraph_010.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">	
+	<div class="h1">Введение</div>
+	<p>Рассмотрим задачи, приводящие к понятию производной.</p>
+	<div class="h2"><a name="an01">0.1. Задача о касательной</a></div>
+
+	<p>Прежде всего дадим определение касательной к плоской кривой 
+	\(K\) в точке \(M \in K\).
+	</p>
+	
+	<div class="definition">
+		Определение 0.1.
+		<p><span class="elected">Касательной</span> 
+		к кривой K в точке \(M \in K\) называется предельное положение 
+		секущей \(MN\) при стремлении точки \(N\) к точке \(M\) вдоль этой кривой (рис. 1).
+		</p>
+	</div>
+
+	<div class="img">
+		<img src="../img/0-1.png"/>
+	</div>
+	<div class="nameImg">Рис. 1</div>
+	
+	<p>Рассмотрим следующую задачу.
+	</p>
+	<p>Пусть кривая \(K\) задана уравнением \(y=f(x)\). 
+	Функция \(y=f(x)\) предполагается непрерывной в некоторой окрестности точки \(x_{0}\). 
+	Написать уравнение касательной к кривой \(K\) в точке \(M(x_{0},f(x_{0}))\).
+	</p>
+	<p>Известно, что уравнение прямой, проходящей через точку \(M(x_{0},f(x_{0}))\), 
+	имеет вид \[y-f(x_{0})=k(x-x_{0}) \left(k \in (-\infty, +\infty)\right)\]
+	или \[x=x_{0}.\]
+	</p>
+	<p>Для того чтобы составить уравнение касательной, нужно найти значение углового коэффициента \(k=tg(\alpha)\), 
+	где \(\alpha\) – угол наклона касательной, или установить, что углового коэффициента у касательной нет.
+	</p>
+	<p>Рассмотрим случай, когда функция \(y=f(x)\) 
+	строго возрастает в какой-то окрестности \(V(x_{0})\) точки 
+	\(x_{0}\), то есть, если \(x_{1} < x_{2}\) при 
+	\(x_{1}, x_{2} \in V(x_{0})\), то \(f(x_{1}) < f(x_{2})\).
+	</p>
+	<p>Найдем угловой коэффициент секущей \(MN\), если 
+	\(x_{N}>x_{M}\). Пусть точка \(N\) имеет координаты 
+	\((x_{0}+\Delta x, f(x_{0}+\Delta x)), \Delta x > 0\). 
+	Угол наклона секущей обозначим через \(\beta\) и вычислим 
+	его, воспользовавшись треугольником \(MNL\) (см. рис. 1):
+\begin{equation}
+k_{MN}=tg(\beta)=\frac{y_{N}-y_{M}}{x_{N}-x_{M}}=\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}
+\end{equation}
+	</p>
+	<p>Из определения 
+	<a class="htooltip" href="#">0.1<span class="wStyle"><span class="elected">Касательной</span> к кривой K в точке \(M \in K\) называется предельное положение секущей \(MN\) при стремлении точки \(N\) к точке \(M\) вдоль этой кривой (рис. 1).</span></a>
+	следует, что 
+	\[k=\lim_{N \rightarrow M}tg(\beta).\]
+	</p>
+	<p>Поскольку \(\Delta x > 0\), то \(\Delta x \rightarrow +0\). Тогда
+\begin{equation}
+k=\lim_{\Delta x \rightarrow + 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}.
+\end{equation}
+	</p>
+	<p>Найдём теперь угловой коэффициент секущей \(MN\), когда \(x_{N} < x_{M}\) (рис. 2).
+	</p>
+	
+	<div class="img">
+		<img src="../img/0-2.png"/>
+	</div>
+	<div class="nameImg">Рис. 2</div>
+	
+	<p>Координаты точки \(N\) имеют вид \((x_{0}+\Delta x, f(x_{0}+\Delta x)), \Delta x < 0.\) 
+	Вычислим тангенс угла наклона секущей \(\beta\), 
+	воспользовавшись треугольником \(MNL\) (см. рис. 2):
+	\[k_{MN}=tg(\beta)=\frac{y_{M}-y_{N}}{x_{M}-x_{N}}=\frac{f(x_{0})-f(x_{0}+\Delta x)}{-\Delta x}=\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}.\]
+	</p>
+	<p>Мы снова получили формулу 
+	<a class="htooltip" href="#">(1)<span class="wStyle">\(k_{MN}=tg(\beta)=\frac{y_{N}-y_{M}}{x_{N}-x_{M}}=\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}\)</span></a>. 
+	Теперь \(\Delta x < 0\) и \(\Delta x \rightarrow -0\). 
+	Для углового коэффициента касательной получим выражение, 
+	аналогичное выражению (2):
+\begin{equation}
+k=\lim_{\Delta x \rightarrow - 0} tg( \beta)=\lim_{\Delta x \rightarrow - 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}.
+\end{equation}
+	</p>
+	<p>Если пределы в формулах 
+	<a class="htooltip" href="#">(2)<span class="wStyle">\(k=\lim_{\Delta x \rightarrow + 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}.\)</span></a>
+	и 
+	<a class="htooltip" href="#">(3)<span class="wStyle">\(k=\lim_{\Delta x \rightarrow - 0} tg( \beta)=\lim_{\Delta x \rightarrow - 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}.\)</span></a>
+	существуют и совпадают, 
+	то, объединяя их, получим выражение для углового коэффициента 
+	касательной к кривой \(y=f(x)\) в точке \(M(x_{0},f(x_{0}))\)
+\begin{equation}
+k=\lim_{\Delta x \rightarrow 0}=\lim_{\Delta x \rightarrow - 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}.
+\end{equation}
+	</p>
+	<p>Легко проверить, что формула (4) сохраняется и в случае 
+	строгого убывания, и в случае постоянства функции \(f(x)\) в 
+	окрестности \(V(x_{0})\).
+	</p>
+	<p><span class="elected">Замечание 0.1. </span>Пределы в формулах (2) и (3) могут не существовать. 
+	Тогда не существует и касательная к графику функции в точке \((x_{0},f(x_{0}))\).
+	Если оба предела 
+	<a class="htooltip" href="#">(2)<span class="wStyle">\(k=\lim_{\Delta x \rightarrow + 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}.\)</span></a>
+	и 
+	<a class="htooltip" href="#">(3)<span class="wStyle">\(k=\lim_{\Delta x \rightarrow - 0} tg( \beta)=\lim_{\Delta x \rightarrow - 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}.\)</span></a>
+	существуют, но не равны друг другу,
+	то касательной в исследуемой точке к кривой \(K\) тоже нет. 
+	Простым примером такого случая является отсутствие касательной
+	к кривой  \(y=|x|\) в точке \(x_{0}=0\).
+	</p>
+	<p>Действительно, по формуле 
+	<a class="htooltip" href="#">(2)<span class="wStyle">\(k=\lim_{\Delta x \rightarrow + 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}.\)</span></a>
+	получим:
+	\[k=\lim_{\Delta x \rightarrow +0}\frac{\Delta x}{\Delta x}=1,\]
+	а по формуле 
+	<a class="htooltip" href="#">(3)<span class="wStyle">\(k=\lim_{\Delta x \rightarrow - 0} tg( \beta)=\lim_{\Delta x \rightarrow - 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}.\)</span></a>
+	получим:
+	\[k=\lim_{\Delta x \rightarrow -0}\frac{(-\Delta x)}{\Delta x}=-1.\]
+	</p>
+	<p><span class="elected">Замечание 0.2. </span>
+	Особо следует рассмотреть случай, когда отношение
+	\[\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}\]
+	является бесконечно большой величиной при \(\Delta x \rightarrow 0\). 
+	Тогда у касательной нет углового коэффициента и ее уравнение имеет вид
+\begin{equation}
+x=x_{0}.
+\end{equation}
+	</p>
+	<div class="h2"><a name="an02">0.2 Задача о скорости</a></div>
+	<p>Пусть (материальная) точка \(M\) начинает свое движение от некоторой 
+	начальной точки \(O\) и движется вдоль некоторой прямой \(l\). Положение 
+	точки \(M\) на прямой \(l\) в момент времени \(t\) определяется ее 
+	расстоянием \(S=S(t)\) до точки \(O\) (рис. 3). Время отсчитывается от 
+	момента начала движения.
+	</p>
+	
+	<div class="img">
+		<img src="../img/0-3.png"/>
+	</div>
+	<div class="nameImg">Рис. 3</div>
+	
+	<p>Движение считается заданным, если известно уравнение движения \(S=S(t)\). 
+	Величина средней скорости движения за промежуток времени \((t_{0},t_{0}+\Delta t)\) 
+	вычисляется по формуле
+	\[\nu_{ср}=\frac{\Delta S}{\Delta t},\]
+	где \(\Delta S=S(t_{0}+\Delta t)-S(t_{0})\). Мгновенная скорость в момент 
+	\(t=t_{0}\) определяется предельным переходом
+\begin{equation}
+\nu(t_{0})=\lim_{\Delta t \rightarrow 0}\frac{S(t_{0}+\Delta t)-S(t_{0})}{\Delta t}.
+\end{equation}
+	</p>
+	<p>Формулы 
+	<a class="htooltip" href="#">(4)<span class="wStyle">\(k=\lim_{\Delta x \rightarrow 0}=\lim_{\Delta x \rightarrow - 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}.\)</span></a>
+	и 
+	<a class="htooltip" href="#">(6)<span class="wStyle">\(\nu(t_{0})=\lim_{\Delta t \rightarrow 0}\frac{S(t_{0}+\Delta t)-S(t_{0})}{\Delta t}.\)</span></a>
+	однотипные. Они приводят нас к обобщающему их понятию 
+	<span class="elected">производной</span>.
+	</p>
+</div>
+</body>
+</html>

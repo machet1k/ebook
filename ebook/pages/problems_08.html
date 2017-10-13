@@ -1,0 +1,120 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		$("div.spoiler div.name span").toggle(function(){
+		$(this).parent("div.name").parent("div.spoiler").children("div.text").show();
+		$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " -15px 0");
+		},function(){
+		$(this).parent("div.name").parent("div.spoiler").children("div.text").hide();
+		$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " 0 -15px");
+		});
+		});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_082.html" class="button">Назад</a>
+	<a href="../pages/paragraph_090.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 8. Асимптоты</div>
+<div class="h2">Задачи к \(\S\) 8. </div>	
+	<p><span class="bold">Задача 8.1.</span>
+	Найти асимптоты графика функции \(y=f(x)\):
+	</p>
+	<p>а) \(f(x)=\frac{2x+1}{x-2};\)
+	</p>
+	<p>б) \(f(x)=\frac{x^{2}+2x+3}{|x+1|};\)
+	</p>
+	<p>в) \(f(x)=(2x-3)e^{-4x};\)
+	</p>
+	<p>г) \(f(x)=\sqrt[3]{(1-2x)(x-3)}\)
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>П. а) 1. При \(x=2\) функция терпит бесконечный разрыв, причем
+			\[\lim_{x\rightarrow 2-0}\frac{2x+1}{x-2}=-\infty,\qquad\lim_{x\rightarrow 2+0}\frac{2x+1}{x-2}=+\infty\]
+			Следовательно, прямая \(x=2\) является вертикальной асимптотой.
+			</p>
+			<p>\(\qquad\)2. Используя замечание 8.1, рассмотрим предел (8.4):
+			\[b=\lim_{x\rightarrow \pm\infty}f(x)=\lim_{x\rightarrow \pm\infty}\frac{2x+1}{x-2}=2,\]
+			следовательно, \(k=0\) и у графика есть горизонтальная асимптота \(y=2\).
+			</p>
+			<p><span class="bold">Ответ.</span> Вертикальная асимптота \(x=2\), 
+			горизонтальная асимптота \(y=2\).
+			</p>
+			<p>П. б): 1. При \(x=-1\) функция терпит бесконечный разрыв, причем
+				\[\lim_{x\rightarrow 1-0}\frac{x^{2}+2x+3}{|x+1|}=+\infty,\quad\lim_{x\rightarrow 1+0}\frac{x^{2}+2x+3}{|x+1|}=+\infty.\]
+			</p>
+			<p>Следовательно, прямая \(x=-1\) является вертикальной асимптотой.
+			</p>
+			<p>\(\qquad\) 2. Вычислим:
+			\[k=\lim_{x\rightarrow \pm\infty}\frac{f(x)}{x}=\lim_{x\rightarrow \pm\infty}\frac{x^{2}+2x+3}{x|x+1|}=
+			\begin{cases}
+			\lim_{x\rightarrow +\infty}\frac{x^{2}+2x+3}{x(x+1)}=1, \\ 
+			\lim_{x\rightarrow -\infty}\frac{x^{2}+2x+3}{-x(x+1)}=-1.
+			\end{cases}\]
+			\[b=\lim_{x\rightarrow \pm\infty}(f(x)-k\cdot x)=
+			\begin{cases}
+			\lim_{x\rightarrow +\infty}\left(\frac{x^{2}+2x+3}{(x+1)}-x\right)=\lim_{x\rightarrow \pm\infty}\frac{x+3}{x+1}=1, \\ 
+			\lim_{x\rightarrow -\infty}\left(\frac{x^{2}+2x+3}{(x+1)}+x\right)=\lim_{x\rightarrow -\infty}\frac{x+3}{x+1}=-1.
+			\end{cases}\]
+			</p>
+			<p>Следовательно, прямая \(y=x+1\) является наклонной 
+			асимптотой при \(x\to+\infty\), прямая \(y=-x-1\) – при \(x\to-\infty\).
+			</p>
+			<p><span class="bold">Ответ.</span> 
+			Вертикальная асимптота \(x=-1\),
+			наклонные асимптоты: \(y=x+1\) при \(x\to+\infty\), \(y=-x-1\) – при \(x\to-\infty\)..
+			</p>
+			
+			<p>П. в): 1. Функция \(f(x)=(2x-3)e^{-4x}\) определена и 
+			непрерывна при \(x\in R\), следовательно, вертикальных 
+			асимптот нет.
+			</p>
+			<p>\(\qquad\) 2. Исследуем поведение функции при  :
+			\(x\to\pm\infty:\)
+			\[b=\lim_{x\to +\infty}f(x)=\lim_{x\to +\infty}(2x-3)e^{-4x}=0,\]
+			поэтому \(y=0\) – горизонтальная асимптота при \(x\to+\infty\);
+			\[\lim_{x\to -\infty}\frac{f(x)}{x}=k=\lim_{x\to-\infty}\frac{(2x-3)e^{-4x}}{x}=+\infty,\]
+			поэтому при \(x\to-\infty\) наклонной асимптоты нет.
+			</p>
+			<p><span class="bold">Ответ.</span> 
+			\(y=0\) – горизонтальная асимптота при \(x\to+\infty\); при \(x\to-\infty\) асимптоты нет.
+			</p>
+			<p>П. г): 1. Функция \(f(x)=\sqrt[3]{(1-2x)(x-3)}\) определена 
+			и непрерывна при \(x\in R\), следовательно, вертикальных асимптот
+			нет.</p>
+			<p>\(\qquad\) 2. Исследуем ее поведение при \(x\to\pm\infty\):
+			\[k=\lim_{x\to\pm\infty}\frac{f(x)}{x}=\lim_{x\to\pm\infty}\frac{\sqrt[3]{(1-2x)(x-3)}}{x}=0,\]
+			\[b=\lim_{x\to\pm\infty}(f(x)-kx)=\lim_{x\to\pm\infty}\sqrt[3]{(1-2x)(x-3)}=-\infty,\]		
+			при \(x\to\pm\infty\) наклонных асимптот нет.
+			</p>
+			<p><span class="bold">Ответ.</span> 
+			Асимптот нет.
+			</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

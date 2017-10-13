@@ -1,0 +1,207 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_110.html" class="button">Назад</a>
+	<a href="../pages/literature.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 12. Дифференциал функции. Дифференциалы высших порядков</div>
+
+	<p>Пусть функция \(y=f(x)\) в точке \(x\in X\) имеет производную \(f'(x)\).
+	</p>
+	
+	<div class="definition">
+		<span class="elected">Определение 12.1.</span>
+		<p><span class="elected">Дифференциалом функции</span> \(y=f(x)\) в точке \(x\) называется 
+		произведение производной \(f'(x)\) на приращение \(\Delta x\) независимой 
+		переменной \(x\). 
+		</p>
+	</div>
+	
+	<p>Дифференциал обозначается как \(dy\) или \(df(x)\):
+	\[df(x)=f'(x)\Delta x\]
+	или
+	\[dy=y'\Delta x\tag{12.1}\]
+	</p>
+	<p><span class="bold">Пример 12.1.</span>
+	Найдем дифференциал функции \(f(x)=x\) в текущей точке \(x\). 
+	Поскольку \(f'(x)=x'=1\), то \(dx=x'\Delta x=\Delta x\). Таким образом, 
+	дифференциал независимой переменной \(x\) равен ее приращению: 
+	\[dx=\Delta x\tag{12.2}\]
+	</p>
+	<p>Из формул (12.1) и (12.2) следует, что
+	\[df(x)=f'(x)dx\]
+	или
+	\[dy=y'dx\tag{12.3}\]
+	</p>
+	
+	<div class="h2">Связь дифференциала функции и ее приращения</div>
+	
+	<p>Обратимся к определению производной функции \(y=f(x)\):
+	\[f'(x)=\lim_{\Delta x\rightarrow 0}\dfrac{\Delta y}{\Delta x}.\]
+	Отсюда по определению предела следует, что
+	\[\dfrac{\Delta y}{\Delta x}=f'(x)+\alpha(\Delta x),\]
+	где \(\alpha(\Delta x)\rightarrow 0\) при \(\Delta x\rightarrow 0\). Тогда
+	\[\Delta y=f'(x)\cdot\Delta x+\alpha(\Delta x)\Delta x\tag{12.4}\]
+	или, в силу (12.3),
+	\[\Delta y=df(x)+\alpha\Delta x\tag{12.5}\]
+	где \(\alpha\Delta x\) – величина более высокого порядка малости, 
+	чем \(df(x)\), если \(f'(x)\neq 0\).
+	</p>
+	<p>Из формул (12.4) и (12.5) следует, что дифференциал составляет главную, 
+	линейную по \(\Delta x\), часть приращения функции. Отсюда также следует, что
+	\[\Delta y\cong dy,\]
+	и это равенство тем точнее, чем меньше \(|\Delta x|\).
+	</p>
+	
+	<div class="h2">Геометрический смысл дифференциала</div>
+	
+	<p>На рис. 12.1 изображен график строго возрастающей функции \(y=f(x)\) 
+	и касательная к нему в точке \(M_{0}(x_{0},f(x_{0}))\). Пусть 
+	\(\Delta x > 0\). Рассмотрим прямоугольный треугольник \(M_{0}KL\). 
+	Для длины катета \(KL\) имеем \(|KL|=|M_{0}K|\tan\alpha\). Так как 
+	\(\tan\alpha=f'(x_{0})\), \(|M_{0}K|=\Delta x\) (рис. 12.1), то 
+	\(|KL|=f'(x_{0})\Delta x=df'(x_{0})\), то есть длина \(|KL|\) равна 
+	дифференциалу функции \(f(x)\) в точке \(x_{0}\). С другой стороны, длина
+	\(|KL|\) является приращением ординаты касательной.
+	</p>
+	<p>Аналогичный вывод можно сделать как для \(\Delta x < 0\), так и в 
+	случае убывающей функции \(f(x)\).
+	</p>	
+	<p>Итак, дифференциал представляет собой приращение ординаты касательной, 
+	проведенной к графику функции в точке дифференцирования.
+	</p>
+	
+	<div class="img">
+		<img src="../img/12-1.png"/>
+		<div class="nameImg">Рис. 12.1</div>
+	</div>
+	
+	<div class="h2">Правила вычисления дифференциала</div>
+	
+	<p>В силу формулы (12.3) и таблицы производных основных элементарных 
+	функций получаем таблицу их дифференциалов:
+	</p>
+	
+	<p>\(1.\quad d(const)=0.\)</p>
+	<p>\(2.\quad d(x^{\alpha})=\alpha\cdot x^{\alpha-1}\cdot dx;\)
+		<br>\(\qquad\qquad\)частные случаи: \(d(\sqrt{x})=\dfrac{dx}{2\sqrt{x}},\quad d\left(\dfrac{dx}{x}\right)=-\dfrac{dx}{x^2}.\)
+	</p>
+	<p>\(3.\quad d(a^{x})=a^{x}\ln a\cdot dx\)
+		<br>\(\qquad\qquad\)частный случай: \(d(e^{x})'=e^{x}dx.\)
+	</p>
+	<p>\(4.\quad d(\log_{a}x)=\dfrac{dx}{x\ln a};\)
+		<br>\(\qquad\qquad\)частный случай: \(d(\ln x)=\dfrac{dx}{x}.\)
+	</p>
+	<p>\(5.\quad d(\sin x)=\cos x\cdot dx.\)</p>
+	<p>\(6.\quad d(\cos x)=-\sin x\cdot dx.\)</p>
+	<p>\(7.\quad d(\tan x)=\dfrac{dx}{\cos^{2}x};\)</p>
+	<p>\(8.\quad d(\cot x)=-\dfrac{dx}{\sin^{2}x};\)</p>
+	<p>\(9.\quad d(\arcsin x)=\dfrac{dx}{\sqrt{1-x^2}};\)</p>
+	<p>\(10.\quad d(\arccos x)=-\dfrac{dx}{\sqrt{1-x^2}};\)</p>
+	<p>\(11.\quad d(\arctan x)=\dfrac{dx}{1+x^2};\)</p>
+	<p>\(12.\quad d(\arccot x)=-\dfrac{dx}{1+x^2};\)</p>
+	
+	<p>В силу формулы (12.3) и правил дифференцирования (теорема 2.1 и 
+	следствие 2.1) получаем следующие свойства дифференциала:
+	</p>
+	<p>\(I.\quad d(u(x)\pm v(x))=du(x)\pm dv(x);\)</p>	
+	<p>\(II.\quad d(u(x)\cdot v(x))=v(x)du(x)+u(x)dv(x);\)</p>	
+	<p>частный случай \(d(cu(x))=c du(x)\;(c=const)\);</p>
+	<p>\(III.\quad d\left(\dfrac{u(x)}{v(x)}\right)=\dfrac{v(x)du(x)-u(x)dv(x)}{v^{2}(x)}\;(v(x)\neq 0).\)</p>		
+	
+	<div class="proof" style="border-top: 2px #FF9D3A solid;">
+		<span class="elected">Доказательство</span>
+		<p>Докажем лишь последнее свойство, так как первые три доказываются
+		аналогично.
+		\[d\left(\dfrac{u(x)}{v(x)}\right)=\left(\dfrac{u(x)}{v(x)}\right)'dx=\dfrac{u'(x)v(x)-v'(x)u(x)}{v^{2}(x)}dx=\dfrac{v(x)du(x)-u(x)dv(x)}{v^{2}(x)}.\]
+		</p>
+	</div>
+	
+	<div class="h2">Инвариантность (неизменяемость) формы дифференциала</div>
+	
+	<p>Формула (12.3) верна независимо от того, является ли \(x\) независимой
+	переменной или функцией переменной \(t\).
+	</p>
+	<p>Действительно, предположим, что \(y=f(x)\), а \(x=x(t)\). Тогда, 
+	используя правило (2.14) дифференцирования сложной функции, имеем:
+	\[dy=f'_{t}(x(t))dt=f'_{x}(x(t))\cdot x'(t)dt=f'_{x}(x)dx\tag{12.6}\]
+	</p>
+	<p><span class="bold">Пример.</span>
+	\[d(\sin^{2}\sqrt{x})=2\sin\sqrt{x}\cdot d\sin\sqrt{x}=2\sin\sqrt{x}\cdot\cos\sqrt{x}\cdot d\sqrt{x}=2\sin\sqrt{x}\cdot\cos\sqrt{x}\cdot\dfrac{1}{2\sqrt{x}}\cdot dx.\]
+	</p>
+	<p><span class="elected">Замечание 12.1.</span>
+	Следует отметить, что в отличие от формулы (12.3) формула (12.1) 
+	справедлива лишь в случае, когда \(x\) – независимая переменная.
+	</p>
+	
+	<div class="h2">Дифференциалы высших порядков</div>
+	<p>Пусть производная \(y'=f'(x)\) определена при \(x\in X\), и существует 
+	вторая производная \(f''(x)\). Составим дифференциал дифференциала 
+	\(df(x)\), считая \(dx\) постоянным множителем:
+	\[d(df(x))=(df(x))'_{x}dx=(f'(x)dx)'_{x}dx=f''(x)(dx)^{2}.\]
+	</p>	
+	<p>Полученное выражение носит название 
+	<span class="bold">дифференциала второго порядка</span>. Дифференциал 
+	второго порядка для краткости обозначается как \(d^{2}f(x)\) и, таким 
+	образом, имеет вид
+	\[d^{2}f(x)=f''(x)dx^{2}\]
+	или 
+	\[d^{2}y=y''dx^{2},\]
+	или \((dx)^{2}=dx^{2}.\)
+	</p>
+	<p>В предположении, что производные соответствующих порядков функции
+	\(y=f(x)\) при \(x\in X\) существуют, получим выражения для дифференциалов 
+	любого порядка:
+	\[d^{3}f(x)=d(f''(x)dx^{2})=f'''(x)dx^{3}, ... ,\]
+	\[d^{(n)}f(x)=d(f^{(n-1)}(x)dx^{(n-1)})=f^{(n)}(x)dx^{n},\]
+	где через \(dx^{n}\) обозначено \((dx)^{n}\).
+	</p>
+	<p>Таким образом, приходим к определению 
+	<span class="bold">дифференциала порядка</span> \(n\), 
+	аналогичному определению 12.1.
+	</p>
+	<div class="definition">
+		<span class="elected">Определение 12.2</span>
+		<p><span class="elected"></span>Дифференциалом порядка \(n\) 
+		<span class="elected">функции</span> \(f(x)\) в точке \(x\) 
+		называется выражение
+		\[d^{n}f(x)=f^{(n)}(x)dx^{n}\]
+		или
+		\[d^{n}y=y^{(n)}dx^{(n)}.\tag{12.7}\]
+		</p>
+	</div>
+	<p><span class="elected">Замечание 12.2.</span>
+	Из определения дифференциала следует, что производная порядка \(n\) 
+	связана с дифференциалом порядка \(n\) равенством:
+	\[y^{(n)}=\dfrac{d^{n}y}{dx^{n}}.\tag{12.8}\]
+	</p>
+	<p><span class="elected">Замечание 12.3.</span>
+	Свойство инвариантности формы для дифференциалов порядка выше первого 
+	не выполняется.
+	</p>
+	
+	<a href="../pages/problems_12.html" class="button">К задачам \(\S\) 12</a>
+
+</div>
+</body>
+</html>

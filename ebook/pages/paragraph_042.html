@@ -1,0 +1,88 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_041.html" class="button">Назад</a>
+	<a href="../pages/paragraph_043.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 4. РАСКРЫТИЕ НЕОПРЕДЕЛЕННОСТЕЙ С ПОМОЩЬЮ ПРОИЗВОДНЫХ</div>
+	
+<div class="h2"><a name="an42">4.2. Неопределенность \(\left[\frac{\infty}{\infty}\right]\)</a></div>	
+	
+<div class="theorem" style="border-bottom: 2px #FF9D3A solid;">
+<span class="elected">Теорема 4.3 (без доказательства).</span>
+	<p>Пусть функции \(f(x)\) и \(g(x)\) определены на промежутке  
+	\((a,b]\); 
+	\[\lim_{x\rightarrow a+0}f(x)=\lim_{x\rightarrow a+0}g(x)=\infty;\] 
+	на промежутке \((a,b]\) существуют производные \(f'(x)\) и \(g'(x)\), 
+	причем \(g'(x)\neq 0\). Тогда, если существует (конечный или 
+	бесконечный) предел
+	\[\lim_{x\rightarrow a+0}\frac{f'(x)}{g'(x)},\]
+	то существует предел
+	\[\lim_{x\rightarrow a+0}\frac{f(x)}{g(x)},\]
+	и
+	\begin{equation}
+	\lim_{x\rightarrow a+0}\frac{f(x)}{g(x)}=\lim_{x\rightarrow a+0}\frac{f'(x)}{g'(x)}. \tag{4.4}
+	\end{equation}
+	</p>
+</div>
+	
+	<p><span class="elected">Замечание 4.6.</span>
+	Аналогичное утверждение справедливо и когда 
+	\(\lim_{x\rightarrow b-0}f(x)=\lim_{x\rightarrow b-0}g(x)=\infty.\)
+	В этом случае правосторонние пределы следует заменить на левосторонние
+	в точке \(x=b\).
+	</p>
+	<p><span class="elected">Замечание 4.7.</span>
+	Из теоремы 4.3 и замечания 4.6 следует, что если функции 
+	\(f(x)\) и \(g(x)\) определены и непрерывны на промежутке 
+	\((a,b)\), \(c\in(a,b)\) и 
+	\(\lim_{x\to c}f(x)=\lim_{x\to c}g(x)=\infty\), то
+\begin{equation}
+\lim_{x\rightarrow c}\frac{f(x)}{g(x)}=\lim_{x\rightarrow c}\frac{f'(x)}{g'(x)}. \tag{4.5}
+\end{equation}
+	</p>
+	<p><span class="elected">Замечание 4.8.</span>
+	Теорема 4.3 справедлива и в случае, когда
+	\[\lim_{x\rightarrow \pm\infty}f(x)=\lim_{x\rightarrow \pm\infty}g(x)=\infty.\]
+	</p>
+	
+	<p><span class="bold">Пример 4.4.</span>
+	Найти 
+	\[\lim_{x\rightarrow +\infty}\frac{\ln x}{x^{a}},\;где\; a > 0.\]
+	</p>
+	
+	<p><span class="elected">Решение.</span>
+	Предел представляет собой неопределенность 
+	\(\left[\frac{\infty}{\infty}\right]\). 
+	Раскрывая ее по теореме 4.3, получим:
+	\[\lim_{x\rightarrow +\infty}\frac{\ln x}{x^{a}}= \lim_{x\rightarrow +\infty}\frac{\frac{1}{x}}{ax^{a-1}}= \frac{1}{a}\lim_{x\rightarrow +\infty}\frac{1}{x^{a}}=0.\]
+	</p>
+	
+	<p>Раскрытие неопределенностей на основании теорем 4.1, 4.2, 4.3 
+	носит название правила Лопиталя.
+	</p>
+		
+</div>
+</body>
+</html>

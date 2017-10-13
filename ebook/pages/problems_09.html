@@ -1,0 +1,165 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		$("div.spoiler div.name span").toggle(function(){
+		$(this).parent("div.name").parent("div.spoiler").children("div.text").show();
+		$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " -15px 0");
+		},function(){
+		$(this).parent("div.name").parent("div.spoiler").children("div.text").hide();
+		$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " 0 -15px");
+		});
+		});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_080.html" class="button">Назад</a>
+	<a href="../pages/paragraph_100.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 9. Выпуклость функции. Точки перегиба</div>
+	<div class="h2">Задачи к \(\S\) 9. </div>	
+	<p><span class="bold">Задача 9.1.</span>
+	Найти интервалы выпуклости вверх, выпуклости вниз и точки перегиба функции \(y=f(x)\):
+	</p> 
+	<p>а) \(f(x)=(2x-3)e^{-4x};\)
+	</p>
+	<p>б) \(f(x)=\frac{2x+1}{x-2};\)
+	</p>
+	<p>в) \(f(x)=\sqrt[3]{2x-3};\)
+	</p>
+	<p>г) \(f(x)=x-\cos x;\)
+	</p>
+	<p>д) \(f(x)=\frac{\ln(1+2x)}{1+2x}.\)
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>П. а). Воспользуемся результатами решения задачи 7.1 а):
+			\[f'(x)=2\cdot e^{-4x}\cdot(7-4x),\]
+			откуда получим
+			\[f''(x)=-8\cdot e^{-4x}\cdot(7-4x)+(-8)\cdot e^{-4x}=8\cdot e^{-4x}\cdot(4x-8).\]
+			</p>
+			<p>Уравнение \(f''(x)=0\) имеет корень \(x=2\). Исследуем знаки второй производной:
+			\(f''(x) < 0\) при \(x < 2\), \(f''(x) > 0\) при \(x > 2\). 
+			</p>
+			<p><span class="bold">Ответ.</span>
+			На интервале \((2,+\infty)\) функция выпукла вниз; на интервале \((-\infty,2)\) 
+			функция выпукла вверх; \((2,e^{-8})\) – точка перегиба.
+			</p>
+			
+			
+			П. б). Функция определена для всех \(x\neq 2\). 
+			Найдем ее производные:
+			\[f'(x)=\frac{2\cdot(x-2)-(2x+1)}{(x-2)^{2}}\frac{5}{{(x-2)^{2}}},\]
+			\[f''(x)=(-5(x-2)^{-2})'=10(x-2)^{-3},\]
+			откуда \(f''(x) < 0\) при \(x < 2\), \(f''(x) > 0\) при \(x > 2\). 
+			<p><span class="bold">Ответ.</span>
+			На промежутке \((-\infty, 2)\) функция выпукла вверх, на промежутке \((2,+\infty)\) выпукла вниз, точек перегиба нет.
+			</p>
+			П. в). Функция определена при всех \(x\in R\). 
+			Найдем ее производные:
+			\[f'(x)=\frac{2}{3}\cdot(2x-3)^{-\frac{2}{3}},\]
+			\[f''(x)=-\frac{8}{9}\cdot(2x-3)^{-\frac{5}{3}}=-\frac{8}{9\cdot\sqrt[3]{(2x-3)^{5}}}\].
+
+			Первая и вторая производные не существуют при 
+			\(x=\frac{3}{2}\). Определим интервалы, на 
+			которых \(f''(x)\) сохраняет знак: на 
+			\(\left(-\infty,\frac{3}{2}\right)\) \(f''(x)>0\), на
+			\(\left(\frac{3}{2},+\infty\right)\) \(f''(x)<0\). 
+			Следовательно, точка \(\left(\frac{3}{2},0 \right)\) 
+			является точкой перегиба. 
+			<p><span class="bold">Ответ.</span>
+			На интервале \(\left(-\infty,\frac{3}{2}\right)\) функция 
+			выпукла вниз, на интервале \(\left(\frac{3}{2},+\infty\right)\)
+			выпукла вверх; точка \(\left(\frac{3}{2},0 \right)\) 
+			является точкой перегиба.
+			</p>
+			<p>П. г). Функция определена для всех \(x\in R\). 
+			Найдем производные:
+			\[f'(x)=(x-\cos x)'=1+\sin x,\]
+			\[f''(x)=(1+\sin x)'=\cos x,\]
+			откуда \(f''(x)=0\), если \(x=\pm\frac{\pi}{2}+2\pi k\), 
+			\(k\in Z\). 
+			При \(\left(-\frac{\pi}{2}+2\pi k,\frac{\pi}{2}+2\pi k\right)\), 
+			\(k\in Z\), \(f''(x) > 0\) – функция выпукла вниз,
+			при \(\left(\frac{\pi}{2}+2\pi k,\frac{3\pi}{2}+2\pi k\right)\), 
+			\(k\in Z\), \(f''(x) < 0\) – функция выпукла вверх. Следовательно,
+			\(\pm\frac{\pi}{2}+2\pi k,\), \(k\in Z\) – точки перегиба.
+			</p>
+			<p><span class="bold">Ответ.</span>
+			На интервалах 
+			\(\left(-\frac{\pi}{2}+2\pi k,\frac{\pi}{2}+2\pi k\right)\), 
+			\(k\in Z\), функция выпукла вниз; на интервалах
+			\(\left(\frac{\pi}{2}+2\pi k,\frac{3\pi}{2}+2\pi k\right)\), 
+			\(k\in Z\) функция выпукла вверх; 
+			\(\pm\frac{\pi}{2}+2\pi k,\), \(k\in Z\) – точки перегиба.
+			</p>
+			П. д). Функция определена при всех \(x > -\frac{1}{2}\). 
+			Используя решение задачи 5.6, найдем ее вторую производную:
+			\[f''(x)=\left(\ln(1+2x)\cdot(1+2x)^{-1}\right)''=(\ln(1+2x))''\cdot(1+2x)^{-1}+\]
+			\[+2(\ln(1+2x))'\cdot((1+2x)^{-1})'+\ln(1+2x)\cdot((1+2x)^{-1})''=\]
+			\[=-4\cdot(1+2x)^{-3}-8\cdot(1+2x)^{-3}+8\cdot\ln(1+2x)\cdot(1+2x)^{-3}=\]
+			\[=-4\frac{3-2\ln(1+2x)}{(1+2x)^{3}},\]			 
+			откуда \(f''(x)=0\) при \(x=\frac{1}{2}\left(e^{\frac{3}{2}}-1\right)\). 
+			При \(x\in\left(-\frac{1}{2},\frac{1}{2}(e^{\frac{3}{2}}-1)\right)\) \(f''(x) < 0\), 
+			при \(x\in\left(\frac{1}{2}(e^{\frac{3}{2}}-1),+\infty\right)\) \(f''(x) > 0\).
+			<p><span class="bold">Ответ.</span>
+			На интервале 
+			\(x\in\left(-\frac{1}{2},\frac{1}{2}(e^{\frac{3}{2}}-1)\right)\) 
+			функция выпукла вверх; на интервале 
+			\(x\in\left(\frac{1}{2}(e^{\frac{3}{2}}-1),+\infty\right)\)
+			функция выпукла вниз; 
+			\(\left(\frac{e^{\frac{3}{2}}-1}{2},
+			\frac{3}{2e^{\frac{3}{2}}}\right)\) – точка перегиба.
+			</p>
+		</div>
+	</div>
+	
+	<p><span class="bold">Задача 9.2.</span>
+	Доказать, что функция \(y\), заданная неявно уравнением 
+	\(\ln y+y=x^{2}\), точек перегиба не имеет.</p> 
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>Отметим, что функция задана при \(y > 0\) и всех \(x\in R\). 
+			Воспользуемся замечанием 9.1, что точками перегиба могут быть 
+			лишь такие точки, в которых вторая производная не существует 
+			или равна нулю, и продифференцируем уравнение дважды, считая, 
+			что \(y=y(x)\):
+			\[\frac{y'}{y}+y'=2x,\]
+			\[\frac{y_{x}''}{y}-\frac{(y_{x}')^{2}}{y^{2}}+y''_{x}=2,\]
+			откуда
+			\[y''_{x}=\frac{2y^{2}+(y'_{x})^{2}}{y(1+y)}.\]
+			</p>
+			<p>Для всех значений \(y > 0\) вторая производная существует,
+			причем нигде \(y''_{x}\neq 0\).
+			</p>
+			<p>Таким образом, доказано, что функция точек перегиба 
+			не имеет. Кроме того всюду \(y''_{x} > 0\), 
+			следовательно, функция выпукла вниз.
+			</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

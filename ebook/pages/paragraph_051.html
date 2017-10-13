@@ -1,0 +1,62 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_040.html" class="button">Назад</a>
+	<a href="../pages/paragraph_052.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 5. ПРОИЗВОДНЫЕ ВЫСШИХ ПОРЯДКОВ</div>
+
+	<div class="h2">5.1. Повторное дифференцирование функции, заданной неявно</div>	
+	<p>Если у функции \(y=f(x)\), заданной неявно уравнением \(F(x,y)=0\), 
+	существует производная \(y'_{x}\), то она выражается через \(x\) и \(y\):
+	\[y'_{x}=G(x,y). \tag{5.7}\]
+	</p>
+	<p>
+	Дифференцируем полученное равенство (5.7), имея в виду, что переменная \(y\)
+	является функцией переменной \(x\) и любая функция от \(y\) является сложной
+	функцией переменной \(x\). Заменяя в полученном равенстве производную \(y'_{x}\) 
+	по формуле (5.7), получим выражение второй производной \(y''_{x}\)
+	через \(x\) и \(y\).
+	</p>
+	<p><span class="bold">Пример 5.2.</span>
+	Найдем вторую производную \(y''_{x}\) функции \(y(x)\), заданной уравнением 
+	\(\ln(x^{2}+y^{2})=\arctan\dfrac{y}{x}\). Первая производная \(y'_{x}\) этой
+	функции была вычислена в примере 2.9:
+	\[y'_{x}=\dfrac{2x+y}{x-2y}. \tag{5.8}\]
+	</p>
+	<p>Продифференцируем равенство (5.8), считая, что \(y\) является функцией 
+	переменной \(x\). Приведя подобные члены, будем иметь:
+	\[y''_{x}=\dfrac{(2x+y)'\cdot(x-2y)-(x-2y)'\cdot(2x+y)}{(x-2y)^{2}}=\]
+	\[=\dfrac{(2+y')\cdot(x-2y)-(1-2y')\cdot(2x+y)}{(x-2y)^{2}}=\]
+	\[=\dfrac{2x-4y+xy'-2yy'-2x-y+4xy'+2yy'}{(x-2y)^{2}}=\dfrac{-5y+5xy'}{(x-2y)^{2}}.\]
+	</p>
+	<p>Подставляя в последнее выражение значение производной \(y'_{x}\) (5.8), 
+	получим:
+	\[y''_{x}=5\dfrac{-y+x\dfrac{2x+y}{x-2y}}{(x-2y)^{2}}=5\dfrac{-y(x-2y)+x(2x+y)}{(x-2y)^{3}}=\]
+	\[=5\dfrac{-yx+2y^{2}+2x^{2}+xy}{(x-2y)^{3}}=10\dfrac{x^{2}+y^{2}}{(x-2y)^{3}}.\]
+	</p>
+	
+	
+</div>
+</body>
+</html>

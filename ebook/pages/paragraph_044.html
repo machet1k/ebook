@@ -1,0 +1,77 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_043.html" class="button">Назад</a>
+	<a href="../pages/problems_04.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 4. РАСКРЫТИЕ НЕОПРЕДЕЛЕННОСТЕЙ С ПОМОЩЬЮ ПРОИЗВОДНЫХ</div>
+	
+<div class="h2"><a name="an44">4.4. Неопределенности \([1^{\infty}]\), \([0^{0}]\), \([\infty^{0}]\)</a></div>	
+	<p>При вычислении \(\lim_{x\rightarrow a}u(x)^{v(x)}\) возможно
+	возникновение одной из неопределенностей: 
+	\(1^{\infty}\), \(0^{0}\), \(\infty^{0}\). В этом случае функцию 
+	\(u(x)^{v(x)}\) следует сначала прологарифмировать. 
+	Положим \(y(x)=(u(x))^{v(x)}\). Тогда \(\ln y(x)=v(x)\cdot\ln u(x)\) и для 
+	\(\lim_{x\rightarrow a}\ln y(x)\) мы получаем неопределенность 
+	\([0\cdot\infty]\). Пусть \(\lim_{x\rightarrow a}\ln y(x)=L\). Тогда, 
+	используя непрерывность логарифмической функции, получим:
+	\[\lim_{x\rightarrow a}\ln y(x)=\ln\lim_{x\rightarrow a} y(x)=L,\]
+	откуда
+	\[\lim_{x\rightarrow a}y(x)=e^{L}\]
+	</p>
+	<p>Если \(\lim_{x\rightarrow a}\ln y(x)=+\infty\) или 
+	\(\lim_{x\rightarrow a}\ln y(x)=-\infty\), то, соответственно, 
+	\(\lim_{x\rightarrow a}y(x)=+\infty\) или \(\lim_{x\rightarrow a}y(x)=0\).
+	</p>
+	<p><span class="bold">Пример 4.8.</span>
+	Найти
+	\[\lim_{x\rightarrow 1}x^{\frac{1}{x^{2}-1}}.\]
+	</p>
+	<p><span class="elected">Решение.</span>
+	Предел представляет собой неопределенность \([1^{\infty}]\). 
+	Рассмотрим функцию \(y=x^{\frac{1}{x^{2}-1}}\). Прологарифмируем эту 
+	функцию: \(z(x)=\ln y(x)=\frac{\ln x}{x^{2}-1}\). Вычислим предел 
+	функции \(z(x)\), раскрывая неопределенность 
+	\(\left[\frac{0}{0}\right]\) по теореме 
+	<a class="htooltip" href="#">4.1<span class="wStyle">
+	Пусть функции \(f(x)\) и \(g(x)\) определены и непрерывны на промежутке
+	\([a, b]\); \(f(a)=g(a)=0\); в промежутке \((a,b)\) существуют 
+	\(f'(x)\) и \(g'(x)\), причем \(g'(x)\neq 0\). Тогда, если существует 
+	(конечный или бесконечный) предел
+	\[\lim_{x\rightarrow a+0}\frac{f'(x)}{g'(x)},\]
+	то существует
+	\[\lim_{x\rightarrow a+0}\frac{f(x)}{g(x)}\]
+	и
+	\[\lim_{x\rightarrow a+0}\frac{f(x)}{g(x)}=\lim_{x\rightarrow a+0}\frac{f'(x)}{g'(x)} \tag{4.1}\]
+	</span></a>: 
+	\[\lim_{x\rightarrow 1}z(x)=\lim_{x\rightarrow 1}\frac{\ln x}{x^{2}-1}=\lim_{x\rightarrow 1}\frac{\frac{1}{x}}{2x}=\lim_{x\rightarrow 1}\frac{1}{2x^{2}}=\frac{1}{2}.\]
+	Поскольку \(\lim_{x\rightarrow 1}\ln y(x)=\frac{1}{2}\), то 
+	\(\lim_{x\rightarrow 1}y(x)=e^{\frac{1}{2}}.\)
+	</p>
+
+	<a href="../pages/problems_04.html" class="button">К задачам \(\S\) 4</a>
+		
+</div>
+</body>
+</html>

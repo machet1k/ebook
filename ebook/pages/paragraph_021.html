@@ -1,0 +1,97 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_010.html" class="button">Назад</a>
+	<a href="../pages/paragraph_022.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 2. ВЫЧИСЛЕНИЕ ПРОИЗВОДНОЙ</div>
+	<div class="h2">2.1. Вычисление производных некоторых основных элементарных функций</div>	
+	
+	<p>Если \(y=const\), то \(y'=0\). Действительно, по определению 
+<a class="htooltip" href="#">1.1<span class="wStyle">
+	Пусть функция \(y=f(x)\) определена на множестве \(X\). Пусть \(x_{0}\in X\). 
+	Придадим  \(x_{0}\) приращение \(\Delta x (\Delta x < 0\) или \(\Delta x > 0)\) 
+	так, чтобы \(x_{0}+\Delta x \in X\). 
+	<span class="elected">Производной функции \(y=f(x)\) по переменной \(x\) 
+	при \(x=x_{0}\) называется предел отношения приращения функции  
+	\(\Delta y\), вычисленного в этой точке, к вызвавшему его приращению 
+	аргумента \(\Delta x\) при стремлении последнего к \(0\), то есть
+	\[\lim_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x \rightarrow 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x},\tag{1.1}\]
+	если этот предел существует.
+	</span></span>
+</a>	
+	имеем \[y'=\lim_{\Delta x\rightarrow 0}\frac{c-c}{\Delta x}=0.\]
+	</p>
+	
+	<p> 2. Пусть \(y=x^{\alpha} (x \in D_{\alpha}\), где \(D_{\alpha}\) 
+	– область определения функции). 
+	</p>
+	<p>Рассмотрим сначала частный случай, когда \(\alpha=1\), то есть 
+	\(y=x\). Тогда 
+	\(\Delta y =\Delta x\) и 
+	\(y'=\lim_{\Delta x\rightarrow 0}\frac{\Delta x}{\Delta x}=1\), так что 
+	\(x'=1\) при всех 
+	\(x \in R\).
+	</p>
+	<p>Пусть теперь \(\alpha \neq 1\). Предположим, что \(x \neq 0\). Тогда
+	\[\lim_{\Delta x\rightarrow 0}\frac{(x+\Delta x)^{\alpha}-x^{\alpha}}{\Delta x}=x^{\alpha}\lim_{\Delta x\rightarrow 0}\frac{(1+\frac{\Delta x}{x})^{\alpha}-1}{\Delta x}.\]
+	</p>
+	<p>Заменяя в числителе дроби бесконечно малое при 
+	\(\Delta x \rightarrow 0\) выражение  
+	\(\frac{(1+\frac{\Delta x}{x})^{\alpha}-1}{\Delta x}\) эквивалентной бесконечно малой 
+	\(\alpha\frac{\Delta x}{x}\) и сокращая числитель и знаменатель на \(\Delta x\), получим:
+	\[(x^{\alpha})'=x^{\alpha}\lim_{\Delta x\rightarrow 0}\frac{\alpha\Delta x}{x\Delta x}=\alpha x^{\alpha-1}.\]
+	</p>
+	<p>Рассмотрим случай \(x=0\). Тогда
+	\[y'=\lim_{\Delta x\rightarrow 0}\frac{(\Delta x)^{\alpha}}{\Delta x}.\]
+	</p>
+	<p>В этом случае при \(\alpha>1\) значение производной равно 0. Оно 
+	совпадает со значением \(\alpha x^{\alpha-1}\) при \(x=0\). 
+	Если \(\alpha<1\), то производная в точке \(x=0\) не существует.
+	</p>
+	<p>3. Пусть \(y=a^{x} (a>0)\). Тогда
+	\[(a^{x})'=\lim_{\Delta x\rightarrow 0}\frac{a^{x+\Delta x}-a^{x}}{\Delta x}=a^{x}\lim_{\Delta x\rightarrow 0}\frac{a^{\Delta x}-1}{\Delta x}=a^{x}\lim_{\Delta x\rightarrow 0}\frac{\Delta x\ln a}{\Delta x}=a^{x}\ln a.\]
+	Здесь использована замена выражения \(a^{\Delta x}-1\) эквивалентной 
+	при \(\Delta x\rightarrow 0\) бесконечно малой величиной \(\Delta x\ln a\).
+	</p>
+	<p>4. Пусть \(y=\ln x (x>0)\). Тогда 
+	\[(\ln x)'=\lim_{\Delta x\rightarrow 0}\frac{\ln(x+\Delta x)-\ln x}{\Delta x}=\lim_{\Delta x\rightarrow 0}\frac{\ln(1+\frac{\Delta x}{x})}{\Delta x}=\lim_{\Delta x\rightarrow 0}\frac{\frac{\Delta x}{x}}{\Delta x}=\frac{1}{x}.\]
+	Мы заменили бесконечно малую при \(\Delta x\rightarrow 0\) величину
+	\(\ln(x+\frac{\Delta x}{x})\) эквивалентной ей бесконечно малой \(\frac{\Delta x}{x}\).
+	</p>
+	<p>	5. Пусть \(y=\sin x (x \in R)\). Тогда
+	\[(\sin x)'=\lim_{\Delta x\rightarrow 0}\frac{\sin(x+\Delta x)-\sin x}{\Delta x}=\lim_{\Delta x\rightarrow 0}\frac{2\sin\frac{\Delta x}{2}\cos(x+\frac{\Delta x}{2})}{\Delta x}.\]
+	Поскольку величина 
+	\(\sin\frac{\Delta x}{2}\) эквивалентна величине 
+	\(\sin\frac{\Delta x}{2}\) при 
+	\(\Delta x\rightarrow 0\), а 
+	\(\lim_{\Delta x\rightarrow 0}\cos(x+\frac{\Delta x}{2})=\cos x\), получим:
+	\[(\sin x)'=\lim_{\Delta x\rightarrow 0}\frac{2\frac{\Delta x}{2}\cos(x+\frac{\Delta x}{2})}{\Delta x}=\cos x\]
+	</p>
+	<p>	6. Рассуждая так же, как в п. 5), получим
+	\[(\cos x)'=-\sin x.\]
+	</p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_025.html" class="button">Назад</a>
+	<a href="../pages/paragraph_027.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 2. ВЫЧИСЛЕНИЕ ПРОИЗВОДНОЙ</div>
+	
+<div class="h2">2.6. Логарифмическое дифференцирование</div>
+
+	<p>Рассмотрим показательно-степенную функцию
+\begin{equation}
+y=(u(x))^{v(x)}. \tag{2.6}
+\end{equation}
+	Чтобы найти ее производную, прологарифмируем ее:
+	\[\ln(y(x))=v(x)\ln(u(x)).\]
+	Продифференцируем теперь функцию \(y(x)\) как функцию, заданную неявно:
+	\[\frac{y'(x)}{y(x)}=v'(x)\ln(u(x))+\frac{v(x)u'(x)}{u(x)},\]
+	откуда
+\begin{equation}
+y'(x)=(u(x))^{v(x)}\left(v'(x)\ln(u(x))+\frac{v(x)u'(x)}{u(x)}\right). \tag{2.7}
+\end{equation}
+	</p>
+	<p><span class="bold">Пример 2.11.</span> 
+	\(y=x^{\sin x}\). Найти \(y'_{x}\). Прологарифмируем функцию \(y\):
+	\[\ln y = \sin x \ln x,\]
+а затем продифференцируем получившееся равенство:
+	\[\frac{y'_{x}}{y}=\cos x\ln x+\frac{\sin x}{x}.\]
+В итоге получим
+	\[y'_{x}=x^{\sin x}\left(\cos x\ln x+\frac{\sin x}{x}\right).\]
+	</p>
+	<p><span class="elected">Замечание 2.3.</span>
+	Логарифмическое дифференцирование удобно применять при определении 
+	производной произведения \(n\) функций \((n>2)\).
+	</p>
+	<p><span class="bold">Пример 2.12.</span> 
+	\(y=y_{1}\cdot y_{2}\cdot y_{3}\). Найти \(y'_{x}\). 
+	</p>
+	<p><span class="elected">Решение</span>
+	\[\ln y = \ln y_{1}+\ln y_{2}+\ln y_{3},\]
+	\[\frac{y'_{x}}{y}=\frac{y'_{1}}{y_{1}}+\frac{y'_{2}}{y_{2}}+\frac{y'_{3}}{y_{3}}\]
+	</p>
+	<p>Умножим обе части равенства на \(y\). Тогда 
+\begin{equation}
+y'_{x}=y'_{1}y_{2}y_{3}+y'_{2}y_{1}y_{3}+y'_{3}y_{1}y_{2}. \tag{2.8}
+\end{equation}
+Получили формулу для дифференцирования произведения трех функций.
+	</p>
+
+</div>
+</body>
+</html>

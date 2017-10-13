@@ -1,0 +1,187 @@
+body{
+	text-align: center;
+	font: 17px Helvetica;
+	background-color: #D9EDF7; /* зеленый 49D260 */
+	padding: 0;
+	margin: 0;
+	text-shadow: 0px 2px 2px #ddd;
+}
+.caps{
+	text-transform: uppercase;
+}
+.sup{
+	vertical-align: super; 
+	font-size: 12px;
+	border-bottom: 0;
+	color: #C90303;
+}
+.elected,.solution{
+	font-weight: bold;
+	font-style: italic;
+}
+.elected a, li a{
+	color: #C90303;
+	border-bottom: 1px #C90303 dashed;
+}
+.elected a sup{
+	border: 0;
+}
+.elected a:hover, li a:hover{
+	color: red;
+	border-bottom: 1px red solid;
+}
+.bold{
+	font-weight: bold;
+}
+.justify{
+	text-align: justify;
+}
+
+/*голубой D9EDF7, синий 3A87BD*/
+
+.definition, .theorem, .proof {
+	width: 85%;
+	margin: 0 auto;
+	margin-top: 15px;
+	padding: 20px 30px 10px 30px;
+	border-radius: 7px;
+	color: #222;
+	font-style: italic;
+	text-align: left;
+}
+
+.definition{
+	/* стиль для определений ещё не придуман */
+	border: 2px red solid;
+	background-color: #FFE9E9;
+}
+
+.theorem {
+	/* стиль для теорем ещё не придуман */
+	border: 2px #FF9D3A solid;
+	background-color: #ffeedd;
+	margin-bottom: 0;
+	border-radius: 7px 7px 0 0;
+	border-bottom: 0;
+}
+
+.proof {
+	/* стиль для доказательств ещё не придуман */
+	border: 2px #FF9D3A solid;
+	background-color: #FCFFD6; /*E5FFE6 green*/
+	margin-top: 0;
+	border-radius: 0 0 7px 7px;
+	border-top: 0;
+}
+
+p {
+	text-align: justify;
+	text-indent: 2.5em;	
+}
+
+.prevNextPage{
+	position: fixed; 
+	margin: auto;
+	width: 920px;
+	left: 50%; 
+	margin-left: -460px;
+	padding: 10px 0;
+	background: rgba(255,255,255,.9);
+	border-radius: 10px 10px 0 0;
+	height: 60px;
+	z-index: 1;
+}
+
+.whiteList{
+	width: 800px;
+	margin: 0 auto;
+	padding: 20px 60px;
+	background: rgba(255,255,255,.9);
+	border-radius: 0 0 10px 10px;
+	position: relative;
+	top: 81px;
+}
+
+.h1{
+	font-weight: bold;
+	margin: 20px 0 20px 0;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.h2{
+	font-weight: bold;
+	margin: 50px 0 20px 0;
+}
+
+img { /* изображения в рамке */
+	padding: 9px;
+	margin: 0 auto;
+	margin-top: 20px;
+	background-color: #dadada;
+	border: 1px solid #777;
+	border-radius: 7px;
+}
+
+.nameImg { /* подпись под изображением */
+	border: 1px red dotted;
+	border-radius: 0 0 5px 5px;
+	padding: 3px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	width: 80px;
+	font-style: italic;
+}
+
+.undLine { /* подчеркнуть текст */
+	text-decoration: underline;
+}
+
+.solution{
+	color: #C90303;
+}
+
+.solution:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+div.spoiler div.text {
+	display: none;
+	background-color: #fcffd2;
+	border: 3px solid #949955;
+	padding: 25px;
+	border-radius: 7px;
+}
+
+
+/*
+	<p><span class="elected">Замечание .</span>
+	
+	</p>
+	
+	<p><span class="bold">Пример .</span>
+	
+	</p>
+	
+	<p><span class="bold">Задача .</span>
+	
+	</p>
+	<p><span class="elected">Решение.</span>
+	
+	</p>
+	
+<div class="theorem">
+	<span class="elected">Теорема </span>
+	<p>
+	</p>
+</div>
+
+<div class="proof">
+	<span class="elected">Теорема </span>
+	<p>
+	</p>
+</div>
+*/
+
+
+

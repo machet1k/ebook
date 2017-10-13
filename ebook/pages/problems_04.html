@@ -1,0 +1,212 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		$("div.spoiler div.name span").toggle(function(){
+		$(this).parent("div.name").parent("div.spoiler").children("div.text").show();
+		$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " -15px 0");
+		},function(){
+		$(this).parent("div.name").parent("div.spoiler").children("div.text").hide();
+		$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " 0 -15px");
+		});
+		});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_044.html" class="button">Назад</a>
+	<a href="../pages/paragraph_050.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 4. РАСКРЫТИЕ НЕОПРЕДЕЛЕННОСТЕЙ С ПОМОЩЬЮ ПРОИЗВОДНЫХ</div>
+	<div class="h2">Задачи к \(\S\) 4. </div>	
+	<p><span class="bold">Задача 4.1.</span> 
+	Используя правило Лопиталя, найти пределы:
+	
+<p>\[а) \quad \lim_{x\rightarrow 2}\frac{(x-2)\ln(x^{2}-3)}{x^{2}+3x-10};\]</p>
+<p>\[б) \quad \lim_{x\rightarrow 0}\frac{\tan 2x-\ln(1+2x)}{x^{2}};\]</p>
+<p>\[в) \quad \lim_{x\rightarrow 1-0}\frac{\tan\frac{\pi x}{2}}{\ln(1-x)};\]</p>
+<p>\[г) \quad \lim_{x\rightarrow +\infty}\frac{e^{-3x}}{\sin\frac{\pi}{4x}};\]</p>
+<p>\[д) \quad \lim_{x\rightarrow -\infty}\frac{2^{4x}}{\ln\left(1+\frac{1}{3x}\right)};\]</p>
+<p>\[е) \quad \lim_{x\rightarrow \frac{\pi}{8}}{\tan 4x\cot \left(\frac{3\pi}{8}+x\right)};\]</p>
+<p>\[ж) \quad \lim_{x\rightarrow 1}\left(\frac{1}{x-1}-\frac{1}{e^{x-1}-1}\right);\]</p>
+<p>\[з) \quad \lim_{x\rightarrow +\infty}\left(2x^{2}+x^{3}\ln\left(1+\frac{3}{x}\right)\right);\]</p>
+<p>\[и) \quad \lim_{x\rightarrow \pi+0}\left(\cos 2x\right)^{\cot x};\]</p>
+<p>\[к) \quad \lim_{x\rightarrow +\infty}\left(\sin\frac{a}{x}\right)^{\frac{b}{x}};\]</p>
+<p>\[л) \quad \lim_{x\rightarrow 2+0}\left(\frac{1}{x-2}\right)^{\sin\pi x};\]</p>
+	
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>П. а). Перед нами неопределенность типа \(\left[\frac{0}{0}\right]\). 
+			Раскрываем ее по правилу Лопиталя:
+			\[\lim_{x\rightarrow 2}\frac{(x-2)\ln(x^{2}-3)}{x^{2+3x-10}}=\lim_{x\rightarrow 2}\frac{\ln(x^{2}-3)+(x-2)\frac{2x}{x^{2}-3}}{2x+3}=0. \]
+			</p>
+			<p><span class="bold">Ответ.</span> 	
+			\[\lim_{x\rightarrow 2}\frac{(x-2)\ln(x^{2}-3)}{x^{2}+3x-10}=0.\]
+			</p>
+			<p>П. б) Перед нами неопределенность типа \(\left[\frac{0}{0}\right]\). 
+			Раскрываем ее по правилу Лопиталя:
+			\[\lim_{x\rightarrow 0}\frac{\tan 2x-\ln(1+2x)}{x^2}=\lim_{x\rightarrow 0}\frac{\frac{2}{\cos^{2}2x}-\frac{2}{1+2x}}{2x}= \]
+			\[=\lim_{x\rightarrow 0}\frac{(-2)\cdot\cos^{-3}2x\cdot(-\sin 2x)\cdot 2+(1+2x)^{-2}\cdot 2}{1}=2.\]
+			</p>
+			<p>П. в). Перед нами неопределенность типа 
+			\(\left[\frac{\infty}{\infty}\right]\). Раскроем ее, следуя правилу Лопиталя:
+			\[\lim_{\rightarrow 1-0}\frac{\tan\frac{\pi x}{2}}{\ln(1-x)}=\lim_{x\rightarrow 1-0}\frac{\frac{\pi}{2}\cdot\frac{1}{\cos^{2}\frac{\pi x}{2}}}{-\frac{1}{1-x}}=-\frac{\pi}{2}\lim_{x\rightarrow 1-0}\frac{1-x}{\cos^{2}\frac{\pi x}{2}}.\]
+			</p>
+			<p>Мы получили неопределенность типа \(\left[\frac{0}{0}\right]\). 
+			Раскроем ее, следуя правилу Лопиталя:
+			\[-\frac{\pi}{2}\lim_{x\rightarrow 1-0}\frac{1-x}{\cos^{2}\frac{\pi x}{2}}= -\frac{\pi}{2}\lim_{x\rightarrow 1-0}\frac{-1}{-2\cos\frac{\pi x}{2}\sin\frac{\pi x}{2}\cdot\frac{\pi}{2}}=-\infty.\]
+			</p>
+			<p><span class="bold">Ответ.</span> 	
+			\(\lim_{x\rightarrow 1-0}\frac{\tan \frac{\pi x}{2}}{\ln(1-x)}=-\infty.\)
+			</p>
+			<p>П. г). Перед нами неопределенность типа \(\left[\frac{0}{0}\right]\). 
+			Раскроем ее, следуя правилу Лопиталя:
+			\[\lim_{x\to +\infty}\frac{e^{-3x}}{\sin\frac{\pi}{4x}}= \lim_{x\rightarrow +\infty}\frac{-3e^{-3x}}{\cos\frac{\pi}{4x}\left(-\frac{\pi}{4x^{2}}\right)}=\frac{12}{\pi}\lim_{x\rightarrow +\infty}\frac{1}{\cos\frac{\pi}{4x}}\lim_{x\rightarrow +\infty}\frac{x^{2}}{e^{3x}}=\frac{12}{\pi}\lim_{x\rightarrow +\infty}\frac{x^{2}}{e^{3x}}.\]
+			</p>
+			<p>Воспользовавшись результатами примера 4.6, получим:
+			\[\lim_{x\rightarrow +\infty}\frac{x^{2}}{e^{3x}}=\lim_{x\rightarrow +\infty}x^{2}e^{-3x}=0.\]
+			</p>
+			<p><span class="bold">Ответ.</span> 	
+			\(\lim_{x\rightarrow +\infty}\frac{e^{-3x}}{\sin\frac{\pi}{4x}}=0.\)
+			</p>
+			<p>П. д). Перед нами неопределенность типа \(\left[\frac{0}{0}\right]\). 
+			Раскроем ее, трижды применяя правило Лопиталя: 
+			\[\lim_{x\rightarrow -\infty}\frac{2^{4x}}{\ln(1+\frac{1}{3x})}= \lim_{x\rightarrow -\infty}\frac{4\ln 2\cdot 2^{4x}}{\left(\frac{3x}{3x+1}\right)\left(-\frac{1}{3x^{2}}\right)}= -4\ln 2 \lim_{x\rightarrow -\infty}2^{4x}(3x^{2}+x)=\]
+			\[=-4\ln 2 \lim_{x\rightarrow -\infty}\frac{3x^{2}+x}{2^{-4x}}= -4\ln 2 \lim_{x\rightarrow -\infty}\frac{6x+1}{(-4)\ln 2\cdot 2^{-4x}}=\lim_{x\rightarrow -\infty}\frac{6}{(-4)\ln 2\cdot 2^{-4x}}=\]
+			\[=-\frac{3}{2\ln 2}\lim_{x\rightarrow -\infty}2^{4x}=0\]
+			</p>
+			<p><span class="bold">Ответ.</span> 	
+			\(\lim_{x\rightarrow -\infty}\frac{2^{4x}}{\ln\left(1+\frac{1}{3x}\right)}=0.\)
+			</p>
+			<p>П. е). Перед нами неопределенность типа \([-\infty\cdot 0]\). Чтобы 
+			раскрыть ее, запишем выражение, стоящее под знаком предела, в виде дроби и 
+			преобразуем ее: 
+			\[\lim_{x\rightarrow \frac{\pi}{8}}\tan 4x\cdot\cot\left(\frac{3\pi}{8}+x\right)= \lim_{x\rightarrow \frac{\pi}{8}}\frac{\sin 4x\cdot\cos\left(\frac{3\pi}{8}+x\right)}{\cos 4x\cdot\sin\left(\frac{3\pi}{8}+x\right)}=\]
+			\[\lim_{x\rightarrow \frac{\pi}{8}}\frac{\sin 4x}{\sin\left(\frac{3\pi}{8}+x\right)}\cdot\lim_{x\rightarrow \frac{\pi}{8}}\frac{\cos\left(\frac{3\pi}{8}+x\right)}{\cos 4x}=\lim_{x\rightarrow \frac{\pi}{8}}\frac{\cos\left(\frac{3\pi}{8}+x\right)}{\cos 4x}.\]
+			</p>
+			<p>Получили неопределенность типа \(\left[\frac{0}{0}\right]\), 
+			для раскрытия которой воспользуемся правилом Лопиталя:
+			\[\lim_{x\rightarrow \frac{\pi}{8}}\frac{\cos\left(\frac{3\pi}{8}+x\right)}{\cos 4x}= \lim_{x\rightarrow \frac{\pi}{8}}\frac{\sin\left(\frac{3\pi}{8}+x\right)}{-\sin 4x\cdot 4}=\frac{1}{4}.\]
+			</p>
+			<p><span class="bold">Ответ.</span> 	
+			\(\lim_{x\rightarrow \frac{\pi}{8}}\tan 4x\cdot\cot\left(\frac{3\pi}{8}+x\right)=\frac{1}{4}.\)
+			</p>
+			<p>П. ж). Перед нами неопределенность типа \(\left[\infty-\infty\right]\). 
+			Для того чтобы раскрыть ее, приведем дроби к общему знаменателю, получим 
+			неопределенность типа \(\left[\frac{0}{0}\right]\), к которой дважды
+			применим правило Лопиталя:
+			</p>
+			\[\lim_{x\rightarrow 1}\left(\frac{1}{x-1}-\frac{1}{e^{x-1}-1}\right)= \lim_{x\rightarrow 1}\frac{e^{x-1}-x}{(x-1)(e^{x-1}-1)}=\]
+			\[=\lim_{x\rightarrow 1}\frac{e^{x-1}-1}{e^{x-1}-1+(x-1)e^{x-1}}= \lim_{x\rightarrow 1}\frac{e^{x-1}}{e^{x-1}+e^{x-1}+(x-1)e^{x-1}}=\frac{1}{2}.\]
+			</p>
+			<p><span class="bold">Ответ.</span> 
+			\(\lim_{x\rightarrow 1}\left(\frac{1}{x-1}-\frac{1}{e^{x-1}-1}\right)=\frac{1}{2}.\)
+			</p>
+			<p>П. з). Исследуем сначала выражение
+			\(\lim_{x\rightarrow +\infty}x^{3}\ln\left(1+\frac{3}{x}\right)\). 
+			Оно представляет собой неопределенность типа \(\left[\infty\cdot 0\right]\). 
+			Преобразуем ее к виду \(\left[\frac{0}{0}\right]\) и воспользуемся правилом 
+			Лопиталя:
+			\[\lim_{x\rightarrow +\infty}x^{3}\ln\left(1+\frac{3}{x}\right)= \lim_{x\rightarrow +\infty}\frac{x^{3}\ln\left(1+\frac{3}{x}\right)}{x^{-3}}= \lim_{x\rightarrow +\infty}\frac{\frac{-3}{(x+3)x}}{-3x^{-4}}=\]
+			\[=\lim_{x\rightarrow +\infty}\frac{x^{3}}{x+3}=\lim_{x\rightarrow +\infty}\frac{3x^{2}}{1}=+\infty.\]
+			</p>
+			<p>Отсюда следует, что 
+			\(\lim_{x\rightarrow +\infty}\left(2x^{2}-x^{3}\ln\left(1+\frac{3}{x}\right)\right)\) 
+			представляет собой неопределенность типа \(\left[\infty-\infty\right]\). 
+			Разделив и умножив выражение под знаком предела на \(x^{-3}\), перейдем в 
+			нем к частному, получим неопределенность типа \(\left[\frac{0}{0}\right]\), 
+			к которой применим правило Лопиталя:
+			\[\lim_{x\rightarrow +\infty}\left(2x^{2}-x^{3}\ln\left(1+\frac{3}{x}\right)\right)= \lim_{x\rightarrow +\infty}\frac{2x^{-1}-\ln\left(1+\frac{3}{x}\right)}{x^{-3}}=\]
+			\[=\lim_{x\rightarrow +\infty}\frac{-2x^{-2}+\frac{3}{(x+3)x}}{-3x^{-4}}.\]
+			</p>
+			<p>Нетрудно заметить, что полученное выражение снова представляет собой 
+			неопределенность типа \(\left[\frac{0}{0}\right]\). Преобразуем его:
+			\[\lim_{x\rightarrow +\infty}\frac{-2x^{-2}+\frac{2}{(x+3)x}}{-3x^{-4}}= \lim_{x\rightarrow +\infty}\frac{x^{3}-6x^{2}}{3(x+3)}=-\infty.\]
+			</p>
+			<p><span class="bold">Ответ.</span> 
+			\(\lim_{x\rightarrow +\infty}\left(2x^{2}-x^{3}\ln\left(1+\frac{3}{x}\right)\right)=\infty.\)
+			</p>
+			<p>П. и). Перед нами неопределенность типа \([1^{\infty}]\). 
+			Рассмотрим \(y(x)=(\cos 2x)^{\cot x}\). Прологарифмируем эту функцию: 
+			\(z(x)=\ln y(x)=\ln(\cos 2x)\cdot\cot x=\frac{\ln(\cos 2x)}{\sin x}\cos x\). 
+			Вычислим предел \(z(x)\), раскрывая неопределенность типа 
+			\(\left[\frac{0}{0}\right]\) по теореме 4.1: </p>
+			\[\lim_{x\rightarrow \pi+0}\frac{\ln(\cos 2x)}{\sin x}\cos x= \lim_{x\rightarrow \pi+0}\cos x\lim_{x\rightarrow \pi+0}\frac{\ln(\cos 2x)}{\sin x}=\]
+			\[=-\lim_{x\rightarrow \pi+0}\frac{\ln(\cos 2x)}{\sin x}= \lim_{x\rightarrow \pi+0}\frac{2\sin 2x}{\cos 2x\cos x}=0.\]
+			</p>
+			<p>Поскольку \(\lim_{x\rightarrow \pi+0}\ln y(x)=0\), получаем \(\lim_{x\rightarrow \pi+0}y(x)=e^{0}=1\).
+			</p>
+			<p><span class="bold">Ответ.</span> 
+			\lim_{x\rightarrow \pi+0}\cos(2x)^{\cot x}=1.
+			</p>
+			<p>П. к). Перед нами неопределенность типа \([0^{0}]\). Рассмотрим 
+			\(y(x)=\left(\sin\frac{a}{x}\right)^{\frac{b}{x}}\). Прологарифмируем эту 
+			функцию \(z(x)=\ln y(x)=\frac{b}{x}\ln\left(\sin\frac{a}{x}\right)\). 
+			Будем вычислять предел \(z(x)\), раскрывая неопределенность типа 
+			\(\left[\frac{\infty}{\infty}\right]\)	по теореме 4.3 и выполняя затем 
+			ряд преобразований: 
+			\[\lim_{x\rightarrow +\infty}\frac{b\ln\left(\sin\frac{a}{x}\right)}{x}= b \lim_{x\rightarrow +\infty}\frac{\cos\frac{a}{x}\cdot\frac{(-a)}{x^{2}}}{\sin\frac{a}{x}}= \lim_{x\rightarrow +\infty}\frac{\cos\frac{a}{x}}{x^{2}\sin\frac{a}{x}}=\]
+			\[=-ab\lim_{x\rightarrow +\infty}\cos\frac{a}{x}\lim_{x\rightarrow +\infty}\frac{1}{x^{2}\sin\frac{a}{x}}=-ab\lim_{x\rightarrow +\infty}\frac{1}{x^{2}\sin\frac{a}{x}}.\]
+			</p>
+			<p>Вычислим предел выражения в знаменателе дроби, заменяя при \(x\to+\infty\) 
+			бесконечно малую функцию \(\sin\frac{a}{x}\) эквивалентной бесконечно малой 
+			\(\frac{a}{x}\):
+			\[\lim_{x\rightarrow +\infty}x^{2}\sin\frac{a}{x}=\lim_{x\rightarrow +\infty}x^{2}\frac{a}{x}=+\infty,\]
+			откуда получим:
+			\[\lim_{x\rightarrow +\infty}\ln y(x) = \lim_{x\rightarrow +\infty}\frac{b\ln\left(\sin\frac{a}{x}\right)}{x}=0\]
+			или
+			\[\lim_{x\rightarrow +\infty}y(x)=e^{0}=1.\]
+			</p>
+			<p><span class="bold">Ответ.</span> 
+			\[\lim_{x\rightarrow +\infty}\left(\sin\frac{a}{x}\right)^{\frac{b}{x}}=1.\]
+			</p>
+			
+			<p>П. л). Перед нами неопределенность типа \([\infty^{0}]\). Рассмотрим 
+			\(y(x)=\left(\frac{1}{x-2}\right)^{\sin\pi x}\). Прологарифмируем эту
+			функцию: \(z(x)=\ln y(x)=\sin\pi x\cdot\ln\left(\frac{1}{x-2}\right)= -\sin\pi x\cdot\ln(x-2)\). 
+			Вычислим предел функции \(z(x)\), приводя возникшую неопределенность типа 
+			\([0\cdot\infty]\) к неопределенности типа 
+			\(\left(\frac{\infty}{\infty}\right)\), для раскрытия которой используем 
+			правило Лопиталя. После преобразований получим:
+			\[\lim_{x\rightarrow 2+0}\ln y(x)=-\lim_{x\rightarrow 2+0}\sin\pi x\cdot\ln(x-2)= -\lim_{x\rightarrow 2+0}\frac{\ln(x-2)}{\sin^{-1}\pi x}=\]
+			\[=\lim_{x\rightarrow 2+0}\frac{\frac{1}{x-2}}{\pi\sin^{-2}\pi x\cos\pi x}= \lim_{x\rightarrow 2+0}\frac{\sin^{2}\pi x}{\pi (x-2)\cos\pi x}=\]
+			\[=\frac{1}{\pi}\lim_{x\rightarrow 2+0}\frac{1}{\cos\pi x}\cdot\lim_{x\rightarrow 2+0}\frac{\sin^{2}\pi x}{(x-2)}=\frac{1}{\pi}\lim_{x\rightarrow 2+0}\frac{\sin^{2\pi x}}{x-2}.\]
+			</p>
+			<p>Нетрудно заметить, что \(\lim_{x\rightarrow 2+0}\frac{\sin^{2}\pi x}{x-2}\) 
+			представляет собой неопределенность типа \(\left[\frac{0}{0}\right]\), для 
+			раскрытия которой снова используем правило Лопиталя:
+			\[\lim_{x\rightarrow 2+0}\frac{\sin^{2}\pi x}{x-2}=\lim_{x\rightarrow 2+0}\frac{2\pi\sin\pi x\cdot\cos\pi x}{1}=0.\]
+			</p>
+			<p>Следовательно,
+			\[\lim_{x\rightarrow 2+0}\ln y(x)=0\]
+			и
+			\[\lim_{x\rightarrow 2+0}y(x)=e^{0}=1.\]
+			</p>
+			<p><span class="bold">Ответ.</span>
+			\(\lim_{x\rightarrow 2+0}\left(\frac{1}{x-2}\right)^{\sin\pi x}=1.\)
+			</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

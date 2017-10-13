@@ -1,0 +1,196 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+		</script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/introduction.html" class="button">Назад</a>
+	<a href="../pages/paragraph_020.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 1. ОПРЕДЕЛЕНИЕ ПРОИЗВОДНОЙ</div>
+	<div class="definition">
+		<span class="elected">Определение 1.1.</span>
+		<p>Пусть функция \(y=f(x)\) определена на множестве \(X\). Пусть \(x_{0}\in X\). 
+		Придадим  \(x_{0}\) приращение \(\Delta x (\Delta x < 0\) или \(\Delta x > 0)\) 
+		так, чтобы \(x_{0}+\Delta x \in X\). 
+			<span class="elected">Производной функции \(y=f(x)\) по переменной \(x\) 
+			при \(x=x_{0}\) называется предел отношения приращения функции  
+			\(\Delta y\), вычисленного в этой точке, к вызвавшему его приращению 
+			аргумента \(\Delta x\) при стремлении последнего к \(0\), то есть
+\[\lim_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x \rightarrow 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x},\tag{1.1}\]
+			если этот предел существует.
+			</span>
+		</p>
+	</div>
+	
+	<p>Если предел в формуле 
+<a class="htooltip" href="#">(1.1)<span class="wStyle">\(\lim_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x \rightarrow 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}\)</span></a>
+	существует, то существует производная при значении
+	\(x_{0}\) переменной \(x\) и она представляет собой число. В этом случае говорят, 
+	что функция \(f(x)\) <span class="elected">дифференцируема</span> при \(x=x_{0}\). 
+	Если производная существует при всех \(x\in X\), то она является функцией переменной \(x\).
+	</p>
+	<p>Производная обозначается следующим образом:
+	\[y', f'(x), \dfrac{dy}{dx}, \dfrac{df(x)}{dx}.\]
+	</p>
+	<p>В скобках при этом указывается значение переменной, при котором берется производная. 
+	Если есть необходимость указать, по какой переменной вычисляется производная, 
+	то эта переменная указывается как нижний индекс:
+	\[y'_{x}, f'_{x}(x_{0}).\]
+	</p>
+	<p>Итак, согласно определению 
+<a class="htooltip" href="#">1.1<span class="wStyle">
+Пусть функция \(y=f(x)\) определена на множестве \(X\). Пусть \(x_{0}\in X\). 
+		Придадим  \(x_{0}\) приращение \(\Delta x (\Delta x < 0\) или \(\Delta x > 0)\) 
+		так, чтобы \(x_{0}+\Delta x \in X\). 
+			<span class="elected">Производной функции \(y=f(x)\) по переменной \(x\) 
+			при \(x=x_{0}\) называется предел отношения приращения функции  
+			\(\Delta y\), вычисленного в этой точке, к вызвавшему его приращению 
+			аргумента \(\Delta x\) при стремлении последнего к \(0\), то есть
+\[\lim_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x \rightarrow 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x},\tag{1.1}\]
+			если этот предел существует.
+			</span>
+</span></a>
+	имеем:
+\begin{equation}
+y'=f'(x)=\lim_{\Delta x \rightarrow 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}.\tag{1.2}
+\end{equation}
+	</p>
+	<p>Процесс вычисления производной называется 
+	<span class="elected">дифференцированием функции</span>.
+	</p>
+	
+	<div class="h2">Геометрический смысл производной</div>	
+	
+	<p>Из <a target="_top" href="introduction.html#an01">п. 0.1</a> введения следует, что производная функции \(y=f(x)\), 
+	вычисленная при \(x=x_{0}\), равна угловому коэффициенту \(k\) касательной, 
+	проведенной к графику этой функции в точке \(M_{0}(x_{0},f(x_{0}))\), то есть
+\begin{equation}
+f'(x_{0})=k.\tag{1.3}
+\end{equation}
+	</p>
+	<p>Уравнение данной касательной имеет вид
+\begin{equation}
+y-f(x_{0})=f'(x_{0})(x-x_{0}).\tag{1.4}
+\end{equation}
+	</p>
+	
+	<div class="h2">Механический смысл производной</div>
+	
+	<p>Из <a target="_top" href="introduction.html#an02">п. 0.2</a> введения следует, что мгновенная скорость точки, движущейся вдоль 
+	некоторой прямой \(l\), равна производной от ее расстояния \(S(t)\), вычисленной 
+	в момент \(t=t_{0}\), то есть
+\begin{equation}
+\nu(t_{0})=S'(t_{0}).\tag{1.5}
+\end{equation}
+	</p>
+	
+	<div class="h2">Непрерывность функции, имеющей производную</div>
+	
+	<div class="theorem">
+	<span class="elected">Теорема 1.1.</span>
+		<p> Если функция \(y=f(x)\) в точке \(x_{0}\) имеет 
+		производную, то функция \(f(x)\) непрерывна в точке \(x_{0}\).
+		</p>
+	</div>
+	
+	<div class="proof">
+	<span class="elected">Доказательство.</span>
+		<p> Из определения производной следует, что \[\frac{\Delta y}{\Delta x}=f'(x_{0})+\alpha,\]
+		где величина \(\alpha\) является бесконечно малой при \(\Delta x \rightarrow 0\). Тогда
+\begin{equation}
+\Delta y=f'(x_{0})\Delta x+\alpha\cdot\Delta x,\tag{1.6}
+\end{equation}
+		где \(\alpha\cdot\Delta x\) – величина более высокого порядка малости, чем \(\Delta x\).
+		Из равенства (1.6) вытекает, что если \(\Delta x \rightarrow 0\), то и \(\Delta y \rightarrow 0\),
+		то есть бесконечно малому приращению аргумента \(\Delta x\) соответствует бесконечно малое приращение
+		функции \(\Delta y\). Согласно второму определению непрерывности функция \(f(x)\)
+		непрерывна в точке \(x_{0}\). 
+		</p>
+		<p>Теорема доказана.</p>
+	</div>
+	
+	<p><span class="elected">Замечание 1.1.</span> 
+	Утверждение, обратное теореме 
+	<a class="htooltip" href="#">1.1<span class="wStyle">Если функция \(y=f(x)\) в точке \(x_{0}\) имеет производную, то функция \(f(x)\) непрерывна в точке \(x_{0}\).</span></a>, 
+	неверно: непрерывность функции в точке \(x_{0}\)
+	не обеспечивает в общем случае существования производной при \(x=x_{0}\). 
+	Это может быть проиллюстрировано следующим примером.
+	</p>
+	
+	<p><span class="bold">Пример 1.1.</span> 
+	Пользуясь определением 
+	<a class="htooltip" href="#">1.1<span class="wStyle">
+		Пусть функция \(y=f(x)\) определена на множестве \(X\). Пусть \(x_{0}\in X\). 
+		Придадим  \(x_{0}\) приращение \(\Delta x (\Delta x < 0\) или \(\Delta x > 0)\) 
+		так, чтобы \(x_{0}+\Delta x \in X\). 
+		<span class="elected">Производной функции \(y=f(x)\) по переменной \(x\) 
+		при \(x=x_{0}\) называется предел отношения приращения функции  
+		\(\Delta y\), вычисленного в этой точке, к вызвавшему его приращению 
+		аргумента \(\Delta x\) при стремлении последнего к \(0\), то есть
+		\[\lim_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x \rightarrow 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x},\tag{1.1}\]
+		если этот предел существует.
+		</span>
+</span></a>
+	, найдем производную функции 
+	\[f(x)=|x|=
+\begin{cases}
+x, & x \geq 0,\\
+-x, & x<0
+\end{cases}
+	\]
+	в точке \(x_{0}=0\). 
+	Поскольку односторонние пределы в этой точке, вычисленные ранее в замечании 0.1, 
+	различны, то предела, определяющего значение производной в этой точке, не существует. 
+	Таким образом, функция \(y=|x|\) хотя и непрерывна в точке \(x_{0}=0\), 
+	не является дифференцируемой в этой точке.
+	</p>
+
+	<p><span class="elected">Замечание 1.2.</span> 
+	Если в определении 
+<a class="htooltip" href="#">1.1<span class="wStyle">
+	Пусть функция \(y=f(x)\) определена на множестве \(X\). Пусть \(x_{0}\in X\). 
+	Придадим  \(x_{0}\) приращение \(\Delta x (\Delta x < 0\) или \(\Delta x > 0)\) 
+	так, чтобы \(x_{0}+\Delta x \in X\). 
+	<span class="elected">Производной функции \(y=f(x)\) по переменной \(x\) 
+	при \(x=x_{0}\) называется предел отношения приращения функции  
+	\(\Delta y\), вычисленного в этой точке, к вызвавшему его приращению 
+	аргумента \(\Delta x\) при стремлении последнего к \(0\), то есть
+	\[\lim_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x \rightarrow 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x},\tag{1.1}\]
+	если этот предел существует.
+	</span></span>
+</a>
+	заменить предел 
+	<a class="htooltip" href="#">(1.1)<span class="wStyle">\(\lim_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x \rightarrow 0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}\)</span></a> на односторонние пределы, то получится определение 
+	односторонних производных функции \(y=f(x)\) в точке \(x_{0}\). Производной справа назовем предел
+\begin{equation}
+f'_{+}(x)=\lim_{\Delta x \rightarrow +0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x},\tag{1.7}
+\end{equation}
+	производной слева – предел
+\begin{equation}
+f'_{-}(x)=\lim_{\Delta x \rightarrow -0}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}.\tag{1.8}
+\end{equation}
+	</p>
+	
+	<p>
+	Таким образом, производная \(f'(x_{0})\) существует тогда и только тогда, когда существуют 
+	и равны обе односторонние производные:
+\begin{equation}
+f'(x_{0})=f'_{+}(x_{0})=f'_{-}(x_{0}).\tag{1.9}
+\end{equation}
+	</p>
+	
+	<a href="../pages/problems_01.html" class="button">К задачам \(\S\) 1</a>
+	
+</div>
+</body>
+</html>

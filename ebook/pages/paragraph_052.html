@@ -1,0 +1,79 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_051.html" class="button">Назад</a>
+	<a href="../pages/problems_05.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 5. ПРОИЗВОДНЫЕ ВЫСШИХ ПОРЯДКОВ</div>
+	<div class="h2"><a name="an52">5.2. Повторное дифференцирование функции, заданной параметрически</a></div>	
+	<p>Пусть зависимость переменной   от переменной   задается системой уравнений:
+	\[\begin{cases}
+	x=\varphi(t),\\
+	y=\psi(t) 
+	\end{cases} (t\in T).\]
+	</p>
+	<p>Тогда ее производная выражается через параметр \(t\) по формуле
+	\[\begin{cases}
+	x=\varphi(t),\\
+	y'_{x}=\frac{\psi'(t)}{\varphi'(t)} 
+	\end{cases}. \tag{5.9}\]
+	Применяя формулу (2.9) для дифференцирования  , получим:
+	\[\begin{cases}
+	x=\varphi(t),\\
+	y'_{x}=\frac{(y'_{x})'_{t}}{\varphi'(t)} 
+	\end{cases}. \tag{5.10}\]
+	Выполняя дифференцирование:
+	\[y''_{x}=\dfrac{(y'_{x})'_{t}}{\varphi'(t)}=\dfrac{\left(\dfrac{\psi'(t)}{\varphi'(t)}\right)'}{\varphi'(t)}=\dfrac{\dfrac{\psi''(t)\cdot\varphi'(t)-\varphi''(t)\cdot\psi'(t)}{(\varphi'(t))^{2}}}{\varphi'(t)}=\]
+	\[=\dfrac{\psi''(t)\cdot\varphi'(t)-\varphi''(t)\cdot\psi'(t)}{(\varphi'(t))^{3}}\]
+	окончательно получим:
+	\[\begin{cases}
+	x=\varphi(t),\\
+	y''_{x}=\dfrac{\psi''(t)\cdot\varphi'(t)-\varphi''(t)\cdot\psi'(t)}{(\varphi'(t))^{3}}
+	\end{cases}. \tag{5.11}\]
+	</p>
+	<p><span class="bold">Пример 5.3.</span>
+	Найдем вторую производную функции, заданной параметрически системой уравнений
+	\[\begin{cases}
+	x=a(1-\cos t),\\
+	y=a(t-\sin t).
+	\end{cases} \tag{5.11}\]
+	</p>
+	<p>Здесь \(\varphi(t)=a(1-\cos t)\), \(\psi(t)=a(t-\sin t)\).
+	Продифференцируем эти функции:
+	\[\varphi'(t)=a\sin t, \psi'(t)=a(1-\cos t),\]
+	\[\varphi''(t)=a\cos t, \psi''(t)=a\sin t.\]
+	По формуле (5.11) получим:
+	\[y''_{x}=\dfrac{\psi''(t)\cdot\varphi'(t)-\varphi''(t)\cdot\psi'(t)}{(\varphi'(t))^{3}}=\dfrac{a\sin t\cdot a\sin t-a\cos t\cdot a(1-\cos t)}{a^{3}\sin^{3}t}=\]
+	\[\dfrac{\sin^{2}t-\cos t+\cos^{2}t}{a\sin^{3}t}=\dfrac{1-a\cos t}{a\sin^{3}t}.\]
+	Тогда
+	\[\begin{cases}
+	x=a(1-\cos t),\\
+	y''_{x}=\dfrac{1-\cos t}{a\sin^{3}t}.
+	\end{cases}\]
+	</p>
+		
+	<a href="../pages/problems_05.html" class="button">К задачам \(\S\) 5</a>
+		
+</div>
+</body>
+</html>

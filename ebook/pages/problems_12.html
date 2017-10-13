@@ -1,0 +1,242 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		$("div.spoiler div.name span").toggle(function(){
+		$(this).parent("div.name").parent("div.spoiler").children("div.text").show();
+		$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " -15px 0");
+		},function(){
+		$(this).parent("div.name").parent("div.spoiler").children("div.text").hide();
+		$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " 0 -15px");
+		});
+		});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_110.html" class="button">Назад</a>
+	<a href="../pages/literature.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 12. Дифференциал функции. Дифференциалы высших порядков</div>
+	<div class="h2">Задачи к \(\S\) 12. </div>	
+	<p><span class="bold">Задача 12.1.</span>
+	Записать дифференциал функции \(y=f(x)\) в точке \(x_{0}\):
+	</p>
+	<p>а) \(\quad f(x)=e^{x^{2}+3x},\;x_{0}=0;\)
+	</p>
+	<p>б) \(\quad f(x)=(\ln(1+x))^{x+1}\;x_{0}=e-1;\)
+	</p>
+	<p>в) \(\quad y^{3}-x^{3}+xy=1\;x_{0}=1;\)
+	</p>
+	<p>г) \(\quad \begin{cases}
+			x=\cos^{5}t, \\ 
+			y=\sin^{5}t.
+		\end{cases},\;x_{0}=\frac{\sqrt{2}}{8}\;(0\leq t < \pi).\)
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>П. а). Вычислим производную:
+			\[f'(x)=(2x+3)e^{x^{2}+3x};\]
+			\[f'(0)=3.\]
+			По формуле (12.3) составим дифференциал:
+			\[df(0)=3dx.\]
+			</p>
+			<p><span class="bold">Ответ.</span> \(df(0)=3dx.\)</p>
+			
+			<p>П. б). Используем логарифмическое дифференцирование для вычисления производной показательно-степенной функции:
+			\[\ln f(x)=(x+1)\ln(\ln(x+1)),\]
+			\[\frac{f'(x)}{f(x)}=\ln(\ln(x+1))+\frac{1}{\ln(x+1)},\]
+			\[f'(x)=(\ln(x+1))^{x+1}\cdot\left(\ln(\ln(x+1))+\frac{1}{\ln(x+1)}\right),\]
+			\[f'(e-1)=1.\]
+			Составляем дифференциал по формуле (12.3):
+			\[df(e-1)=dx\]
+			</p>
+			<p><span class="bold">Ответ.</span> \(df(e-1)=dx.\)</p>
+			
+			<p>П. в). Значению \(x_{0}=1\) соответствует значение \(y_{0}=1\). 
+			Вычислим производную неявно заданной функции:
+			\[3y^{2}y'_{x}-3x^{2}+y+xy'_{x}=0,\]
+			\[y'_{x}=\frac{3x^{2}-y}{3y^{2}+x},\]
+			\[y'_{x}(1)=\frac{3-1}{3+1}=\frac{1}{2}.\]
+			По формуле (12.3) составляем дифференциал:
+			\[dy=\frac{1}{2}dx.\]
+			</p>
+			<p><span class="bold">Ответ.</span> \(dy=\frac{1}{2}dx.\)</p>
+			
+			<p>П. г). Значению \(x_{0}=\frac{\sqrt{2}}{8}\) соответствует значение \(t_{0}=\frac{\pi}{4}\). 
+			Вычислим производную параметрически заданной функции:
+			\[y'_{x}=-\frac{5\sin^{4}t\cos t}{5\cos^{4}t\sin t}=-\tan^{3}t,\]
+			\[y'_{x}=-\tan^{3}\frac{\pi}{4}=-1\;при\;x_{0}=\frac{\sqrt{2}}{8}.\]
+			По формуле (12.3) составляем дифференциал:
+			\[dy=-dx.\]
+			</p>
+			<p><span class="bold">Ответ.</span> \(dy=-dx.\)</p>
+		</div>
+	</div>
+	<p><span class="bold">Задача 12.2.</span>
+	Найти приращение функции \(y=\arctan\sqrt{2x}\) при переходе от значения \(x=x_{0}\) к значению \(x=x_{1}\) 
+	и сравнить его с дифференциалом функции в точке \(x_{0}\):
+	</p>
+	<p>а)\(\quad x_{0}=0.5,\;x_{1}=0.6;\)
+	</p>
+	<p>б)\(\quad x_{0}=0.5,\;x_{1}=0.51;\)
+	</p>
+	<p>в)\(\quad x_{0}=0.5,\;x_{1}=0.501;\)
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>П. а). Найдем приращение функции
+			\[\Delta y=f(x_{1})-f(x_{0})=\arctan\sqrt{1.2}-\arctan\sqrt{1}\approx 0.0455.\]
+			Составим дифференциал. Для этого найдем приращение аргумента \(\Delta x\): 
+			\[\Delta x = x_{1}-x_{0}=0.6-0.5=0.1.\]
+			По определению 12.2
+			\[dx=\Delta x =0.1.\]
+			Вычислим производную:
+			\[f'(x)=\frac{1}{1+2x}\cdot\frac{1}{\sqrt{2x}},\]
+			\[f'(x_{0})=0.5.\]
+			Тогда дифференциал 
+			\[dy=0.5\cdot 0.1=0.05.\]
+			Разница между приращением и дифференциалом \(|\Delta y - dy|\approx 0.0045.\)
+			</p>
+			<p><span class="bold">Ответ.</span>
+			\(\Delta y\approx 0.0455;\;dy=0.05;\;|\Delta y - dy|\approx 0.0045.\)
+			</p>
+			
+			<p>П. б). Приращение функции 
+			\[\Delta y=\arctan\sqrt{1.02}-\arctan\sqrt{1}\approx 0.00495.\]
+			Найдем приращение аргумента \(\Delta x\): 
+			\[\Delta x = x_{1}-x_{0}=0.51-0.5=0.01.\]
+			По определению 12.2
+			\[dx=\Delta x =0.01.\]
+			Тогда дифференциал 
+			\[dy=0.5\cdot 0.01=0.005.\]
+			Разница между приращением и дифференциалом \(|\Delta y - dy|\approx 0.00005.\)
+			</p>
+			<p><span class="bold">Ответ.</span>
+			\(\Delta y\approx 0.00495;\;dy=0.005;\;|\Delta y - dy|\approx 0.00005.\)
+			</p>
+			
+			<p>П. в). Приращение функции 
+			\[\Delta y=\arctan\sqrt{1.002}-\arctan\sqrt{1}\approx 0.000499.\]
+			По определению 12.2 дифференциал 
+			\[dx=x_{1}-x_{0}=0.501-0.5=0.001.\]
+			Тогда дифференциал 
+			\[dy=0.5\cdot 0.001=0.0005.\]
+			Разница между приращением и дифференциалом \(|\Delta y - dy|\approx 0.000001.\)
+			</p>
+			<p><span class="bold">Ответ.</span>
+			\(\Delta y\approx 0.000499;\;dy=0.0005;\;|\Delta y - dy|\approx 0.000001.\)
+			</p>
+		</div>
+	</div>
+	<p><span class="bold">Задача 12.3.</span>
+	Составить выражения для дифференциалов функций \(y=f(x)\):
+	</p>
+	<p>а)\(\quad y=\sqrt{x+\sqrt{x+\sqrt{x}}},\;x\geq 0;\)
+	</p>
+	<p>б)\(\quad y=(\sqrt{x})^{\sqrt{x}},\;x > 0;\)
+	</p>
+	<p>в)\(\quad 3^{x}+3^{y}=3^{x+y};\)
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>Для составления выражения дифференциала используем формулу (12.3).
+			</p>
+			<p>П. а). Используем правило дифференцирования сложной функции (2.14):
+			\[y'=\frac{1}{2\sqrt{x+\sqrt{x+\sqrt{x}}}}\left(1+\frac{1}{2\sqrt{x+\sqrt{x}}}\left(1+\frac{1}{2\sqrt{x}}\right)\right).\]
+			</p>
+			<p><span class="bold">Ответ.</span>
+			\(dy=y'dx=\frac{1}{2\sqrt{x+\sqrt{x+\sqrt{x}}}}\left(1+\frac{1}{2\sqrt{x+\sqrt{x}}}\left(1+\frac{1}{2\sqrt{x}}\right)\right).\)
+			</p>
+			<br>
+			<p>Для составления выражения дифференциала используем формулу (12.3).
+			</p>
+			<br>
+			<p>П. б). Используем правило дифференцирования показательно-степенной функции:
+			\[\ln y=\sqrt{x}\ln(\sqrt{x})=\frac{\sqrt{x}}{2}\ln x,\]
+			\[\frac{y'}{y}=\frac{1}{2}\left(\frac{1}{2\sqrt{x}}\ln x+\frac{1}{\sqrt{x}}\right)=\frac{\ln x+2}{4\sqrt{x}},\]
+			\[y'=\left(\sqrt{x}^{\sqrt{x}}\right)\frac{\ln x+2}{4\sqrt{x}}.\]
+			</p>
+			<p><span class="bold">Ответ.</span>
+			\(dy=\left(\sqrt{x}^{\sqrt{x}}\right)\frac{\ln x+2}{4\sqrt{x}}.\)
+			</p>
+			<br>
+			<p>П. в). Используем правило дифференцирования неявно заданной функции:
+			\[3^{x}\ln 3+3^{y}\ln 3\cdot y'=3^{x+y}\ln 3\cdot(1+y'),\]
+			\[y'=\frac{3^{x+y}-3^{x}}{3^{y}-3^{x+y}}.\]
+			</p>
+			<p><span class="bold">Ответ.</span>
+			\(dy=y'dx=\frac{3^{x+y}-3^{x}}{3^{y}-3^{x+y}}.\)
+			</p>
+		</div>
+	</div>
+	<p><span class="bold">Задача 12.4.</span>
+	Составить дифференциалы второго, третьего, ..., \(n\)-го порядка функций:
+	</p>
+	<p>а)\(\quad y=\sqrt{1+2x};\)
+	</p>
+	<p>б)\(\quad y=\sin 3x\cos 2x.\)
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>Дифференциалы выражаются через производные высших порядков по формуле (12.7).
+			</p>
+			<p>П. а). Последовательно дифференцируем функцию и составля-ем дифференциалы соответствующих порядков:
+			\[y'=\frac{1}{\sqrt{1+2x}}=(1+2x)^{-\frac{1}{2}},\]
+			\[y''=-(1+2x)^{-\frac{3}{2}},\]
+			\[y'''=3(1+2x)^{-\frac{5}{2}}\;...\;.\]
+			Обобщая результаты, при \(n\geq 2\) получим
+			\[y^{(n)}=(-1)^{(n+1)}\cdot(2n-3)!!\cdot(1+2x)^{-\frac{2n-1}{2}},\]
+			где \((2n-3)!!=1\cdot 3\cdot 5\;\cdot\;...\;\cdot\;(2n-3)\).
+			</p>
+			<p><span class="bold">Ответ.</span>
+			\[dy=y'dx=(-1)^{n+1}\frac{(2n-3)!!}{\sqrt{1+2x}^{2n-1}}dx^{n},\;n\geq 2.\]
+			</p>
+			<br>
+			<p>П. б). Для выполнения повторного дифференцирования представим 
+			произведение в виде суммы:
+			\[y=\sin 3x\cos 2x=\frac{1}{2}(\sin 5x+\sin x).\]
+			Далее выполняем дифференцирование:
+			\[y'=\frac{1}{2}(5\cos 5x+\cos x),\]
+			\[y''=-\frac{1}{2}(25\sin 5x+\sin x),\]
+			\[y'''=-\frac{1}{2}(125\cos 5x+\cos x),\]
+			\[y^{IV}=\frac{1}{2}(625\sin 5x+\sin x),\]
+			и т. д.
+			</p>
+			<p>Обобщая результаты, для производных четного и нечетного
+			порядков получим:
+			\[y^{(2n)}=(-1)^{n}\frac{1}{2}(5^{2n}\sin 5x+\sin x),\;n\in N,\]
+			\[y^{(2n+1)}=(-1)^{n}\frac{1}{2}(5^{2n+1}\cos 5x+\cos x),\;n=0,\;1,\;2,\;...\;.\]
+			</p>
+			<p><span class="bold">Ответ.</span>
+			\[d^{(2n)}y=(-1)^{n}\frac{1}{2}(5^{2n}\sin 5x+\sin x)dx^{(2n)},\;n\in N,\]
+			\[d^{(2n+1)}y=(-1)^{n}\frac{1}{2}(5^{2n+1}\cos 5x+\cos x)dx^{(2n+1)},\;n=0,\;1,\;2,\;...\;.\]
+			</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+﻿<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../styles/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/frame.css"/>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: {
+				Macros: {
+					tan: '{\\rm tg\\;\}',
+					cot: '{\\rm ctg\\;\}',
+					arctan: '{\\rm arctg\\;\}',
+					arccot: '{\\rm arcctg\\;\}'
+				}
+			}
+		});
+		</script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		$("div.spoiler div.name span").toggle(function(){
+		$(this).parent("div.name").parent("div.spoiler").children("div.text").show();
+		$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " -15px 0");
+		},function(){
+		$(this).parent("div.name").parent("div.spoiler").children("div.text").hide();
+		$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " 0 -15px");
+		});
+		});
+		</script>
+	</head>
+<body>
+
+<div class="prevNextPage">
+	<a href="../pages/paragraph_050.html" class="button">Назад</a>
+	<a href="../pages/paragraph_070.html" class="button">Вперёд</a>
+</div>
+
+<div class="whiteList">
+	<div class="h1">\(\S\) 6. Условия постоянства и монотонности дифференцируемой функции</div>
+	<div class="h2">Задачи к \(\S\) 6. </div>	
+	<p><span class="bold">Задача 6.1.</span>
+	Найти интервалы строгой монотонности и постоянства функции:
+	</p> 
+	<p>а) \(f(x)=2x^{3}+15x^{2}-84x+3;\)
+	</p>
+	<p>б) \(f(x)=\begin{cases}
+			2x-3, & x\leq 2, \\ 
+			1, & x > 2.
+		\end{cases} (t\in T).\)
+	</p>
+
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>П. а). Вычислим производную функции \(f(x)\):
+			\[f'(x)=6x^{2}+30x-84=6(x^{2}+5x-14)=6(x+7)(x-2).\]
+			</p>
+			<p>Поскольку \(f'(x) > 0\) при \(x\in(-\infty,-7)\) или \(x\in(2,+\infty)\), 
+			а \(f'(x) < 0\) при \(x\in(-7, 2)\), то по теореме 6.3 на интервалах 
+			\((-\infty,-7)\) и \((2,+\infty)\) функция \(f(x)\) строго возрастает, на интервале 
+			\((-7, 2)\) строго убывает.
+			</p>
+			<p><span class="bold">Ответ.</span>
+			На интервалах \((-\infty,-7)\) и \((2,+\infty)\) \(f(x)\) строго возрастает,
+			на интервале \((-7, 2)\) \(f(x)\) строго убывает.
+			</p>
+			<br>
+			<p>П. б). Вычислим производную функции \(f(x)\). При  
+			\[f'(x)=(2x-3)'=2 > 0,\]
+			следовательно, функция строго возрастает. При  
+			\[f'(x)=0,\]
+			по теореме 6.1 здесь функция постоянна.
+			<p><span class="bold">Ответ.</span>
+			На интервалах \((-\infty,2)\;f(x)\) строго возрастает,
+			на интервале \((2,+\infty)\;f(x)\) постоянна.
+			</p>
+		</div>
+	</div>
+	<p><span class="bold">Задача 6.2.</span>
+	Доказать неравенства:
+	</p> 
+	<p>а) \(e^{x} > x+1\;при\;x\in(0,+\infty);\)
+	</p>
+	<p>б) \(\tan x > x\;при\;x\in(0,\frac{\pi}{2}).\)
+	</p>
+	<div class="spoiler">
+		<div class="name"><span class="solution"><p>Решение <span class="sup">Click!</span></p></span></div>
+		<div class="text">
+			<p>П. а). Рассмотрим функцию \(f(x)=e^{x}-x-1\;на промежутке\;[0,+\infty).\)
+			Неравенство \(e^{x} > x+1\) равносильно неравенству \(f(x) > 0\). 
+			Докажем его. Вычислим производную функции:
+			\[f'(x)=e^{x}-1.\]
+			</p>
+			<p>На промежутке \([0,+\infty)\) функция \(f(x)=e^{x}-x-1\) определена, 
+			непрерывна и \(f'(x)>0\) при \(x>0\). Таким образом, \(f(x)\) 
+			удовлетворяет всем условиям теоремы 6.3. Следовательно, функция \(f(x)\) 
+			возрастает на промежутке \(X = [0,+\infty)\), 
+			поэтому \(f(x)>f(0)=0\). 
+			</p>
+			<p>Таким образом, доказано, что при всех \(x\in (0,+\infty)\;e^{x}>x+1\).
+			</p><br>
+			<p>П. б). Составим функцию \(f(x)=\tan x-x\). Она определена и 
+			непрерывна на промежутке \(X = \left[0,\frac{\pi}{2}\right)\).
+			Вычислим ее производную:
+			\[f'(x)=\frac{1}{\cos^{2}x}-1=\frac{1-\cos^{2}x}{\cos^{2}x}.\]			
+			</p>
+			<p>При \(\left(0,\frac{\pi}{2}\right)\;f'(x)>0\), следовательно, 
+			на промежутке \(X = \left[0,\frac{\pi}{2}\right)\) функция \(f(x)\)
+			удовлетворяет всем условиям теоремы 6.3, поэтому она возрастает на 
+			этом промежутке и \(f(x) > f(0)=0\).
+			</p>
+			<p>Таким образом, доказано, что при \(x\in\left[0,\frac{\pi}{2}\right)\;\tan x > x\).
+			</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
